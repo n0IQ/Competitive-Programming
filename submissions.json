@@ -22301,6 +22301,23 @@
     ],
     "timestamp": "Jul/04/2020 12:57"
   },
+  "CF86218317": {
+    "contest_id": 486,
+    "language": "MS C++ 2017",
+    "path": "codeforces\\486\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Calculating Function",
+    "problem_url": "https://codeforces.com/contest/486/problem/A",
+    "submission_id": "CF86218317",
+    "submission_url": "https://codeforces.com/contest/486/submission/86218317",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Jul/07/2020 22:09"
+  },
   "CF86220171": {
     "contest_id": 977,
     "language": "MS C++ 2017",
