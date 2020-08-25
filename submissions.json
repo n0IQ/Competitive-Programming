@@ -12181,6 +12181,23 @@
     ],
     "timestamp": "Jun/02/2022 21:45"
   },
+  "CF90899504": {
+    "contest_id": 231,
+    "language": "MS C++ 2017",
+    "path": "codeforces\\231\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Team",
+    "problem_url": "https://codeforces.com/contest/231/problem/A",
+    "submission_id": "CF90899504",
+    "submission_url": "https://codeforces.com/contest/231/submission/90899504",
+    "tags": [
+      "brute force",
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Aug/25/2020 18:07"
+  },
   "CF90901672": {
     "contest_id": 158,
     "language": "MS C++ 2017",
