@@ -12181,6 +12181,23 @@
     ],
     "timestamp": "Jun/02/2022 21:45"
   },
+  "CF93637590": {
+    "contest_id": 1221,
+    "language": "GNU C++14",
+    "path": "codeforces\\1221\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Perfect Team",
+    "problem_url": "https://codeforces.com/contest/1221/problem/C",
+    "submission_id": "CF93637590",
+    "submission_url": "https://codeforces.com/contest/1221/submission/93637590",
+    "tags": [
+      "binary search",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Sep/24/2020 17:29"
+  },
   "CF94806050": {
     "contest_id": 1426,
     "language": "GNU C++14",
