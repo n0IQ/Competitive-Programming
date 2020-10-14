@@ -21,10 +21,38 @@ int main()
 	string s;
 	cin >> s;
 
-	string s1 = "0000000";
-	string s2 = "1111111";
+	int count = 0, flag = 0;
 
-	if (s.find(s1) != string::npos || s.find(s2) != string::npos)
+	for (int i = 0; i < s.length(); i++)
+	{
+		if (s[i] == '1')
+		{
+			if ((i == 0) || (s[i] == '1' && s[i - 1] != '0'))
+			{
+				count++;
+			}
+			else
+			{
+				count = 1;
+			}
+		}
+		else if (s[i] == '0')
+		{
+			if ((i == 0) || (s[i] == '0' && s[i - 1] != '1'))
+			{
+				count++;
+			}
+			else
+			{
+				count = 1;
+			}
+		}
+
+		if (count == 7)
+			flag = 1;
+	}
+
+	if (flag == 1)
 		cout << "YES" << '\n';
 	else
 		cout << "NO" << '\n';
