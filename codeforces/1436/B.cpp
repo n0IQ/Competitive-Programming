@@ -22,44 +22,67 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 
+	const int N = 1e5 + 5;
+	static bool prime[N];
+
+	for (int i = 0; i < N; i++)
+	{
+		prime[i] = true;
+	}
+
+	prime[0] = prime[1] = false;
+
+	for (int i = 2; i * i < N; i++)
+	{
+		if (prime[i])
+		{
+			for (int j = i * i; j < N; j += i)
+			{
+				prime[j] = false;
+			}
+		}
+	}
+
 	int T;
 	cin >> T;
 
 	while (T-- > 0)
 	{
-
 		int n;
 		cin >> n;
 
-		int a[n][n];
+		int num = 1;
 
-		for (int i = 0; i < n; i++)
+		while (num <= 1e5)
 		{
-			for (int j = 0; j < n; j++)
+			if (prime[num] == false )
 			{
-				a[i][j] = 0;
+				if (prime[num + (n - 1)])
+				{
+					break;
+				}
 			}
+
+			num++;
 		}
 
-		int i = 0;
-		int size = n;
-
-		while (n-- > 0)
+		for (int i = 1; i <= n; i++)
 		{
-			a[i][i] = 1;
-			a[i][(i + 1) % size] = 1;
-			i++;
-		}
-
-		for (int i = 0; i < size; i++)
-		{
-			for (int j = 0; j < size; j++)
+			for (int j = 1; j <= n; j++)
 			{
-				cout << a[i][j] << " ";
+				if (i == j)
+				{
+					cout << num << " ";
+				}
+				else
+				{
+					cout << 1 << " ";
+				}
 			}
 
 			cout << '\n';
 		}
+
 	}
 
 	return 0;
