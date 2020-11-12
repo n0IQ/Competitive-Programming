@@ -15,12 +15,26 @@ using namespace std;
 
 bool Solve(vi v1, vi v2, int x)
 {
-	sort(v2.begin(), v2.end(), greater<>());
+	if (v1[0] + v2[0] > x)
+		return false;
 
-	for (int i = 0; i < (int)v1.size(); i++)
+	int flag = 0;
+	int n = (int)v1.size();
+
+	for (int i = n - 1; i >= 0 ; i--)
 	{
+		if (v1[i] + v2[i] <= x)
+			continue;
+
 		if (v1[i] + v2[i] > x)
-			return false;
+		{
+			swap(v2[flag], v2[i]);
+
+			if (v2[flag] + v1[flag] > x || v1[i] + v2[i] > x)
+				return false;
+
+			flag++;
+		}
 	}
 
 	return true;
