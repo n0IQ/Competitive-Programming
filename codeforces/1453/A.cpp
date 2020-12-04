@@ -30,23 +30,28 @@ int main()
 		int n, m;
 		cin >> n >> m;
 
-		vi t(101, 0);
+		vi t1;
+		vi t2;
 
 		for (int i = 0; i < n; i++) {
 			int num; cin >> num;
-			t[num]++;
+			t1.pb(num);
 		}
 
 		for (int i = 0; i < m; i++) {
 			int num; cin >> num;
-			t[num]++;
+			t2.pb(num);
 		}
 
+		//set<int> s;
 		ll crash = 0;
 
-		for (int i = 1; i <= 100; i++) {
-			if (t[i] >= 2) {
-				crash++;
+		for (int i = 0; i < n; i++)
+		{
+			for (int j = 0; j < m; j++)
+			{
+				if (t1[i] == t2[j])
+					crash++;
 			}
 		}
 
