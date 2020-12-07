@@ -8,7 +8,7 @@ using namespace std;
 #define ss second
 #define vi vector<int>
 #define pii pair<int, int>
-#define all(x) x.begin(),x.end()
+#define all v.begin(),v.end()
 #define mod 1000000007
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
@@ -33,9 +33,25 @@ int main()
 		string s;
 		cin >> s;
 
-		sort(all(s));
+		int count = 0;
 
-		cout << s << '\n';
+		for (int i = 0; i < s.length(); i++) {
+			if (s[i] == 'b') {
+				s.erase(s.begin() + i);
+				count++;
+				i = -1;
+			}
+		}
+
+		string s2 = "";
+
+		for (int i = 0; i < count; i++) {
+			s2 += 'b';
+		}
+
+		s2 += s;
+
+		cout << s2 << '\n';
 	}
 
 	return 0;
