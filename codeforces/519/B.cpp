@@ -49,27 +49,44 @@ int main()
 	int n;
 	cin >> n;
 
-	ll sum1 = 0, sum2 = 0, sum3 = 0;
+	map<int, int> m1;
+	map<int, int> m2;
+	map<int, int> m3;
+
 	rep(i, n) {
 		int num; cin >> num;
-		sum1 += num;
+		m1[num]++;
 	}
 
-
-	vi v2(n - 1);
 	rep(i, n - 1) {
 		int num; cin >> num;
-		sum2 += num;
+		m2[num]++;
 	}
 
-
-	vi v3(n - 2);
 	rep(i, n - 2) {
 		int num; cin >> num;
-		sum3 += num;
+		m3[num]++;
 	}
 
-	cout << sum1 - sum2 << '\n' << sum2 - sum3 << '\n';
+	int ans = 0;
+
+	for (auto x : m1) {
+		if (m2[x.ff] != x.ss) {
+			ans = x.ff;
+			break;
+		}
+	}
+
+	cout << ans << '\n';
+
+	for (auto x : m2) {
+		if (m3[x.ff] != x.ss) {
+			ans = x.ff;
+			break;
+		}
+	}
+
+	cout << ans << '\n';
 
 	return 0;
 }
