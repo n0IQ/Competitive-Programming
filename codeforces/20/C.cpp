@@ -37,20 +37,11 @@ typedef pair<double, double> pdd;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL);
 
-vector<vector<pii>> adj;
-vi d, p;
-vb visited;
-int n, m;
-
-void Dijkstra(int s)
+void Dijkstra(vector<pii> adj[], int n, vb &visited, vi &d, vi &p)
 {
-	d.assign(n + 1, INT_MAX);
-	p.assign(n + 1, -1);
-	visited.assign(n + 1, false);
-	d[s] = 0;
-
+	d[1] = 0;
 	priority_queue <pii, vpii, greater<pii>> q;
-	q.push({0, s});
+	q.push({0, 1});
 
 	while (!q.empty()) {
 		int minVertex = q.top().ss;
@@ -75,14 +66,41 @@ void Dijkstra(int s)
 	}
 }
 
-void Solve()
+void haspath(vector<pii> adj[], int s, int d, vb &visited, bool &path)
 {
-	Dijkstra(1);
+	if (s == d) {
+		path = true;
+		return;
+	}
 
-	if (d[n] == INT_MAX) {
+	visited[s] = true;
+
+	for (auto e : adj[s]) {
+		int v = e.ff;
+		if (!visited[v]) {
+			haspath(adj, v, d, visited, path);
+		}
+	}
+}
+
+void Solve(vector<pii> adj[], int n)
+{
+	vb visited(n + 1, false);
+	bool flag = false;
+
+	haspath(adj, 1, n, visited, flag);
+
+	if (!flag) {
 		cout << -1 << '\n';
 		return;
 	}
+
+	vi d, p;
+	d.assign(n + 1, INT_MAX);
+	p.assign(n + 1, -1);
+	visited.assign(n + 1, false);
+
+	Dijkstra(adj, n, visited, d, p);
 
 	vi path;
 
@@ -108,9 +126,10 @@ int main()
 	freopen("output.txt", "w", stdout);
 #endif
 
+	int n, m;
 	cin >> n >> m;
 
-	adj.resize(n + 1);
+	vector<pair<int, int>> adj[n + 1];
 
 	rep(i, m) {
 		int u, v, wt; cin >> u >> v >> wt;
@@ -118,7 +137,7 @@ int main()
 		adj[v].pb({u, wt});
 	}
 
-	Solve();
+	Solve(adj, n);
 
 	return 0;
 }
