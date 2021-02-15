@@ -60,11 +60,18 @@ int main()
 		}
 
 		sort(all(v));
-		int smallest = v[0], ans = 0;
 
-		for (auto x : v) {
-			if (x > smallest) {
-				ans++;
+		ll ans = 0;
+
+		for (int i = 0; i < n; i++) {
+			for (int j = 0; j < n; j++) {
+				if (i == j) {
+					continue;
+				}
+				if (v[i] > v[j]) {
+					ans++;
+					break;
+				}
 			}
 		}
 
