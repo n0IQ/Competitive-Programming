@@ -61,13 +61,25 @@ int main()
 
 		int ans = 0;
 
-		repA(i, 1, n - 1) {
-			int l = max(v[i], v[i - 1]);
-			int s = min(v[i], v[i - 1]);
+		rep(i, n - 1) {
+			if (max(v[i], v[i + 1]) <= 2 * min(v[i], v[i + 1])) {
+				continue;
+			}
+			else if (v[i] <  v[i + 1]) {
+				int temp = v[i];
 
-			while (2 * s < l) {
-				ans++;
-				s *= 2;
+				while (temp * 2 < v[i + 1]) {
+					temp *= 2;
+					ans++;
+				}
+			}
+			else {
+				int temp = v[i + 1];
+
+				while (temp * 2 < v[i]) {
+					temp *= 2;
+					ans++;
+				}
 			}
 		}
 
