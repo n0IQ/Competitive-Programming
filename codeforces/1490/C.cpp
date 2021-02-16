@@ -55,17 +55,10 @@ int main()
 		cin >> x;
 		bool ok = false;
 
-		for (ll i = 1; i * i * i <= x; i++)
+		for (ll i = 1; i <= (ll)cbrtl(x / 2); i++)
 		{
-			ll cubea = x - (i * i * i);
-
-			ll cubeb = cbrtl(cubea);
-
-			while (cubeb * cubeb * cubeb < cubea)cubeb++;
-			while (cubeb * cubeb * cubeb > cubea)cubeb--;
-
-			if (cubeb > 0 && cubeb * cubeb * cubeb == cubea) {
-				ok = true;
+			if (!(cbrtl(x - i * i * i) - (ll)cbrtl(x - i * i * i))) {
+				ok = true; break;
 			}
 		}
 
