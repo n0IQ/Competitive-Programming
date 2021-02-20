@@ -44,15 +44,28 @@ void solve()
 	string s;
 	cin >> s;
 
+	int n = s.length();
+
+	vector<char> c1;
+	vector<char> c2;
+	c1.pb('z');
+	c2.pb('z');
+
 	rep(i, s.length()) {
 		if (i % 2 == 0) {
-			if (s[i] < 97 || s[i] > 122) {
+			if (s[i] >= 97 && s[i] <= 122) {
+				continue;
+			}
+			else {
 				cout << "No" << '\n';
 				return;
 			}
 		}
 		else {
-			if (s[i] < 65 || s[i] > 90) {
+			if (s[i] >= 65 && s[i] <= 90) {
+				continue;
+			}
+			else {
 				cout << "No" << '\n';
 				return;
 			}
