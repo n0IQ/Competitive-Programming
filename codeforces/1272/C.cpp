@@ -53,24 +53,19 @@ void solve()
 		f[c - 'a' + 1]++;
 	}
 
-	ll ans = 0;
-	ll dp[n] = {0};
+	ll ans = 0, len = 0;
 
 	rep(i, n) {
-		if (f[s[i] - 'a' + 1] == 0) {
-			dp[i] = 0;
+		if (f[s[i] - 'a' + 1] >= 1) {
+			len++;
 		}
 		else {
-			if (i == 0) dp[i] = 1;
-			else {
-				dp[i] = dp[i - 1] + 1;
-			}
+			ans += len + ((len * (len - 1)) / 2);
+			len = 0;
 		}
 	}
 
-	rep(i, n) {
-		ans += dp[i];
-	}
+	ans += len + ((len * (len - 1)) / 2);
 
 	cout << ans << '\n';
 }
