@@ -69,18 +69,17 @@ void solve()
 		return;
 	}
 
-	int p1 = 0, p2 = 0;
-
 	repA(i, 1, n) {
-		if (!princess[i]) p1 = i;
+		if (!princess[i]) {
+			repA(j, 1, n) {
+				if (!prince[j]) {
+					cout << "IMPROVE\n";
+					cout << i << " " << j << '\n';
+					return;
+				}
+			}
+		}
 	}
-
-	repA(i, 1, n) {
-		if (!prince[i]) p2 = i;
-	}
-
-	cout << "IMPROVE\n";
-	cout << p1 << " " << p2 << '\n';
 }
 
 int main()
