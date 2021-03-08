@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF109419670": {
+    "contest_id": 732,
+    "language": "GNU C++17",
+    "path": "codeforces\\732\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Cormen --- The Best Friend Of a Man",
+    "problem_url": "https://codeforces.com/contest/732/problem/B",
+    "submission_id": "CF109419670",
+    "submission_url": "https://codeforces.com/contest/732/submission/109419670",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Mar/08/2021 23:32"
+  },
   "CF109489486": {
     "contest_id": 313,
     "language": "GNU C++17",
