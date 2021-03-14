@@ -34,33 +34,26 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-int dp[1000][1000];
-
-int joysticks(int a, int b)
-{
-	if (a <= 0 || b <= 0) {
-		return 0;
-	}
-
-	if (a <= 1 && b <= 1) {
-		return 0;
-	}
-
-	if (dp[a][b] != -1) {
-		return dp[a][b];
-	}
-
-	return dp[a][b] = max(1 + joysticks(a - 2, b + 1), 1 + joysticks(a + 1, b - 2));
-}
-
 void solve()
 {
 	int a, b;
 	cin >> a >> b;
 
-	mem1(dp);
+	int count = 0;
 
-	cout << joysticks(a, b) << '\n';
+	if (a == 1 && b == 1) {
+		cout << 0 << '\n';
+		return;
+	}
+
+	while (a > 0 && b > 0) {
+		count++;
+
+		if (a <= b) a++, b -= 2;
+		else b++, a -= 2;
+	}
+
+	cout << count << '\n';
 }
 
 int main()
