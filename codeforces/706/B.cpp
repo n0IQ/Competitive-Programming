@@ -34,24 +34,6 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-int search(vi v, int n, int x)
-{
-	int l = -1, r = n, mid = 0;
-
-	while (l + 1 < r) {
-		mid = (l + r) / 2;
-
-		if (v[mid] <= x) {
-			l = mid;
-		}
-		else {
-			r = mid;
-		}
-	}
-
-	return l + 1;
-}
-
 void solve()
 {
 	int n, q;
@@ -64,7 +46,11 @@ void solve()
 	cin >> q;
 	rep(i, 0, q) {
 		int x; cin >> x;
-		cout << search(v, n, x) << '\n';
+		auto it = v.begin();
+		auto it1 = ub(all(v), x);
+		ll ans = it1 - it;
+
+		cout << ans << '\n';
 	}
 }
 
