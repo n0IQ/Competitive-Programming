@@ -34,46 +34,37 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-const int N = 1e7;
-ll dp[N];
+int search(vi v, int n, int x)
+{
+	int l = -1, r = n, mid = 0;
+
+	while (l + 1 < r) {
+		mid = (l + r) / 2;
+
+		if (v[mid] <= x) {
+			l = mid;
+		}
+		else {
+			r = mid;
+		}
+	}
+
+	return l + 1;
+}
 
 void solve()
 {
 	int n, q;
 	cin >> n;
 
-	vi v(n + 1);
-	unordered_map<int, int> mp;
-	rep(i, 1, n + 1) {
-		cin >> v[i];
-		mp[v[i]]++;
-	}
-
+	vi v(n);
+	rep(i, 0, n) cin >> v[i];
 	sort(all(v));
-	int j = 1;
-
-	rep(i, 1, 1000000) {
-		if (j <= n && i == v[j]) {
-			dp[i] = mp[i] + dp[i - 1];
-			j += mp[i];
-		}
-		else {
-			dp[i] = dp[i - 1];
-		}
-	}
-
-	int largest = v[n];
 
 	cin >> q;
 	rep(i, 0, q) {
 		int x; cin >> x;
-
-		if (x > largest) {
-			cout << dp[largest] << '\n';
-		}
-		else {
-			cout << dp[x] << '\n';
-		}
+		cout << search(v, n, x) << '\n';
 	}
 }
 
