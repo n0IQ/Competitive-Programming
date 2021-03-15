@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF110022221": {
+    "contest_id": 1020,
+    "language": "GNU C++17",
+    "path": "codeforces\\1020\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Badge",
+    "problem_url": "https://codeforces.com/contest/1020/problem/B",
+    "submission_id": "CF110022221",
+    "submission_url": "https://codeforces.com/contest/1020/submission/110022221",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "graphs",
+      "*1000"
+    ],
+    "timestamp": "Mar/15/2021 14:38"
+  },
   "CF110052206": {
     "contest_id": 1033,
     "language": "GNU C++17",
