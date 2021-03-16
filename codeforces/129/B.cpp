@@ -36,8 +36,6 @@ typedef pair<ll, ll> pll;
 
 vvi adj;
 vb visited;
-vi degree;
-deque<int> q;
 
 void solve()
 {
@@ -45,45 +43,44 @@ void solve()
 	cin >> n >> m;
 
 	adj.resize(n + 1);
-	degree.assign(n + 1, 0);
+	visited.assign(n + 1, false);
 
 	rep(i, 0, m) {
 		int u, v; cin >> u >> v;
-		adj[u].pb(v), adj[v].pb(u);
-		degree[u]++, degree[v]++;
+		adj[u].pb(v);
+		adj[v].pb(u);
 	}
 
-	int ans = 0, u = 0, v = 0;
+	int count = 0, u = 0, v = 0;
+	bool ok = false;
+	queue<pii> q;
 
 	while (1) {
-		visited.assign(n + 1, false);
+		ok = false;
 
 		rep(i, 1, n + 1) {
-			if (degree[i] == 1) {
+			if (sz(adj[i]) == 1 && !visited[i]) {
+				ok = true;
+				v = adj[i][0];
 				visited[i] = true;
-				q.pb(i);
+				q.push({i, v});
 			}
 		}
 
-		if (q.empty()) break;
-		ans++;
+		if (!ok) break;
 
 		while (!q.empty()) {
-			int u = q.front();
-			q.pop_front();
+			u = q.front().ff, v = q.front().ss;
+			q.pop();
 
-			degree[u]--;
-			visited[u] = true;
-
-			for (auto v : adj[u]) {
-				if (!visited[v]) {
-					degree[v]--;
-				}
-			}
+			auto it = find(adj[v].begin(), adj[v].end(), u);
+			adj[v].erase(it);
 		}
+
+		count++;
 	}
 
-	cout << ans << '\n';
+	cout << count << '\n';
 }
 
 int main()
