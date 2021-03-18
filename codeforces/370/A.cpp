@@ -44,11 +44,47 @@ void solve()
 	if (x1 == x2 || y1 == y2) rook = 1;
 	else rook = 2;
 
-	if ((x1 + y1) % 2 != (x2 + y2) % 2) bishop = 0;
-	else if (x1 + y1 == x2 + y2 || (x1 - x2) == (y1 - y2)) bishop = 1;
-	else bishop = 2;
-
 	king = max(abs(x1 - x2), abs(y1 - y2));
+
+	if ((x1 + y1) % 2 != (x2 + y2) % 2) {
+		cout << rook << " " << bishop << " " << king << '\n';
+		return;
+	}
+	else {
+		for (int i = x1, j = y1; i >= 1 && j <= 8; i--, j++) {
+			if (i == x2 && j == y2) {
+				bishop = 1;
+				cout << rook << " " << bishop << " " << king << '\n';
+				return;
+			}
+		}
+
+		for (int i = x1, j = y1; i <= 8 && j <= 8; i++, j++) {
+			if (i == x2 && j == y2) {
+				bishop = 1;
+				cout << rook << " " << bishop << " " << king << '\n';
+				return;
+			}
+		}
+
+		for (int i = x1, j = y1; i >= 1 && j >= 1; i--, j--) {
+			if (i == x2 && j == y2) {
+				bishop = 1;
+				cout << rook << " " << bishop << " " << king << '\n';
+				return;
+			}
+		}
+
+		for (int i = x1, j = y1; i <= 8 && j >= 1; i++, j--) {
+			if (i == x2 && j == y2) {
+				bishop = 1;
+				cout << rook << " " << bishop << " " << king << '\n';
+				return;
+			}
+		}
+
+		bishop = 2;
+	}
 
 	cout << rook << " " << bishop << " " << king << '\n';
 }
