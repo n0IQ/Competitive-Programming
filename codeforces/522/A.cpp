@@ -64,6 +64,16 @@ void solve()
 		adj[mp[s3]].pb(mp[s1]);
 	}
 
+	/*rep(i, 1, n + 1) {
+		cout << i << "-> ";
+
+		for (auto v : adj[i]) {
+			cout << v << " ";
+		}
+
+		cout << '\n';
+	}*/
+
 	dfs(1, 1);
 	cout << ans << '\n';
 }
