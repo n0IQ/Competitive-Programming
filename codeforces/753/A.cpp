@@ -36,36 +36,20 @@ typedef pair<ll, ll> pll;
 
 void solve()
 {
-	int n;
+	int n, i = 1;
 	cin >> n;
 
-	int a[n], dp[n + 1][n + 1];
-	rep(i, 0, n) a[i] = i + 1;
-
-	rep(i, 0, n + 1) {
-		rep(j, 0, n + 1) {
-			if (i == 0 || j == 0) dp[i][j] = 0;
-			else if (a[i - 1] <= j) {
-				dp[i][j] = max(1 + dp[i - 1][j - a[i - 1]], dp[i - 1][j]);
-			}
-			else {
-				dp[i][j] = dp[i - 1][j];
-			}
-		}
-	}
-
-	int j = n;
 	vi ans;
 
-	for (int i = 1; i <= j; ) {
+	while (n >= i) {
 		ans.pb(i);
-		j -= i;
+		n -= i;
 		i++;
 	}
 
-	ans.back() += j;
+	ans.back() += n;
 
-	cout << dp[n][n] << '\n';
+	cout << sz(ans) << '\n';
 	for (auto x : ans) {
 		cout << x << " ";
 	}
