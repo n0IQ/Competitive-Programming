@@ -34,8 +34,6 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-ll dp[10001];
-
 ll calc(ll n)
 {
 	ll sum = 0;
@@ -52,17 +50,12 @@ void solve()
 	ll n, ans = 18;
 	cin >> n;
 
-	ll i = n, j = 1;
-
-	while (i != 0) {
+	while (n != 0) {
 		ans++;
-		if (calc(ans) == 10) {
-			dp[j] = ans;
-			j++, i--;
-		}
+		if (calc(ans) == 10) n--;
 	}
 
-	cout << dp[n] << '\n';
+	cout << ans << '\n';
 }
 
 int main()
