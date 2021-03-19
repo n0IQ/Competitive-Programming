@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF110432194": {
+    "contest_id": 753,
+    "language": "GNU C++17",
+    "path": "codeforces\\753\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Santa Claus and Candies",
+    "problem_url": "https://codeforces.com/contest/753/problem/A",
+    "submission_id": "CF110432194",
+    "submission_url": "https://codeforces.com/contest/753/submission/110432194",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Mar/19/2021 14:23"
+  },
   "CF110441117": {
     "contest_id": 729,
     "language": "GNU C++17",
