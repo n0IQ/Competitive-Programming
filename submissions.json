@@ -1,4 +1,20 @@
 {
+  "AC21065852": {
+    "contest_id": "abc196",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc196\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Difference Max",
+    "problem_url": "https://atcoder.jp/contests/abc196/tasks/abc196_a",
+    "submission_id": "AC21065852",
+    "submission_url": "https://atcoder.jp/contests/abc196/submissions/21065852",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/20/2021 17:33"
+  },
   "AC21077661": {
     "contest_id": "abc196",
     "language": "C++ (GCC 9.2.1)",
