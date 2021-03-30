@@ -53,21 +53,16 @@ void solve()
 		else p[i] = 0;
 	}
 
-	int dp[sz(v) + 1][b + 1];
+	sort(all(v));
 
-	rep(i, 0, sz(v) + 1) {
-		rep(j, 0, b + 1) {
-			if (i == 0 || j == 0) dp[i][j] = 0;
-			else if (v[i - 1] <= j) {
-				dp[i][j] = max(1 + dp[i - 1][j - v[i - 1]], dp[i - 1][j]);
-			}
-			else {
-				dp[i][j] = dp[i - 1][j];
-			}
+	rep(i, 0, sz(v)) {
+		if (v[i] <= b) {
+			ans++;
+			b -= v[i];
 		}
 	}
 
-	cout << dp[sz(v)][b] << '\n';
+	cout << ans << '\n';
 }
 
 int main()
