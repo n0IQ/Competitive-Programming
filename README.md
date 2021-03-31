@@ -1052,7 +1052,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 109 | [B - DMCA](https://codeforces.com/contest/1505/problem/B) | [GNU C++17](./codeforces/1505/B.cpp) | `*special problem` `implementation` `number theory` `*1600` | Apr/01/2021 22:25 | 
 108 | [C - Fibonacci Words](https://codeforces.com/contest/1505/problem/C) | [GNU C++17](./codeforces/1505/C.cpp) | `*special problem` `implementation` `*1400` | Apr/01/2021 21:08 | 
 107 | [A - Is it rated - 2](https://codeforces.com/contest/1505/problem/A) | [GNU C++17](./codeforces/1505/A.cpp) | `*special problem` `implementation` `interactive` `*900` | Apr/01/2021 20:44 | 
-106 | [B - Block Adventure](https://codeforces.com/contest/1200/problem/B) | [GNU C++17](./codeforces/1200/B.cpp) | `dp` `greedy` `*1200` | Apr/01/2021 01:27 | 
+106 | [B - Block Adventure](https://codeforces.com/contest/1200/problem/B) | [GNU C++17](./codeforces/1200/B.cpp) | `dp` `greedy` `*1200` | Apr/01/2021 01:52 | 
 105 | [B - Lecture Sleep](https://codeforces.com/contest/961/problem/B) | [GNU C++17](./codeforces/961/B.cpp) | `data structures` `dp` `implementation` `two pointers` `*1200` | Mar/31/2021 03:36 | 
 104 | [B - Cutting](https://codeforces.com/contest/998/problem/B) | [GNU C++17](./codeforces/998/B.cpp) | `dp` `greedy` `sortings` `*1200` | Mar/31/2021 01:13 | 
 103 | [B - Creating the Contest](https://codeforces.com/contest/1029/problem/B) | [GNU C++17](./codeforces/1029/B.cpp) | `dp` `greedy` `math` `*1200` | Mar/30/2021 22:03 | 

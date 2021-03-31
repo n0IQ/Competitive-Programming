@@ -34,24 +34,25 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
+int n, m, k, dp[101];
+
+bool calc(int a[], int i, int blocks)
+{
+	if (blocks < 0) return false;
+	if (i == n - 1) return true;
+
+	return calc(a, i + 1, blocks + a[i] - max(0, a[i + 1] - k));
+}
+
 void solve()
 {
-	int n, m, k;
 	cin >> n >> m >> k;
 
 	int a[n];
 	rep(i, 0, n) cin >> a[i];
 
-	rep(i, 0, n - 1) {
-		m += a[i] - max(0, a[i + 1] - k);
-
-		if (m < 0) {
-			cout << "NO" << '\n';
-			return;
-		}
-	}
-
-	cout << "YES" << '\n';
+	if (calc(a, 0, m)) cout << "YES" << '\n';
+	else cout << "NO" << '\n';
 }
 
 int main()
