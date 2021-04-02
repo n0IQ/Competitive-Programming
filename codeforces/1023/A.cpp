@@ -36,28 +36,66 @@ typedef pair<ll, ll> pll;
 
 void solve()
 {
-	int n, m, indx = -1;
-	string s, t;
+	int n, m, j = 0;
+	string s, t, temp;
 	cin >> n >> m >> s >> t;
+	bool ok = false;
 
 	rep(i, 0, n) {
-		if (s[i] == '*') indx = i;
+		if (s[i] != '*') temp.pb(s[i]);
+		else j = i, ok = true;
 	}
 
-	if (indx == -1) {
-		(s == t ? cout << "YES" : cout << "NO");
-		return;
-	}
-
-	int rem = m - (n - 1);
-	if (rem < 0) {
+	if (!ok && s != t) {
 		cout << "NO" << '\n';
 		return;
 	}
 
-	s = s.substr(0, indx) + t.substr(indx, rem) + s.substr(indx + 1, n - indx - 1);
+	if (temp == t) {
+		cout << "YES" << '\n';
+		return;
+	}
 
-	s == t ? cout << "YES" : cout << "NO";
+	if (n > m) {
+		cout << "NO" << '\n';
+		return;
+	}
+
+	int index1 = 0, index2 = 0, k = m - 1;
+
+	temp = "";
+	ok = false;
+
+	rep(i, 0, j) {
+		if (s[i] != t[i]) {
+			index1 = i;
+			ok = true;
+			break;
+		}
+	}
+
+	if (!ok) {
+		index1 = j;
+	}
+
+	for (int i = n - 1; i > j; i--, k--) {
+		if (s[i] != t[k]) {
+			cout << "NO" << '\n';
+			return;
+		}
+	}
+
+	rep(i, index1, k + 1) {
+		temp.pb(t[i]);
+	}
+
+	string ans;
+	rep(i, 0, j)ans.pb(s[i]);
+	ans += temp;
+	rep(i, j + 1, n)ans.pb(s[i]);
+
+	if (ans == t)cout << "YES" << '\n';
+	else cout << "NO" << '\n';
 }
 
 int main()
