@@ -34,31 +34,69 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-bool checkpalindrome(string s)
-{
-	int n = s.length();
-
-	rep(i, 0, n) {
-		if (s[i] != s[n - i - 1]) return false;
-	}
-
-	return true;
-}
-
 void solve()
 {
 	string s;
 	cin >> s;
 
-	if (!checkpalindrome(s + 'a')) {
-		cout << "YES" << '\n' << s << 'a' << '\n';
+	int n = s.length();
+
+	if (n == 1) {
+		if (s[0] == 'a') {
+			cout << "NO" << '\n';
+		}
+		else {
+			s += "a";
+			cout << "YES" << '\n';
+			cout << s << '\n';
+		}
+
+		return;
 	}
-	else if (!checkpalindrome('a' + s)) {
-		cout << "YES" << '\n' << 'a' << s << '\n';
+
+	bool ok = false;
+	rep(i, 0, n) {
+		if (s[i] != 'a') {
+			ok = true;
+			break;
+		}
+	}
+
+	if (!ok) {
+		cout << "NO" << '\n';
+		return;
+	}
+
+	if (s[0] == s[n - 1]) {
+		if (s[0] == 'a') {
+			int cnt1 = 0, cnt2 = 0;
+			rep(i, 0, n) {
+				if (s[i] != 'a') break;
+				cnt1++;
+			}
+			repR(i, n - 1, 0) {
+				if (s[i] != 'a') break;
+				cnt2++;
+			}
+
+			if (cnt1 >= cnt2) {
+				s.insert(0, "a");
+			}
+			else {
+				s.insert(n - 1, "a");
+			}
+		}
+		else s.insert(0, "a");
 	}
 	else {
-		cout << "NO" << '\n';
+		if (s[0] == 'a') {
+			s.insert(1, "a");
+		}
+		else s.insert(n - 1, "a");
 	}
+
+	cout << "YES" << '\n';
+	cout << s << '\n';
 }
 
 int main()
