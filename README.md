@@ -1034,7 +1034,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 126 | [C - Omkar and Waterslide](https://codeforces.com/contest/1392/problem/C) | [GNU C++17](./codeforces/1392/C.cpp) | `greedy` `implementation` `*1200` | Apr/08/2021 16:09 | 
 125 | [B - Flip the Bits](https://codeforces.com/contest/1504/problem/B) | [GNU C++17](./codeforces/1504/B.cpp) | `constructive algorithms` `greedy` `implementation` `math` `*1200` | Apr/07/2021 21:08 | 
 124 | [C - Make It Good](https://codeforces.com/contest/1385/problem/C) | [GNU C++17](./codeforces/1385/C.cpp) | `greedy` `*1200` | Apr/07/2021 01:57 | 
-123 | [C - Yet Another Array Restoration](https://codeforces.com/contest/1409/problem/C) | [GNU C++17](./codeforces/1409/C.cpp) | `brute force` `math` `number theory` `*1200` | Apr/07/2021 00:57 | 
+123 | [C - Yet Another Array Restoration](https://codeforces.com/contest/1409/problem/C) | [GNU C++17](./codeforces/1409/C.cpp) | `brute force` `math` `number theory` `*1200` | Apr/07/2021 01:20 | 
 122 | [C - Ternary XOR](https://codeforces.com/contest/1328/problem/C) | [GNU C++17](./codeforces/1328/C.cpp) | `greedy` `implementation` `*1200` | Apr/04/2021 23:01 | 
 121 | [B - Tanya and Candies](https://codeforces.com/contest/1118/problem/B) | [GNU C++17](./codeforces/1118/B.cpp) | `implementation` `*1200` | Apr/04/2021 17:45 | 
 120 | [A -  Déjà Vu](https://codeforces.com/contest/1504/problem/A) | [GNU C++17](./codeforces/1504/A.cpp) | `constructive algorithms` `strings` `*800` | Apr/04/2021 15:34 | 

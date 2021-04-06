@@ -39,54 +39,22 @@ void solve()
 	int n, x, y;
 	cin >> n >> x >> y;
 
-	int i = 1, diff = 1;
+	int diff = y - x;
 
-	while (1) {
-		int start = x, count = n - 1;
+	rep(i, 1, diff + 1) {
+		if (diff % i) continue;
+		if (diff / i + 1 > n) continue;
 
-		while (start < y && count > 0) {
-			start += i;
-			count--;
+		int k = min((y - 1) / i, n - 1);
+		int a0 = y - k * i;
+
+		rep(j, 0, n) {
+			cout << a0 + j*i << " ";
 		}
 
-		if (start == y) {
-			diff = i;
-			break;
-		}
-
-		i++;
+		cout << '\n';
+		return;
 	}
-
-	n -= 2;
-	int temp = x + diff;
-
-	cout << x << " ";
-
-	while (temp != y) {
-		cout << temp << " ";
-		n--;
-		temp += diff;
-	}
-
-	cout << y << " ";
-
-	temp = x;
-
-	while (n > 0 && temp - diff > 0) {
-		temp -= diff;
-		cout << temp << " ";
-		n--;
-	}
-
-	temp = y;
-
-	while (n > 0) {
-		temp += diff;
-		cout << temp << " ";
-		n--;
-	}
-
-	cout << '\n';
 }
 
 int main()
