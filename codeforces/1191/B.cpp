@@ -57,34 +57,61 @@ void solve()
 
 	if (ismentsu(a, b, c)) {
 		cout << 0 << '\n';
-		return;
 	}
-
-	vs v;
-	rep(i, 1, 10) {
-		string s;
-		s += (char)(i + '0');
-		v.pb(s + 'm');
-		v.pb(s + 'p');
-		v.pb(s + 's');
+	else if (a[1] != b[1] && a[1] != c[1] && b[1] != c[1]) {
+		cout << 2 << '\n';
 	}
+	else {
+		map<char, int> mp;
+		mp[a[1]]++; mp[b[1]]++, mp[c[1]]++;
+		int arr[3] = {100, 100, 100};
 
-	for (auto s : v) {
-		if (ismentsu(s, a, b)) {
-			cout << 1 << '\n';
-			return;
+		if (mp['m'] >= 2) {
+			if (a[1] == 'm') arr[0] = a[0] - '0';
+			if (b[1] == 'm') arr[1] = b[0] - '0';
+			if (c[1] == 'm') arr[2] = c[0] - '0';
+			sort(arr, arr + 3);
+			//cout << arr[0] << " " << arr[1] << " " << arr[2] << '\n';
+
+			if ((arr[0] + 1 == arr[1]) || (arr[0] + 2 == arr[1]) || (arr[1] + 1 == arr[2]) || (arr[1] + 2 == arr[2]) || (arr[0] == arr[1]) || (arr[1] == arr[2]) || (arr[0] == arr[2])) {
+				cout << 1 << '\n';
+			}
+			else {
+				cout << 2 << '\n';
+			}
 		}
-		if (ismentsu(s, a, c)) {
-			cout << 1 << '\n';
-			return;
+		else if ((mp['p'] >= 2)) {
+			if (a[1] == 'p') arr[0] = a[0] - '0';
+			if (b[1] == 'p') arr[1] = b[0] - '0';
+			if (c[1] == 'p') arr[2] = c[0] - '0';
+			sort(arr, arr + 3);
+			//cout << arr[0] << " " << arr[1] << " " << arr[2] << '\n';
+
+			if ((arr[0] + 1 == arr[1]) || (arr[0] + 2 == arr[1]) || (arr[1] + 1 == arr[2]) || (arr[1] + 2 == arr[2]) || (arr[0] == arr[1]) || (arr[1] == arr[2]) || (arr[0] == arr[2])) {
+				cout << 1 << '\n';
+			}
+			else {
+				cout << 2 << '\n';
+			}
 		}
-		if (ismentsu(s, b, c)) {
-			cout << 1 << '\n';
-			return;
+		else if ((mp['s'] >= 2)) {
+			if (a[1] == 's') arr[0] = a[0] - '0';
+			if (b[1] == 's') arr[1] = b[0] - '0';
+			if (c[1] == 's') arr[2] = c[0] - '0';
+			sort(arr, arr + 3);
+			//cout << arr[0] << " " << arr[1] << " " << arr[2] << '\n';
+
+			if ((arr[0] + 1 == arr[1]) || (arr[0] + 2 == arr[1]) || (arr[1] + 1 == arr[2]) || (arr[1] + 2 == arr[2]) || (arr[0] == arr[1]) || (arr[1] == arr[2]) || (arr[0] == arr[2])) { // 1 8 8
+				cout << 1 << '\n';
+			}
+			else {
+				cout << 2 << '\n';
+			}
+		}
+		else {
+			cout << 2 << '\n';
 		}
 	}
-
-	cout << 2 << '\n';
 }
 
 int main()
