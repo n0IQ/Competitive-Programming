@@ -51,8 +51,8 @@ void solve()
 		return;
 	}
 
-	sort(a, a + n);
-	ll mn = a[0], extra = 0;
+	sort(a, a + n, greater<ll>());
+	ll mn = a[n - 1], extra = 0;
 
 	rep(i, 0, n) {
 		extra += a[i] - mn;
