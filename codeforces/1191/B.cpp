@@ -34,10 +34,14 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-bool ismentsu(string a, string b, string c)
+bool iskoutsu(string a, string b, string c)
 {
 	if (a == b && a == c) return true;
+	return false;
+}
 
+bool isshuntsu(string a, string b, string c)
+{
 	int arr[3] = {a[0], b[0], c[0]};
 	sort(arr, arr + 3);
 
@@ -55,7 +59,7 @@ void solve()
 	string a, b, c;
 	cin >> a >> b >> c;
 
-	if (ismentsu(a, b, c)) {
+	if (iskoutsu(a, b, c) || isshuntsu(a, b, c)) {
 		cout << 0 << '\n';
 	}
 	else if (a[1] != b[1] && a[1] != c[1] && b[1] != c[1]) {
