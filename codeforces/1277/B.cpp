@@ -42,7 +42,7 @@ void solve()
 	cin >> n;
 
 	int a[n];
-	map<int, int> mp;
+	unordered_map<int, int> mp;
 	rep(i, 0, n) cin >> a[i];
 	sort(a, a + n, greater<int>());
 
