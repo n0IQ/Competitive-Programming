@@ -3615,6 +3615,23 @@
     ],
     "timestamp": "Apr/11/2021 03:01"
   },
+  "CF113430607": {
+    "contest_id": 1133,
+    "language": "GNU C++17",
+    "path": "codeforces\\1133\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Balanced Team",
+    "problem_url": "https://codeforces.com/contest/1133/problem/C",
+    "submission_id": "CF113430607",
+    "submission_url": "https://codeforces.com/contest/1133/submission/113430607",
+    "tags": [
+      "sortings",
+      "two pointers",
+      "*1200"
+    ],
+    "timestamp": "Apr/18/2021 22:07"
+  },
   "CF113442930": {
     "contest_id": 1140,
     "language": "GNU C++17",
