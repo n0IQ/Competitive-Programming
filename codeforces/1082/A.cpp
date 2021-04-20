@@ -34,35 +34,71 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-ll n, x, y, d;
-
-ll dist(ll x, ll y)
-{
-	return (abs(x - y) + (d - 1)) / d;
-}
-
 void solve()
 {
+	ll n, x, y, d;
 	cin >> n >> x >> y >> d;
 
-	ll len = abs(x - y), res = LLONG_MAX;
+	if (y >= x) {
+		if ((y - x) % d == 0) {
+			cout << (y - x) / d << '\n';
+			return;
+		}
 
-	if (len % d == 0) {
-		res = min(res, dist(x, y));
+		ll t1 = LLONG_MAX, t2 = LLONG_MAX;
+		bool ok1 = false, ok2 = false;
+
+		if ((y - 1) % d == 0) {
+			ok1 = true;
+			ll temp = x - 1;
+			(temp % d == 0 ? temp = temp / d : temp = (temp / d) + 1);
+			t1 = temp + ((y - 1) / d);
+		}
+
+		if ((n - y) % d == 0) {
+			ok2 = true;
+			ll temp = n - x;
+			(temp % d == 0 ? temp = temp / d : temp = (temp / d) + 1);
+			t2 = temp + ((n - y) / d);
+		}
+
+		if (ok1 || ok2) {
+			cout << min(t1, t2) << '\n';
+			return;
+		}
+
+		cout << -1 << '\n';
 	}
+	else {
+		if ((x - y) % d == 0) {
+			cout << (x - y) / d << '\n';
+			return;
+		}
 
-	len = y - 1;
-	if (len % d == 0) {
-		res = min(res, dist(x, 1) + dist(1, y));
+		ll t1 = LLONG_MAX, t2 = LLONG_MAX;
+		bool ok1 = false, ok2 = false;
+
+		if ((y - 1) % d == 0) {
+			ok1 = true;
+			ll temp = x - 1;
+			(temp % d == 0 ? temp = temp / d : temp = (temp / d) + 1);
+			t1 = temp + ((y - 1) / d);
+		}
+
+		if ((n - y) % d == 0) {
+			ok2 = true;
+			ll temp = n - x;
+			(temp % d == 0 ? temp = temp / d : temp = (temp / d) + 1);
+			t2 = temp + ((n - y) / d);
+		}
+
+		if (ok1 || ok2) {
+			cout << min(t1, t2) << '\n';
+			return;
+		}
+
+		cout << -1 << '\n';
 	}
-
-	len = n - y;
-	if (len % d == 0) {
-		res = min(res, dist(x, n) + dist(n, y));
-	}
-
-	if (res == LLONG_MAX) cout << -1 << '\n';
-	else cout << res << '\n';
 }
 
 int main()
