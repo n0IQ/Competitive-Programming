@@ -39,29 +39,59 @@ void solve()
 	string s;
 	cin >> s;
 
-	int l = 0, r = sz(s) - 1;
-	vi li, ri;
+	int n = sz(s), ans = 0;
+	vi v;
 
-	while (l < r) {
-		while (l < sz(s) && s[l] == ')') l++;
-		while (r >= 0  && s[r] == '(') r--;
-
-		if (l < sz(s) && r >= 0 && l < r) {
-			li.pb(l + 1); ri.pb(r + 1);
-			l++; r--;
+	while (1) {
+		int pref[n] = {0}, suff[n] = {0}, cnt = 0;
+		rep(i, 0, n) {
+			if (s[i] == '(') pref[i] = ++cnt;
 		}
+		cnt = 0;
+		repR(i, n - 1 , 0) {
+			if (s[i] == ')') suff[i] = ++cnt;
+		}
+
+		int x1 = -1, x2 = -1;
+
+		repR(i, n - 1, 0) {
+			if (pref[i] == 0) continue;
+
+			if (pref[i] > 0) {
+				x1 = i;
+				int num = pref[i];
+
+				rep(j, 0, n) {
+					if (suff[j] == num) x2 = j;
+				}
+			}
+
+			if (x1 < x2) break;
+			else x1 = x2 = -1;
+		}
+
+		if (x1 == -1 || x2 == -1) {
+			cout << 0 << '\n';
+			return;
+		}
+
+		rep(i, 0, x1 + 1) {
+			if (pref[i] > 0) v.pb(i);
+		}
+
+		repR(i, n - 1, x2) {
+			if (suff[i] > 0)v.pb(i);
+		}
+
+		sort(all(v));
+
+		ans++;
+		break;
 	}
 
-	if (li.empty()) {
-		cout << 0 << '\n';
-		return;
-	}
-
-	cout << 1 << '\n';
-	cout << sz(li) * 2 << '\n';
-	for (auto x : li) cout << x << " ";
-	reverse(all(ri));
-	for (auto x : ri) cout << x << " ";
+	cout << ans << '\n';
+	cout << sz(v) << '\n';
+	for (auto x : v) cout << x + 1 << " ";
 	cout << '\n';
 }
 
