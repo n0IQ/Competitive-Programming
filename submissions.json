@@ -1,4 +1,20 @@
 {
+  "AC22101014": {
+    "contest_id": "abc046",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc046\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Painting Balls with AtCoDeer",
+    "problem_url": "https://atcoder.jp/contests/abc046/tasks/abc046_b",
+    "submission_id": "AC22101014",
+    "submission_url": "https://atcoder.jp/contests/abc046/submissions/22101014",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/27/2021 03:48"
+  },
   "AC22117010": {
     "contest_id": "abc048",
     "language": "C++ (GCC 9.2.1)",
