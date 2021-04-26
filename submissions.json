@@ -1,4 +1,20 @@
 {
+  "AC22100884": {
+    "contest_id": "abc045",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc045\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Card Game for Three (ABC Edit)",
+    "problem_url": "https://atcoder.jp/contests/abc045/tasks/abc045_b",
+    "submission_id": "AC22100884",
+    "submission_url": "https://atcoder.jp/contests/abc045/submissions/22100884",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/27/2021 03:11"
+  },
   "AC22101014": {
     "contest_id": "abc046",
     "language": "C++ (GCC 9.2.1)",
