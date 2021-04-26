@@ -1,4 +1,20 @@
 {
+  "AC22100774": {
+    "contest_id": "abc042",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc042\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Iroha Loves Strings (ABC Edition)",
+    "problem_url": "https://atcoder.jp/contests/abc042/tasks/abc042_b",
+    "submission_id": "AC22100774",
+    "submission_url": "https://atcoder.jp/contests/abc042/submissions/22100774",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/27/2021 02:39"
+  },
   "AC22100793": {
     "contest_id": "abc043",
     "language": "C++ (GCC 9.2.1)",
