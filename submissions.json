@@ -1,4 +1,20 @@
 {
+  "AC22117010": {
+    "contest_id": "abc048",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc048\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Between a and b ...",
+    "problem_url": "https://atcoder.jp/contests/abc048/tasks/abc048_b",
+    "submission_id": "AC22117010",
+    "submission_url": "https://atcoder.jp/contests/abc048/submissions/22117010",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Apr/27/2021 19:55"
+  },
   "AC22398911": {
     "contest_id": "abc200",
     "language": "C++ (GCC 9.2.1)",
