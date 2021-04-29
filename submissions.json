@@ -3615,6 +3615,22 @@
     ],
     "timestamp": "Apr/11/2021 03:01"
   },
+  "CF114550854": {
+    "contest_id": 1519,
+    "language": "GNU C++17",
+    "path": "codeforces\\1519\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Red and Blue Beans",
+    "problem_url": "https://codeforces.com/contest/1519/problem/A",
+    "submission_id": "CF114550854",
+    "submission_url": "https://codeforces.com/contest/1519/submission/114550854",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Apr/29/2021 20:15"
+  },
   "CF114569367": {
     "contest_id": 1519,
     "language": "GNU C++17",
