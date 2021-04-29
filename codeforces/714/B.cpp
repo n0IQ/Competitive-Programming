@@ -39,26 +39,36 @@ void solve()
 	int n;
 	cin >> n;
 
+	int a[n];
 	map<int, int> mp;
-	vi v;
 	rep(i, 0, n) {
-		int x; cin >> x;
-		if (mp.find(x) == mp.end()) {
-			mp[x]++;
-			v.pb(x);
-		}
+		cin >> a[i];
+		mp[a[i]]++;
 	}
 
-	if (sz(mp) < 3) cout << "YES";
+	sort(a, a + n);
+
+	if (sz(mp) <= 2) cout << "YES" << '\n';
 	else if (sz(mp) < 4) {
-		sort(all(v));
-		int a = v[0], b = v[1], c = v[2];
+		ll l = a[0], r = a[n - 1];
 
-		if (2 * 1LL * b == a + c) cout << "YES";
-		else cout << "NO";
+		if ((r - l) % 2 == 0) {
+			ll x = l + (r - l) / 2;
+
+			rep(i, 0, n) {
+				if (a[i] != l && a[i] != r && a[i] != x) {
+					cout << "NO" << '\n';
+					return;
+				}
+			}
+
+			cout << "YES" << '\n';
+		}
+		else cout << "NO" << '\n';
 	}
-	else cout << "NO";
-	cout << '\n';
+	else {
+		cout << "NO" << '\n';
+	}
 }
 
 int main()
