@@ -34,32 +34,20 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-const int N = 2 * 1e5;
-bool rows[N + 1], cols[N + 1];
-
 void solve()
 {
 	int n, m;
 	cin >> n >> m;
 
 	ll cells = n * 1LL * n;
-	ll r = 0LL, c = 0LL;
+	ll cnt;
+	set<int> s1; set<int> s2;
 
 	while (m-- > 0) {
 		int x, y; cin >> x >> y;
-
-		if (!rows[x]) {
-			cells -= (n - c);
-			r++;
-			rows[x] = 1;
-		}
-		if (!cols[y]) {
-			cells -= (n - r);
-			c++;
-			cols[y] = 1;
-		}
-
-		cout << cells << " ";
+		s1.insert(x), s2.insert(y);
+		cnt = ((sz(s1) * 1LL * n) + (sz(s2) * 1LL * n)) - (sz(s1) * 1LL * sz(s2));
+		cout << cells - cnt << " ";
 	}
 }
 
