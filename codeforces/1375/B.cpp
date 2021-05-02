@@ -34,54 +34,45 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-int n, m;
-int a[501][501];
-
-bool check()
-{
-	rep(i, 0, n) {
-		rep(j, 0, m) {
-			if ((i == 0 && j == 0) || (i == 0 && j == m - 1) || (i == n - 1 && j == 0) || (i == n - 1 && j == m - 1)) {
-				if (a[i][j] > 2) {
-					return false;
-				}
-			}
-			if (i == 0 || i == n - 1) {
-				if (a[i][j] > 3) {
-					return false;
-				}
-			}
-			if (j == 0 || j == m - 1) {
-				if (a[i][j] > 3) {
-					return false;
-				}
-			}
-			else {
-				if (a[i][j] > 4) {
-					return false;
-				}
-			}
-		}
-	}
-
-	return true;
-}
-
 void solve()
 {
+	int n, m;
 	cin >> n >> m;
+	int a[n][m];
 	rep(i, 0, n) {
 		rep(j, 0, m) {
 			cin >> a[i][j];
 		}
 	}
 
-	if (!check()) {
-		cout << "NO" << '\n';
-		return;
+	rep(i, 0, n) {
+		rep(j, 0, m) {
+			if ((i == 0 && j == 0) || (i == 0 && j == m - 1) || (i == n - 1 && j == 0) || (i == n - 1 && j == m - 1)) {
+				if (a[i][j] > 2) {
+					cout << "NO" << '\n';
+					return;
+				}
+			}
+			if (i == 0 || i == n - 1) {
+				if (a[i][j] > 3) {
+					cout << "NO" << '\n';
+					return;
+				}
+			}
+			if (j == 0 || j == m - 1) {
+				if (a[i][j] > 3) {
+					cout << "NO" << '\n';
+					return;
+				}
+			}
+			else {
+				if (a[i][j] > 4) {
+					cout << "NO" << '\n';
+					return;
+				}
+			}
+		}
 	}
-
-	cout << "YES" << '\n';
 
 	rep(i, 0, n) {
 		rep(j, 0, m) {
@@ -91,6 +82,8 @@ void solve()
 			else a[i][j] = 4;
 		}
 	}
+
+	cout << "YES" << '\n';
 
 	rep(i, 0, n) {
 		rep(j, 0, m) {
