@@ -34,24 +34,51 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
+bool check(ll n)
+{
+	while (n != 1) {
+		if (n % 2 != 0) return false;
+		n /= 2;
+	}
+
+	return true;
+}
+
 void solve()
 {
 
-	ll n, cnt2 = 0LL, cnt3 = 0LL;
+	ll n, cnt = 0LL;
 	cin >> n;
 
-	while (n % 2 == 0) {
-		n /= 2;
-		cnt2++;
-	}
+	while (1) {
+		if (n == 1) {
+			cout << cnt << '\n';
+			return;
+		}
 
-	while (n % 3 == 0) {
-		n /= 3;
-		cnt3++;
-	}
+		if (check(n)) {
+			cout << -1 << '\n';
+			return;
+		}
 
-	if (n == 1 && cnt2 <= cnt3) cout << (2 * cnt3) - cnt2 << '\n';
-	else cout << -1 << '\n';
+		while (n % 6 == 0) {
+			n /= 6;
+			cnt++;
+		}
+
+		if (n == 1) {
+			cout << cnt << '\n';
+			return;
+		}
+
+		if (check(n) || n > 1e17) {
+			cout << -1 << '\n';
+			return;
+		}
+
+		n = n * 1LL * 2;
+		cnt++;
+	}
 }
 
 int main()
