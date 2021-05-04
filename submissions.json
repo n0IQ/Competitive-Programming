@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF115150875": {
+    "contest_id": 989,
+    "language": "GNU C++17",
+    "path": "codeforces\\989\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A Tide of Riverscape",
+    "problem_url": "https://codeforces.com/contest/989/problem/B",
+    "submission_id": "CF115150875",
+    "submission_url": "https://codeforces.com/contest/989/submission/115150875",
+    "tags": [
+      "constructive algorithms",
+      "strings",
+      "*1200"
+    ],
+    "timestamp": "May/05/2021 02:40"
+  },
   "CF115152565": {
     "contest_id": 959,
     "language": "GNU C++17",
