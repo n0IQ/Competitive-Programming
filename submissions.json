@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF115505339": {
+    "contest_id": 928,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\928\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Login Verification",
+    "problem_url": "https://codeforces.com/contest/928/problem/A",
+    "submission_id": "CF115505339",
+    "submission_url": "https://codeforces.com/contest/928/submission/115505339",
+    "tags": [
+      "*special problem",
+      "strings",
+      "*1200"
+    ],
+    "timestamp": "May/07/2021 16:39"
+  },
   "CF115517113": {
     "contest_id": 920,
     "language": "GNU C++17 (64)",
