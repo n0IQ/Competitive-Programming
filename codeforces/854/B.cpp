@@ -40,7 +40,12 @@ void solve()
 	cin >> n >> k;
 
 	if (k == 0 || k == n) cout << 0 << " " << 0 << '\n';
-	else cout << 1 << " " << min(n - k, 2 * 1LL * k) << '\n';
+	else if (n % 2 == 0) {
+		cout << 1 << " " << min(n - k, 2 * 1LL * k) << '\n';
+	}
+	else {
+		cout << 1 << " " << min(n - k, 2 * 1LL * k) << '\n';
+	}
 }
 
 int main()
