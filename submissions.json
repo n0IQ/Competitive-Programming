@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF115689773": {
+    "contest_id": 828,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\828\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Restaurant Tables",
+    "problem_url": "https://codeforces.com/contest/828/problem/A",
+    "submission_id": "CF115689773",
+    "submission_url": "https://codeforces.com/contest/828/submission/115689773",
+    "tags": [
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "May/08/2021 16:17"
+  },
   "CF115691537": {
     "contest_id": 787,
     "language": "GNU C++17 (64)",
