@@ -1951,6 +1951,26 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF115799362": {
+    "contest_id": 637,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\637\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Chat Order",
+    "problem_url": "https://codeforces.com/contest/637/problem/B",
+    "submission_id": "CF115799362",
+    "submission_url": "https://codeforces.com/contest/637/submission/115799362",
+    "tags": [
+      "*special problem",
+      "binary search",
+      "constructive algorithms",
+      "data structures",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "May/09/2021 20:44"
+  },
   "CF115961412": {
     "contest_id": 708,
     "language": "GNU C++17 (64)",
