@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF115796792": {
+    "contest_id": 625,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\625\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "War of the Corporations",
+    "problem_url": "https://codeforces.com/contest/625/problem/B",
+    "submission_id": "CF115796792",
+    "submission_url": "https://codeforces.com/contest/625/submission/115796792",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "strings",
+      "*1200"
+    ],
+    "timestamp": "May/09/2021 20:09"
+  },
   "CF115798798": {
     "contest_id": 612,
     "language": "GNU C++17 (64)",
