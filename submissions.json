@@ -4790,6 +4790,23 @@
     ],
     "timestamp": "May/11/2021 21:29"
   },
+  "CF115963115": {
+    "contest_id": 630,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\630\\R.cpp",
+    "platform": "Codeforces",
+    "problem_index": "R",
+    "problem_name": "Game",
+    "problem_url": "https://codeforces.com/contest/630/problem/R",
+    "submission_id": "CF115963115",
+    "submission_url": "https://codeforces.com/contest/630/submission/115963115",
+    "tags": [
+      "games",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "May/11/2021 21:51"
+  },
   "CF116038643": {
     "contest_id": 459,
     "language": "GNU C++17 (64)",
