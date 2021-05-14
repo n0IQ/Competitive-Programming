@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF116166241": {
+    "contest_id": 682,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\682\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Alyona and Mex",
+    "problem_url": "https://codeforces.com/contest/682/problem/B",
+    "submission_id": "CF116166241",
+    "submission_url": "https://codeforces.com/contest/682/submission/116166241",
+    "tags": [
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "May/14/2021 14:58"
+  },
   "CF116168144": {
     "contest_id": 660,
     "language": "GNU C++17 (64)",
