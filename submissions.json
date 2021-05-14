@@ -4827,6 +4827,22 @@
     ],
     "timestamp": "May/12/2021 22:19"
   },
+  "CF116164510": {
+    "contest_id": 639,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\639\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Bear and Displayed Friends",
+    "problem_url": "https://codeforces.com/contest/639/problem/A",
+    "submission_id": "CF116164510",
+    "submission_url": "https://codeforces.com/contest/639/submission/116164510",
+    "tags": [
+      "implementation",
+      "*1200"
+    ],
+    "timestamp": "May/14/2021 14:32"
+  },
   "CF116166241": {
     "contest_id": 682,
     "language": "GNU C++17 (64)",
