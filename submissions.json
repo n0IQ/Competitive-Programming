@@ -4999,6 +4999,22 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF116502899": {
+    "contest_id": 1255,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1255\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Changing Volume",
+    "problem_url": "https://codeforces.com/contest/1255/problem/A",
+    "submission_id": "CF116502899",
+    "submission_url": "https://codeforces.com/contest/1255/submission/116502899",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "May/17/2021 22:10"
+  },
   "CF116504084": {
     "contest_id": 1294,
     "language": "GNU C++17 (64)",
