@@ -4999,6 +4999,24 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF117031981": {
+    "contest_id": 765,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\765\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Code obfuscation",
+    "problem_url": "https://codeforces.com/contest/765/problem/B",
+    "submission_id": "CF117031981",
+    "submission_url": "https://codeforces.com/contest/765/submission/117031981",
+    "tags": [
+      "greedy",
+      "implementation",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "May/22/2021 21:44"
+  },
   "CF117172898": {
     "contest_id": 1100,
     "language": "GNU C++17 (64)",
