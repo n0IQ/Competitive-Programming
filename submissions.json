@@ -4999,6 +4999,23 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF117172898": {
+    "contest_id": 1100,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1100\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Build a Contest",
+    "problem_url": "https://codeforces.com/contest/1100/problem/B",
+    "submission_id": "CF117172898",
+    "submission_url": "https://codeforces.com/contest/1100/submission/117172898",
+    "tags": [
+      "data structures",
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "May/24/2021 18:09"
+  },
   "CF117178074": {
     "contest_id": 1077,
     "language": "GNU C++17 (64)",
