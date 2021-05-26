@@ -4999,6 +4999,23 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF117422697": {
+    "contest_id": 1139,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1139\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Chocolates",
+    "problem_url": "https://codeforces.com/contest/1139/problem/B",
+    "submission_id": "CF117422697",
+    "submission_url": "https://codeforces.com/contest/1139/submission/117422697",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*1000"
+    ],
+    "timestamp": "May/26/2021 20:55"
+  },
   "CF117493219": {
     "contest_id": 1497,
     "language": "GNU C++17 (64)",
