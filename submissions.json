@@ -4999,6 +4999,22 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF117535860": {
+    "contest_id": 545,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\545\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Equidistant String",
+    "problem_url": "https://codeforces.com/contest/545/problem/B",
+    "submission_id": "CF117535860",
+    "submission_url": "https://codeforces.com/contest/545/submission/117535860",
+    "tags": [
+      "greedy",
+      "*1100"
+    ],
+    "timestamp": "May/28/2021 02:12"
+  },
   "CF117536425": {
     "contest_id": 545,
     "language": "GNU C++17 (64)",
