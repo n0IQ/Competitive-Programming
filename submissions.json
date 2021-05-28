@@ -4999,6 +4999,23 @@
     ],
     "timestamp": "May/16/2021 19:47"
   },
+  "CF117579679": {
+    "contest_id": 1367,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1367\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Short Substrings",
+    "problem_url": "https://codeforces.com/contest/1367/problem/A",
+    "submission_id": "CF117579679",
+    "submission_url": "https://codeforces.com/contest/1367/submission/117579679",
+    "tags": [
+      "implementation",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "May/28/2021 16:49"
+  },
   "CF117581393": {
     "contest_id": 1367,
     "language": "GNU C++17 (64)",
