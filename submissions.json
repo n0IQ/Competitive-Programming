@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF118591706": {
+    "contest_id": 1263,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1263\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Sweet Problem",
+    "problem_url": "https://codeforces.com/contest/1263/problem/A",
+    "submission_id": "CF118591706",
+    "submission_url": "https://codeforces.com/contest/1263/submission/118591706",
+    "tags": [
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Jun/06/2021 18:33"
+  },
   "CF118593133": {
     "contest_id": 1257,
     "language": "GNU C++17 (64)",
