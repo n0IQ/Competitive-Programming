@@ -42,11 +42,9 @@ void solve()
 
 	set<string> st;
 
-	rep(i, 0, n) {
-		string t;
-
-		for (int k = 0; k < 5 && i + k < n; k++) {
-			t.pb(s[i + k]);
+	rep(i, 1, n + 1) {
+		for (int j = 0; i + j <= n; j++) {
+			string t = s.substr(j, i);
 			st.insert(t);
 		}
 	}
@@ -72,6 +70,7 @@ void solve()
 		}
 	}
 }
+
 
 int main()
 {
