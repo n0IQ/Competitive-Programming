@@ -1,4 +1,20 @@
 {
+  "AC23406106": {
+    "contest_id": "abc205",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc205\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Permutation Check",
+    "problem_url": "https://atcoder.jp/contests/abc205/tasks/abc205_b",
+    "submission_id": "AC23406106",
+    "submission_url": "https://atcoder.jp/contests/abc205/submissions/23406106",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jun/13/2021 17:34"
+  },
   "AC23412420": {
     "contest_id": "abc205",
     "language": "C++ (GCC 9.2.1)",
