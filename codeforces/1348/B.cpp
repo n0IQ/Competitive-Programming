@@ -39,24 +39,35 @@ void solve()
 	int n, k;
 	cin >> n >> k;
 
-	set<int> s;
+	vi a(n);
+	map<int, int> cnt;
 	rep(i, 0, n) {
-		int a; cin >> a;
-		s.insert(a);
+		cin >> a[i];
+		cnt[a[i]]++;
 	}
 
-	if (sz(s) > k) {
+	if (sz(cnt) > k) {
 		cout << -1 << '\n';
 		return;
 	}
 
-	cout << n*k << '\n';
+	vi b, v, ans;
+	int j = 0;
 
-	rep(i, 0, n) {
-		for (int x : s) cout << x << ' ';
-		rep(j, 0, k - sz(s)) cout << 1 << ' ';
+	for (auto it : cnt) b.pb(it.ff);
+
+	rep(i, 0, k) {
+		if (j == sz(cnt)) j = 0;
+		v.pb(b[j]);
+		j++;
 	}
 
+	rep(i, 0, n) {
+		for (auto x : v) ans.pb(x);
+	}
+
+	cout << sz(ans) << '\n';
+	for (auto x : ans) cout << x << " ";
 	cout << '\n';
 }
 
