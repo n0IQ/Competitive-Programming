@@ -39,26 +39,66 @@ void solve()
 	int n;
 	cin >> n;
 
-	vi a(n);
-	rep(i, 0, n) cin >> a[i];
-
-	sort(all(a));
-	if (n == 2) {
-		cout << a[0] << " " << a[1] << '\n';
-		return;
+	vll a(n);
+	map<ll, ll> cnt;
+	rep(i, 0, n) {
+		cin >> a[i];
+		cnt[a[i]]++;
 	}
 
-	int mn = INT_MAX, pos = 0;
-	rep(i, 1, n) {
-		if (mn > abs(a[i] - a[i - 1])) {
-			mn = abs(a[i] - a[i - 1]);
-			pos = i;
+	sort(all(a));
+
+	bool ok = 0;
+	ll num = 0;
+	for (auto &it : cnt) {
+		if (it.ss > 1) {
+			ok = 1;
+			num = it.ff;
+			it.ss -= 2;
+			break;
 		}
 	}
 
-	rep(i, pos, n) cout << a[i] << " ";
-	rep(i, 0, pos) cout << a[i] << " ";
+	vll res(n);
+	if (ok) {
+		res[0] = res[n - 1] = num;
+	}
+	else {
+		ll mn = INT_MAX, num1 = 0, num2 = 0;
 
+		rep(i, 0, n - 1) {
+			ll t = abs(a[i] - a[i + 1]);
+
+			if (t < mn) {
+				mn = t;
+				num1 = a[i], num2 = a[i + 1];
+			}
+		}
+
+		res[0] = num1, res[n - 1] = num2;
+		cnt[num1]--;
+		cnt[num2]--;
+	}
+
+	multiset<ll> s;
+	for (auto &it : cnt) {
+		while (it.ss > 0) {
+			s.insert(it.ff);
+			it.ss--;
+		}
+	}
+
+	rep(i, 1, n - 1) {
+		auto it = s.lb(res[i - 1]);
+		if (it == s.end()) {
+			it = s.begin();
+		}
+		ll x = *it;
+		s.erase(it);
+		res[i] = x;
+	}
+
+	rep(i, 0, n) cout << res[i] << " ";
 	cout << '\n';
 }
 
