@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF119802277": {
+    "contest_id": 1413,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1413\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A New Technique",
+    "problem_url": "https://codeforces.com/contest/1413/problem/B",
+    "submission_id": "CF119802277",
+    "submission_url": "https://codeforces.com/contest/1413/submission/119802277",
+    "tags": [
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Jun/18/2021 19:42"
+  },
   "CF119810575": {
     "contest_id": 1537,
     "language": "GNU C++17 (64)",
