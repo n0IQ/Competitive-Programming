@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF120290826": {
+    "contest_id": 1037,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1037\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Equalize",
+    "problem_url": "https://codeforces.com/contest/1037/problem/C",
+    "submission_id": "CF120290826",
+    "submission_url": "https://codeforces.com/contest/1037/submission/120290826",
+    "tags": [
+      "dp",
+      "greedy",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jun/22/2021 18:04"
+  },
   "CF120305079": {
     "contest_id": 1420,
     "language": "GNU C++17 (64)",
