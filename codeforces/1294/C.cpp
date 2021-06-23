@@ -34,71 +34,37 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-vi getPrimefact(int n)
-{
-	vi primes;
-
-	while (n % 2 == 0) {
-		primes.pb(2);
-		n /= 2;
-	}
-
-	for (int i = 3; i * i <= n; i += 2) {
-		while (n % i == 0) {
-			primes.pb(i);
-			n /= i;
-		}
-	}
-
-	if (n > 2) primes.pb(n);
-
-	return primes;
-}
-
 void solve()
 {
 	int n;
 	cin >> n;
 
-	vi primes = getPrimefact(n);
+	set<int> res;
 
-	if (sz(primes) < 3) {
-		cout << "NO" << '\n';
-		return;
-	}
-
-	set<int> s;
-	s.insert(primes[0]);
-
-	if (primes[1] != primes[0]) {
-		s.insert(primes[1]);
-
-		ll num = 1LL;
-		rep(i, 2, sz(primes)) {
-			num *= primes[i];
+	for (int i = 2; i * i <= n; i++) {
+		if (n % i == 0 && res.count(i) == 0) {
+			res.insert(i);
+			n /= i;
+			break;
 		}
-
-		if (num != 1) s.insert(num);
 	}
+
+	for (int i = 2; i * i <= n; i++) {
+		if (n % i == 0 && res.count(i) == 0) {
+			res.insert(i);
+			n /= i;
+			break;
+		}
+	}
+
+	if (sz(res) < 2 || res.count(n) || n == 1) cout << "NO" << '\n';
 	else {
-		ll num = (primes[1] * 1ll * primes[2]);
-		s.insert(num);
-
-		num = 1;
-		rep(i, 3, sz(primes)) {
-			num *= primes[i];
-		}
-
-		if (num != 1) s.insert(num);
-	}
-
-	if (sz(s) == 3) {
 		cout << "YES" << '\n';
-		for (auto it : s) cout << it << " ";
-	}
-	else cout << "NO";
+		res.insert(n);
 
-	cout << '\n';
+		for (auto it : res) cout << it << " ";
+		cout << '\n';
+	}
 }
 
 int main()
