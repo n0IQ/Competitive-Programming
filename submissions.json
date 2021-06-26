@@ -1,4 +1,20 @@
 {
+  "AC23756831": {
+    "contest_id": "abc207",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc207\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Repression",
+    "problem_url": "https://atcoder.jp/contests/abc207/tasks/abc207_a",
+    "submission_id": "AC23756831",
+    "submission_url": "https://atcoder.jp/contests/abc207/submissions/23756831",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/26/2021 17:31"
+  },
   "AC23766550": {
     "contest_id": "abc207",
     "language": "C++ (GCC 9.2.1)",
