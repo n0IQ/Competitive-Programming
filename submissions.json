@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF120696748": {
+    "contest_id": 665,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\665\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Simple Strings",
+    "problem_url": "https://codeforces.com/contest/665/problem/C",
+    "submission_id": "CF120696748",
+    "submission_url": "https://codeforces.com/contest/665/submission/120696748",
+    "tags": [
+      "dp",
+      "greedy",
+      "strings",
+      "*1300"
+    ],
+    "timestamp": "Jun/27/2021 02:19"
+  },
   "CF120742203": {
     "contest_id": 1433,
     "language": "GNU C++17 (64)",
