@@ -695,7 +695,7 @@ A repository to keep track of problem solving practice, containing solutions fro
 313 | [B - Inflation](https://codeforces.com/contest/1476/problem/B) | [GNU C++17 (64)](./codeforces/1476/B.cpp) | `binary search` `brute force` `greedy` `math` `*1300` | Jun/29/2021 19:43 | 
 312 | [B - Substring Removal](https://codeforces.com/contest/1096/problem/B) | [GNU C++17 (64)](./codeforces/1096/B.cpp) | `combinatorics` `math` `strings` `*1300` | Jun/29/2021 18:21 | 
 311 | [B - Move and Turn](https://codeforces.com/contest/1459/problem/B) | [GNU C++17 (64)](./codeforces/1459/B.cpp) | `dp` `math` `*1300` | Jun/29/2021 15:19 | 
-310 | [B - Box Fitting](https://codeforces.com/contest/1498/problem/B) | [GNU C++17 (64)](./codeforces/1498/B.cpp) | `binary search` `bitmasks` `data structures` `greedy` `*1300` | Jun/28/2021 22:02 | 
+310 | [B - Box Fitting](https://codeforces.com/contest/1498/problem/B) | [GNU C++17 (64)](./codeforces/1498/B.cpp) | `binary search` `bitmasks` `data structures` `greedy` `*1300` | Jun/28/2021 22:12 | 
 309 | [E - Two Round Dances](https://codeforces.com/contest/1433/problem/E) | [GNU C++17 (64)](./codeforces/1433/E.cpp) | `combinatorics` `math` `*1300` | Jun/27/2021 20:09 | 
 308 | [C - Simple Strings](https://codeforces.com/contest/665/problem/C) | [GNU C++17 (64)](./codeforces/665/C.cpp) | `dp` `greedy` `strings` `*1300` | Jun/27/2021 02:19 | 
 307 | [B - WOW Factor](https://codeforces.com/contest/1178/problem/B) | [GNU C++17 (64)](./codeforces/1178/B.cpp) | `dp` `strings` `*1300` | Jun/27/2021 02:09 | 

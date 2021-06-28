@@ -48,26 +48,17 @@ void solve()
 	int h = 1, t = w;
 
 	while (!s.empty()) {
-		if (t == 0) {
-			t = w;
+		auto it = s.ub(t);
+
+		if (it != s.begin()) {
+			it--;
+			t -= (*it);
+			s.erase(it);
+		}
+		else {
 			h++;
+			t = w;
 		}
-
-		auto it = s.lb(t);
-
-		if (it == s.end()) it--;
-
-		if (*it > t) {
-			if (it != s.begin()) it--;
-			else {
-				h++;
-				t = w;
-				continue;
-			}
-		}
-
-		t -= (*it);
-		s.erase(it);
 	}
 
 	cout << h << '\n';
