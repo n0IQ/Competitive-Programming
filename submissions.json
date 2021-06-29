@@ -6409,6 +6409,23 @@
     ],
     "timestamp": "Jun/28/2021 22:02"
   },
+  "CF120862979": {
+    "contest_id": 1459,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1459\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Move and Turn",
+    "problem_url": "https://codeforces.com/contest/1459/problem/B",
+    "submission_id": "CF120862979",
+    "submission_url": "https://codeforces.com/contest/1459/submission/120862979",
+    "tags": [
+      "dp",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Jun/29/2021 15:19"
+  },
   "CF120875847": {
     "contest_id": 1096,
     "language": "GNU C++17 (64)",
