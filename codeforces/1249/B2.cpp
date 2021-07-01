@@ -34,55 +34,54 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-const int MaxN = 3e5;
-int p[MaxN], r[MaxN];
+vvi adj;
+vi res;
+vb vis;
+ll days;
 
-void init()
+void dfs(int s, int d)
 {
-	rep(i, 0, MaxN) {
-		p[i] = i;
-		r[i] = 1;
+	vis[s] = 1;
+
+	for (auto it : adj[s]) {
+		if (it != d) {
+			days++;
+			dfs(it, d);
+			res[s] = days;
+		}
+		else res[s] = days;
 	}
-}
-
-int get_set(int x)
-{
-	if (x == p[x])
-		return x;
-
-	return p[x] = get_set(p[x]);
-}
-
-void union_set(int a, int b)
-{
-	if (r[a] < r[b])
-		swap(a, b);
-
-	p[b] = p[a];
-	r[a] += r[b];
 }
 
 void solve()
 {
-	init();
-
 	int n;
 	cin >> n;
 
-	rep(i, 1, n + 1) {
-		int a = i, b; cin >> b;
+	adj.clear(); adj.resize(n);
+	vis.clear(); vis.resize(n);
+	res.clear(); res.resize(n);
 
-		a = get_set(a);
-		b = get_set(b);
+	rep(u, 0, n) {
+		int v; cin >> v;
+		--v;
 
-		if (a != b) {
-			union_set(a, b);
+		if (u != v) {
+			adj[u].pb(v);
 		}
 	}
 
-	rep(i, 1, n + 1) {
-		int x = get_set(i);
-		cout << r[x] << " ";
+	rep(i, 0, n) {
+		days = 1;
+
+		if (!vis[i]) {
+			dfs(i, i);
+		}
+	}
+
+	for (auto it : res) {
+		if (it == 0) it = 1;
+		cout << it << " ";
 	}
 
 	cout << '\n';
