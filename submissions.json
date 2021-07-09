@@ -1,4 +1,20 @@
 {
+  "AC24082188": {
+    "contest_id": "abc051",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc051\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Sum of Three Integers",
+    "problem_url": "https://atcoder.jp/contests/abc051/tasks/abc051_b",
+    "submission_id": "AC24082188",
+    "submission_url": "https://atcoder.jp/contests/abc051/submissions/24082188",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Jul/09/2021 18:34"
+  },
   "AC24082479": {
     "contest_id": "abc052",
     "language": "C++ (GCC 9.2.1)",
