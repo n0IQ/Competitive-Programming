@@ -39,25 +39,35 @@ void solve()
 	string s;
 	cin >> s;
 
-	int l = s.find('a');
-
-	if (l == string::npos) {
-		cout << "NO" << '\n';
-		return;
+	int n = sz(s);
+	map<char, int> cnt;
+	rep(i, 0, n) {
+		cnt[s[i]]++;
 	}
 
-	int n = sz(s), r = l;
+	for (auto it : cnt) {
+		char c = it.ff;
 
-	rep(i, 1, n) {
-		int pos = s.find(char('a' + i));
-
-		if (pos == string::npos || (pos != l - 1 && pos != r + 1)) {
+		if ((c - 'a' + 1) > n) {
 			cout << "NO" << '\n';
 			return;
 		}
-		else {
-			l = min(l, pos);
-			r = max(r, pos);
+
+		if (it.ss > 1) {
+			cout << "NO" << '\n';
+			return;
+		}
+	}
+
+	string s1 = "z";
+	s1 += s;
+	s1.pb('z');
+
+
+	rep(i, 1, n) {
+		if ((s1[i] > s1[i - 1]) && (s1[i] > s1[i + 1])) {
+			cout << "NO" << '\n';
+			return;
 		}
 	}
 
