@@ -40,37 +40,49 @@ void solve()
 	cin >> n >> m;
 
 	vector<string> a(n);
-	set<string> s;
-	rep(i, 0, n) {
-		cin >> a[i];
-		s.insert(a[i]);
+	rep(i, 0, n) cin >> a[i];
+
+	vector<string> p1, p2, p3;
+
+	for (int i = 0; i < sz(a); ) {
+		string s = a[i];
+		reverse(all(s));
+
+		auto it = find(all(a), s);
+		int j = it - a.begin();
+
+		if (i != j && it != a.end()) {
+			p1.pb(a[i]);
+			p3.pb(s);
+
+			a.erase(a.begin() + i);
+
+			if (i < j) --j;
+			a.erase(a.begin() + j);
+		}
+		else i++;
 	}
 
-	vector<string> left, right;
-	string mid;
+	for (int i = 0; i < sz(a); ) {
+		string s = a[i];
+		reverse(all(s));
 
-	rep(i, 0, n) {
-		string t = a[i];
-		reverse(all(t));
-
-		if (t == a[i]) {
-			mid = t;
+		if (a[i] == s) {
+			p2.pb(a[i]);
+			a.erase(a.begin() + i);
+			break;
 		}
-		else if (s.find(t) != s.end()) {
-			left.pb(a[i]);
-			right.pb(t);
-			s.erase(a[i]);
-			s.erase(t);
-		}
+		else i++;
 	}
 
-	cout << sz(left) * 2 * m + sz(mid) << '\n';
+	reverse(all(p3));
+	string res;
+	for (auto s : p1) res += s;
+	for (auto s : p2) res += s;
+	for (auto s : p3) res += s;
 
-	for (auto it : left) cout << it;
-	cout << mid;
-	reverse(all(right));
-	for (auto it : right) cout << it;
-	cout << '\n';
+	cout << sz(res) << '\n';
+	cout << res << '\n';
 }
 
 int main()
