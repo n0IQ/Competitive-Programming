@@ -34,39 +34,24 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-ll k, n, a, b;
-
-ll search()
-{
-	ll l = 0LL, r = n, ans = 0LL;
-
-	while (l <= r) {
-		ll mid = (l + r) / 2;
-		ll batteryUse = mid * a;
-		ll roundsLeft = n - mid;
-
-		if (batteryUse + (b * roundsLeft) < k) {
-			ans = mid;
-			l = mid + 1;
-		}
-		else {
-			r = mid - 1;
-		}
-	}
-
-	return ans;
-}
-
 void solve()
 {
+	ll k, n, a, b;
 	cin >> k >> n >> a >> b;
 
-	if (n * b >= k) {
-		cout << -1 << '\n';
+	k -= (n * a);
+
+	if (k > 0) {
+		cout << n << '\n';
 		return;
 	}
 
-	cout << search() << '\n';
+	k = -k; ++k;
+	ll diff = a - b;
+	ll ans = (k + diff - 1) / diff;
+
+	if (ans > n) cout << -1 << '\n';
+	else cout << n - ans << '\n';
 }
 
 int main()
