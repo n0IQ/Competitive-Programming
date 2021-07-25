@@ -6547,6 +6547,24 @@
     ],
     "timestamp": "Jul/07/2021 17:45"
   },
+  "CF123706162": {
+    "contest_id": 1285,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1285\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Fadi and LCM",
+    "problem_url": "https://codeforces.com/contest/1285/problem/C",
+    "submission_id": "CF123706162",
+    "submission_url": "https://codeforces.com/contest/1285/submission/123706162",
+    "tags": [
+      "brute force",
+      "math",
+      "number theory",
+      "*1400"
+    ],
+    "timestamp": "Jul/25/2021 18:45"
+  },
   "CF123776726": {
     "contest_id": 1552,
     "language": "GNU C++17 (64)",
