@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF124041086": {
+    "contest_id": 870,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\870\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Maximum splitting",
+    "problem_url": "https://codeforces.com/contest/870/problem/C",
+    "submission_id": "CF124041086",
+    "submission_url": "https://codeforces.com/contest/870/submission/124041086",
+    "tags": [
+      "dp",
+      "greedy",
+      "math",
+      "number theory",
+      "*1300"
+    ],
+    "timestamp": "Jul/28/2021 19:57"
+  },
   "CF124043565": {
     "contest_id": 628,
     "language": "GNU C++17 (64)",
