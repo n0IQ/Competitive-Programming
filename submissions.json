@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF124967907": {
+    "contest_id": 1263,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1263\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Everyone is a Winner!",
+    "problem_url": "https://codeforces.com/contest/1263/problem/C",
+    "submission_id": "CF124967907",
+    "submission_url": "https://codeforces.com/contest/1263/submission/124967907",
+    "tags": [
+      "binary search",
+      "math",
+      "meet-in-the-middle",
+      "number theory",
+      "*1400"
+    ],
+    "timestamp": "Aug/05/2021 20:00"
+  },
   "CF124981376": {
     "contest_id": 1263,
     "language": "GNU C++17 (64)",
