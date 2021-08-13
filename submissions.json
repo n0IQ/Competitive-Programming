@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF125743572": {
+    "contest_id": 1201,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1201\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Maximum Median",
+    "problem_url": "https://codeforces.com/contest/1201/problem/C",
+    "submission_id": "CF125743572",
+    "submission_url": "https://codeforces.com/contest/1201/submission/125743572",
+    "tags": [
+      "binary search",
+      "greedy",
+      "math",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Aug/13/2021 14:52"
+  },
   "CF125750992": {
     "contest_id": 1293,
     "language": "GNU C++17 (64)",
