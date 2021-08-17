@@ -39,34 +39,54 @@ void solve()
 	int n, m, d;
 	cin >> n >> m >> d;
 
-	vector<int> a(m + 1), res(n + 1, 0);
-	int sum = 0;
-	rep(i, 1, m + 1)  {
-		cin >> a[i];
-		sum += a[i];
-	}
+	vector<int> a(m);
+	rep(i, 0, m) cin >> a[i];
 
-	int curr = 0;
-	rep(i, 1, m + 1) {
-		if (curr + d + sum > n + 1) {
-			rep(j, curr + 1, curr + 1 + a[i]) res[j] = i;
-			curr = curr + a[i];
-		}
-		else {
-			rep(j, curr + d, curr + d + a[i]) res[j] = i;
-			curr = curr + d + a[i] - 1;
+	int i = d - 1, j = 0;
+	while (i < n) {
+		if (j >= m) {
+			cout << "NO" << '\n';
+			return;
 		}
 
-		sum -= a[i];
+		int wood = a[j++];
+
+		while (i < n && wood) {
+			wood--;
+			i++;
+		}
+
+		i += (d - 1);
 	}
 
-	if (curr + d < n + 1) {
-		cout << "NO" << '\n';
-		return;
+	vector<int> res(n, 0), pos;
+	i = 0, j = 0;
+	while (i < n && j < m) {
+		int wood = a[j];
+		while (wood--) res[i++] = j + 1;
+		pos.pb(i - 1);
+		j++;
+	}
+
+	reverse(all(pos));
+	int end = n;
+	j = m - 1;
+
+	rep(i, 0, sz(pos)) {
+		int old_pos = pos[i], new_pos = end - d, l = a[j];
+
+		if (old_pos + d < end) {
+			while (l--) res[old_pos--] = 0;
+			l = a[j];
+			while (l--) res[new_pos--] = j + 1;
+			end = new_pos + 1;
+			j--;
+		}
+		else break;
 	}
 
 	cout << "YES" << '\n';
-	rep(i, 1, n + 1) cout << res[i] << " ";
+	for (auto x : res) cout << x << " ";
 	cout << '\n';
 }
 
