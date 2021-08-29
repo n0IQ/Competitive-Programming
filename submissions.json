@@ -14175,6 +14175,22 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF127342747": {
+    "contest_id": 1556,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1556\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "A Variety of Operations",
+    "problem_url": "https://codeforces.com/contest/1556/problem/A",
+    "submission_id": "CF127342747",
+    "submission_url": "https://codeforces.com/contest/1556/submission/127342747",
+    "tags": [
+      "math",
+      "*800"
+    ],
+    "timestamp": "Aug/29/2021 20:16"
+  },
   "CF127383244": {
     "contest_id": 1556,
     "language": "GNU C++17 (64)",
