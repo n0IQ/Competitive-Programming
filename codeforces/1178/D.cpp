@@ -34,13 +34,32 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-bool isPrime(int n)
+const int N = 1e5;
+bool isPrime[N + 10];
+set<int> primes;
+int deg[1010];
+set<pii> edges;
+
+void sieve()
 {
-	for (int i = 2; i * i <= n; i++) {
-		if (n % i == 0) return false;
+	for (int i = 0; i <= N; i++) {
+		isPrime[i] = true;
 	}
 
-	return true;
+	isPrime[0] = isPrime[1] = false;
+
+	for (int i = 2; i * i <= N; i++) {
+		if (isPrime[i] && i * i <= N) {
+			for (int j = i * i; j <= N; j += i) {
+				isPrime[j] = false;
+			}
+		}
+	}
+
+	primes.insert(2);
+	for (int i = 3; i <= N; i += 2) {
+		if (isPrime[i]) primes.insert(i);
+	}
 }
 
 void solve()
@@ -48,17 +67,40 @@ void solve()
 	int n;
 	cin >> n;
 
-	int m = n;
-	while (!isPrime(m)) m++;
-
-	cout << m << '\n';
 	rep(i, 1, n) {
-		cout << i << ' ' << i + 1 << '\n';
+		edges.insert({i, i + 1});
+		deg[i]++;
+		deg[i + 1]++;
 	}
-	cout << 1 << ' ' << n << '\n';
+	edges.insert({n, 1});
+	deg[n]++, deg[1]++;
 
-	rep(i, 1, (m - n) + 1) {
-		cout << i << ' ' << i + (n / 2) << '\n';
+	int x = *(primes.lb(sz(edges))) - sz(edges);
+	int i = 1;
+
+	while (x > 0) {
+		int curr = deg[i];
+		int corp = min(n - deg[i] - 1, curr + x);
+		auto it = primes.lb(corp);
+		if (*it > corp) it--;
+		int add = abs(*it - curr);
+		x -= add;
+
+		for (int j = 1, k = 0; k < add && j <= n; j++) {
+			if (i == j) continue;
+			if (primes.count(deg[j] + 1) && !edges.count({i, j}) && !edges.count({j, i})) {
+				edges.insert({i, j});
+				deg[i]++, deg[j]++;
+				k++;
+			}
+		}
+
+		i++;
+	}
+
+	cout << sz(edges) << '\n';
+	for (auto it : edges) {
+		cout << it.ff << " " << it.ss << '\n';
 	}
 }
 
@@ -71,6 +113,7 @@ int main()
 	     freopen("output.txt","w",stdout);
 	#endif*/
 
+	sieve();
 	int t = 1;
 	//cin>>t;
 	while (t--) solve();
