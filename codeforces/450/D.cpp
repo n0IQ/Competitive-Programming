@@ -34,19 +34,38 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-const int MaxN = 5e5 + 10;
 const int INF = 1e9 + 10;
-int n, m, k, cnt;
+int n, m, k, cnt = 0;
+vector<vector<pair<int, int>>> adj;
+vector<int> trains, dist;
+vector<bool> visited, mark;
 
-vector<pii> adj[MaxN];
-int train[MaxN], dist[MaxN];
-bool visited[MaxN], mark[MaxN];
+void init()
+{
+	adj.resize(n); trains.assign(n, INF); dist.assign(n, INF);
+	visited.assign(n, false); mark.assign(n, false);
+
+	rep(i, 0, m) {
+		int u, v, wt;
+		cin >> u >> v >> wt;
+		--u, --v;
+		adj[u].pb({v, wt});
+		adj[v].pb({u, wt});
+	}
+
+	rep(i, 0, k) {
+		int v, wt;
+		cin >> v >> wt;
+		--v;
+		trains[v] = min(trains[v], wt);
+	}
+}
 
 void Dijkstra()
 {
 	set<pii> q;
 	rep(i, 1, n) {
-		dist[i] = train[i];
+		dist[i] = trains[i];
 		if (dist[i] != INF) mark[i] = true;
 		q.insert({dist[i], i});
 	}
@@ -77,24 +96,7 @@ void Dijkstra()
 void solve()
 {
 	cin >> n >> m >> k;
-
-	rep(i, 0, MaxN) train[i] = INF;
-
-	rep(i, 0, m) {
-		int u, v, wt;
-		cin >> u >> v >> wt;
-		--u, --v;
-		adj[u].pb({v, wt});
-		adj[v].pb({u, wt});
-	}
-
-	rep(i, 0, k) {
-		int v, wt;
-		cin >> v >> wt;
-		--v;
-		train[v] = min(train[v], wt);
-	}
-
+	init();
 	Dijkstra();
 
 	cout << k - cnt << '\n';
