@@ -37,17 +37,18 @@ typedef pair<ll, ll> pll;
 const int MaxN = 1010;
 int n, m, k;
 vector<int> adj[MaxN];
-int govs[MaxN];
-bool visited[MaxN];
+vector<bool> visited(MaxN);
+set<int> govs;
 
-void dfs(int s, int &nodes)
+void dfs(int s, int &nodes, int &ok)
 {
 	visited[s] = true;
 	nodes++;
+	if (govs.count(s)) ok = 1;
 
 	for (auto x : adj[s]) {
 		if (!visited[x]) {
-			dfs(x, nodes);
+			dfs(x, nodes, ok);
 		}
 	}
 }
@@ -57,7 +58,7 @@ void solve()
 	cin >> n >> m >> k;
 	rep(i, 0, k) {
 		int x; cin >> x;
-		govs[i] = --x;
+		govs.insert(--x);
 	}
 
 	rep(i, 0, m) {
@@ -67,18 +68,46 @@ void solve()
 		adj[v].pb(u);
 	}
 
-	ll ans = 0, mx = 0;
-	rep(i, 0, k) {
-		int nodes = 0;
-		dfs(govs[i], nodes);
-		if (nodes > mx) mx = nodes;
-		ans = ans + (nodes * 1LL * (nodes - 1)) / 2;
+	vector<pii> edges;
+	rep(i, 0, n) {
+		if (!visited[i]) {
+			int nodes = 0, ok = 0;
+			dfs(i, nodes, ok);
+			if (nodes == 1) visited[i] = false;
+			else edges.pb({nodes, ok});
+		}
+	}
+
+	sort(all(edges), greater<pii>());
+	int cnt = 0;
+	bool ok = false;
+	rep(i, 0, sz(edges)) {
+		if (!ok) {
+			cnt += edges[i].ff;
+			if (edges[i].ss == 1) ok = true;
+			edges[i].ss = -1;
+		}
+		else {
+			if (edges[i].ss == 0) {
+				cnt += edges[i].ff;
+				edges[i].ss = -1;
+			}
+		}
 	}
 
 	rep(i, 0, n) {
-		if (!visited[i]) {
-			ans += mx;
-			mx++;
+		if (!ok && govs.count(i) && !visited[i]) {
+			cnt++;
+			ok = true;
+		}
+		if (!govs.count(i) && !visited[i]) cnt++;
+	}
+
+	ll ans = (cnt * 1LL * (cnt - 1)) / 2;
+	rep(i, 0, sz(edges)) {
+		if (edges[i].ss != -1) {
+			int nodes = edges[i].ff;
+			ans += ((nodes * 1LL * (nodes - 1)) / 2);
 		}
 	}
 
