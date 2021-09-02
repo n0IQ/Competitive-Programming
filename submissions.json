@@ -7936,6 +7936,24 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF127713782": {
+    "contest_id": 745,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\745\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Hongcow Builds A Nation",
+    "problem_url": "https://codeforces.com/contest/745/problem/C",
+    "submission_id": "CF127713782",
+    "submission_url": "https://codeforces.com/contest/745/submission/127713782",
+    "tags": [
+      "constructive algorithms",
+      "dfs and similar",
+      "graphs",
+      "*1500"
+    ],
+    "timestamp": "Sep/02/2021 22:54"
+  },
   "CF127763586": {
     "contest_id": 598,
     "language": "GNU C++17 (64)",
