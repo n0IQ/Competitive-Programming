@@ -34,24 +34,24 @@ typedef pair<ll, ll> pll;
 #define ps(x,y) fixed << setprecision(y) << x
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 
-int n, m, k;
+int n, m, k, ans;
 int a[1001][1001];
 int visited[1001][1001];
-int dx[4] = {0, 0, 1, -1};
-int dy[4] = {1, -1, 0, 0};
 map<int, int> res;
 
-void dfs(int x, int y, int &cnt, int num)
+void dfs(int i, int j, int &cnt, int num)
 {
-	if (a[x][y] == 1 || visited[x][y] != -1) return;
+	if (i < 0 || j < 0 || i > n || j > m || a[i][j] == 1 || visited[i][j] != -1) return;
 
-	visited[x][y] = num;
-	rep(i, 0, 4) {
-		if (a[x + dx[i]][y + dy[i]] == 1) cnt++;
-	}
-	rep(i, 0, 4) {
-		dfs(x + dx[i], y + dy[i], cnt, num);
-	}
+	visited[i][j] = num;
+	if (a[i][j + 1] == 1) cnt++;
+	if (a[i][j - 1] == 1) cnt++;
+	if (a[i + 1][j] == 1) cnt++;
+	if (a[i - 1][j] == 1) cnt++;
+	dfs(i + 1, j, cnt, num);
+	dfs(i - 1, j, cnt, num);
+	dfs(i, j + 1, cnt, num);
+	dfs(i, j - 1, cnt, num);
 }
 
 void solve()
@@ -66,11 +66,15 @@ void solve()
 	}
 
 	mem1(visited);
-	int num = 0;
-
+	vector<pii> queries;
 	while (k--) {
-		int x, y, cnt = 0; cin >> x >> y;
-		--x, --y;
+		int x, y; cin >> x >> y;
+		queries.pb({--x, --y});
+	}
+
+	int num = 0;
+	for (auto [x, y] : queries) {
+		int cnt = 0;
 		if (visited[x][y] == -1) {
 			dfs(x, y, cnt, num);
 			res[num] = cnt;
