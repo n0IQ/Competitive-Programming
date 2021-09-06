@@ -7936,6 +7936,22 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF128081857": {
+    "contest_id": 1194,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1194\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Yet Another Crosses Problem",
+    "problem_url": "https://codeforces.com/contest/1194/problem/B",
+    "submission_id": "CF128081857",
+    "submission_url": "https://codeforces.com/contest/1194/submission/128081857",
+    "tags": [
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Sep/07/2021 02:51"
+  },
   "CF128124003": {
     "contest_id": 276,
     "language": "GNU C++17 (64)",
