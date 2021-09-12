@@ -7936,6 +7936,25 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF128634937": {
+    "contest_id": 1566,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1566\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "MAX-MEX Cut",
+    "problem_url": "https://codeforces.com/contest/1566/problem/C",
+    "submission_id": "CF128634937",
+    "submission_url": "https://codeforces.com/contest/1566/submission/128634937",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Sep/12/2021 21:08"
+  },
   "CF128643424": {
     "contest_id": 1566,
     "language": "GNU C++17 (64)",
