@@ -7936,6 +7936,25 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF128571977": {
+    "contest_id": 1265,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1265\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Beautiful Numbers",
+    "problem_url": "https://codeforces.com/contest/1265/problem/B",
+    "submission_id": "CF128571977",
+    "submission_url": "https://codeforces.com/contest/1265/submission/128571977",
+    "tags": [
+      "data structures",
+      "implementation",
+      "math",
+      "two pointers",
+      "*1300"
+    ],
+    "timestamp": "Sep/12/2021 15:10"
+  },
   "CF128599239": {
     "contest_id": 1566,
     "language": "GNU C++17 (64)",
