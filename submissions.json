@@ -7936,6 +7936,23 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF128857913": {
+    "contest_id": 160,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\160\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Unlucky Ticket",
+    "problem_url": "https://codeforces.com/contest/160/problem/B",
+    "submission_id": "CF128857913",
+    "submission_url": "https://codeforces.com/contest/160/submission/128857913",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1100"
+    ],
+    "timestamp": "Sep/15/2021 03:52"
+  },
   "CF128973105": {
     "contest_id": 632,
     "language": "GNU C++17 (64)",
