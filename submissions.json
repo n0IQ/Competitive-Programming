@@ -7936,6 +7936,24 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF129624317": {
+    "contest_id": 1353,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1353\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Constructing the Array",
+    "problem_url": "https://codeforces.com/contest/1353/problem/D",
+    "submission_id": "CF129624317",
+    "submission_url": "https://codeforces.com/contest/1353/submission/129624317",
+    "tags": [
+      "constructive algorithms",
+      "data structures",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Sep/23/2021 02:22"
+  },
   "CF129626167": {
     "contest_id": 1353,
     "language": "GNU C++17 (64)",
