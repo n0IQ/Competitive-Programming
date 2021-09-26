@@ -1,4 +1,20 @@
 {
+  "AC26140362": {
+    "contest_id": "abc220",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc220\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Long Sequence",
+    "problem_url": "https://atcoder.jp/contests/abc220/tasks/abc220_c",
+    "submission_id": "AC26140362",
+    "submission_url": "https://atcoder.jp/contests/abc220/submissions/26140362",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Sep/26/2021 17:50"
+  },
   "AC26275637": {
     "contest_id": "abc221",
     "language": "C++ (GCC 9.2.1)",
