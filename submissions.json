@@ -7936,6 +7936,24 @@
     ],
     "timestamp": "Aug/26/2021 20:16"
   },
+  "CF129942267": {
+    "contest_id": 1165,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1165\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Polycarp Training",
+    "problem_url": "https://codeforces.com/contest/1165/problem/B",
+    "submission_id": "CF129942267",
+    "submission_url": "https://codeforces.com/contest/1165/submission/129942267",
+    "tags": [
+      "data structures",
+      "greedy",
+      "sortings",
+      "*1000"
+    ],
+    "timestamp": "Sep/26/2021 21:49"
+  },
   "CF129944103": {
     "contest_id": 1165,
     "language": "GNU C++17 (64)",
