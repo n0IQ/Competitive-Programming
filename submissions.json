@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF129999734": {
+    "contest_id": 1184,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1184\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Parallel Universes (Easy)",
+    "problem_url": "https://codeforces.com/contest/1184/problem/D1",
+    "submission_id": "CF129999734",
+    "submission_url": "https://codeforces.com/contest/1184/submission/129999734",
+    "tags": [
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Sep/27/2021 18:04"
+  },
   "CF130019266": {
     "contest_id": 1196,
     "language": "GNU C++17 (64)",
