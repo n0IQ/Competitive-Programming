@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF130553067": {
+    "contest_id": 1213,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1213\\D2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D2",
+    "problem_name": "Equalizing by Division (hard version)",
+    "problem_url": "https://codeforces.com/contest/1213/problem/D2",
+    "submission_id": "CF130553067",
+    "submission_url": "https://codeforces.com/contest/1213/submission/130553067",
+    "tags": [
+      "brute force",
+      "math",
+      "sortings",
+      "*1600"
+    ],
+    "timestamp": "Oct/02/2021 16:25"
+  },
   "CF130599218": {
     "contest_id": 1217,
     "language": "GNU C++17 (64)",
