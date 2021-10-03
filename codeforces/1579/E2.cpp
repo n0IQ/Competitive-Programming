@@ -47,17 +47,14 @@ void solve()
 	rep(i, 0, n) cin >> a[i];
 
 	ordered_multiset<ll> s;
-	map<ll, ll> m;
 	s.insert(a[0]);
-	m[a[0]]++;
 	ll ans = 0;
 
 	rep(i, 1, n) {
 		ll t1 = s.order_of_key(a[i]);
-		ll t2 = i - t1 - m[a[i]];
-		ans += min({t1, t2});
+		ll t2 = s.order_of_key(a[i] + 1);
+		ans += min({i - t1, t1, i - t2, t2});
 		s.insert(a[i]);
-		m[a[i]]++;
 	}
 
 	cout << ans << '\n';
