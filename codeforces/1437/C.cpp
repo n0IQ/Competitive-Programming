@@ -47,7 +47,12 @@ int helper(vector<int> a, int i, int time)
 	if (i == n) return 0;
 	if (dp[i][time] != -1) return dp[i][time];
 
-	return dp[i][time] = min(abs(time - a[i]) + helper(a, i + 1, time + 1), helper(a, i, time + 1));
+	int ans = 1e9;
+	rep(j, time, 501) {
+		ans = min(ans, abs(j - a[i]) + helper(a, i + 1, j + 1));
+	}
+
+	return dp[i][time] = ans;
 }
 
 void solve()
