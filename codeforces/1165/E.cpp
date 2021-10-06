@@ -44,19 +44,22 @@ void solve()
 	cin >> n;
 
 	vector<ll> a(n), b(n);
-	rep(i, 0, n) {
-		cin >> a[i];
-		a[i] = a[i] * (i + 1) * (n - i);
-	}
-
+	rep(i, 0, n) cin >> a[i];
 	rep(i, 0, n) cin >> b[i];
 
-	sort(all(a), greater<ll>());
+	vector<pair<ll, int>> v(n);
 	sort(all(b));
+
+	rep(i, 0, n) {
+		v[i].ff = (i + 1) * 1LL * (n - i) * a[i];
+		v[i].ss = i;
+	}
+
+	sort(v.rbegin(), v.rend());
 
 	ll ans = 0;
 	rep(i, 0, n) {
-		ans = (ans + ((a[i] % mod) * (b[i] % mod)) % mod) % mod;
+		ans = (ans + ((v[i].ff % mod) * (b[i] % mod)) % mod) % mod;
 	}
 
 	cout << ans << '\n';
