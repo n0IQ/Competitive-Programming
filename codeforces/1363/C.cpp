@@ -38,7 +38,19 @@ typedef pair<ll, ll> pll;
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
+vector<vector<int>> adj;
 int deg[1001];
+
+void dfs(int u, int p)
+{
+	for (auto v : adj[u]) {
+		if (v != p) {
+			deg[u]++;
+			deg[v]++;
+			dfs(v, u);
+		}
+	}
+}
 
 void solve()
 {
@@ -46,18 +58,21 @@ void solve()
 	cin >> n >> x;
 
 	x--;
+	adj = vector<vector<int>> (n);
 	mem0(deg);
 
 	rep(i, 0, n - 1) {
 		int u, v;
 		cin >> u >> v;
 		--u, --v;
-		deg[u]++;
-		deg[v]++;
+		adj[u].pb(v);
+		adj[v].pb(u);
 	}
 
+	dfs(0, -1);
+
 	if (deg[x] <= 1) cout << "Ayush" << '\n';
-	else if (n % 2 == 1) cout << "Ashish" << '\n';
+	else if (deg[x] % 2 == ((n - 1) - deg[x]) % 2) cout << "Ashish" << '\n';
 	else cout << "Ayush" << '\n';
 }
 
