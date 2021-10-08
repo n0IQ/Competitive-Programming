@@ -48,14 +48,22 @@ void solve()
 		return;
 	}
 
-	ll prev = 3, ans = 3;
-	rep(i, 1, n - 1) {
-		prev = (3 * prev) % mod;
-		ans = prev - ans;
-		if (ans < 0) ans += mod;
+	ll preva = 0, prevb = 1, prevc = 1, prevd = 1;
+	ll a, b, c, d;
+
+	rep(i, 2, n + 1) {
+		a = (prevb + prevc + prevd) % mod;
+		b = (preva + prevc + prevd) % mod;
+		c = (preva + prevb + prevd) % mod;
+		d = (preva + prevb + prevc) % mod;
+
+		preva = a;
+		prevb = b;
+		prevc = c;
+		prevd = d;
 	}
 
-	cout << ans % mod << '\n';
+	cout << a % mod << '\n';
 }
 
 int main()
