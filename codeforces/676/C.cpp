@@ -38,33 +38,58 @@ typedef pair<ll, ll> pll;
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
 template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
 
-int n, k;
-string s;
-
-int helper(char c)
+int helper(string s, int n, int k, char c)
 {
-	int l = 0, curr = 0, ans = 0;
+	int i = 0, j = 0, ans = 0, l = 0;
+	vector<int> idx;
 
-	rep(r, 0, n) {
-		curr += (s[r] != c);
+	while (j < n) {
+		if (s[j] == c) l++;
+		else {
+			if (k > 0) {
+				idx.pb(j);
+				l++, k--;
+			}
+			else {
+				ans = max(ans, l);
 
-		while (curr > k) {
-			curr -= (s[l] != c);
-			l++;
+				if (!idx.empty()) {
+					l = j - idx[0];
+					idx.erase(idx.begin());
+					idx.pb(j);
+				}
+			}
 		}
 
-		ans = max(ans, r - l + 1);
+		j++;
 	}
+
+	ans = max(ans, l);
 
 	return ans;
 }
 
 void solve()
 {
+	int n, k;
+	string s;
 	cin >> n >> k >> s;
 
-	int ans = max(helper('a'), helper('b'));
-	cout << ans << '\n';
+	if (k == 0) {
+		int ans = 0, l = 1;
+		rep(i, 1, n) {
+			if (s[i] == s[i - 1]) l++;
+			else {
+				ans = max(ans, l);
+				l = 1;
+			}
+		}
+
+		cout << max(ans, l) << '\n';
+	}
+	else {
+		cout << max(helper(s, n, k, 'a'), helper(s, n, k, 'b')) << '\n';
+	}
 }
 
 int main()
