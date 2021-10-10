@@ -1951,6 +1951,26 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF131454052": {
+    "contest_id": 1598,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1598\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Delete Two Elements",
+    "problem_url": "https://codeforces.com/contest/1598/problem/C",
+    "submission_id": "CF131454052",
+    "submission_url": "https://codeforces.com/contest/1598/submission/131454052",
+    "tags": [
+      "data structures",
+      "dp",
+      "implementation",
+      "math",
+      "two pointers",
+      "*1200"
+    ],
+    "timestamp": "Oct/10/2021 16:40"
+  },
   "CF131455160": {
     "contest_id": 1598,
     "language": "GNU C++17 (64)",
