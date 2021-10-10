@@ -39,27 +39,38 @@ void solve()
 	cin >> n;
 
 	int a[n + 1][6];
+	vector<int> days[6];
 
 	rep(i, 1, n + 1) {
 		rep(j, 1, 6) {
 			cin >> a[i][j];
+
+			if (a[i][j] == 1) {
+				days[j].pb(i);
+			}
 		}
 	}
 
 	rep(i, 1, 6) {
-		rep(j, i + 1, 6) {
-			int cnt1 = 0, cnt2 = 0, dup = 0;
 
-			rep(k, 1, n + 1) {
-				if (a[k][i] == 1) cnt1++;
-				if (a[k][j] == 1) cnt2++;
-				if (a[k][i] == 1 && a[k][j] == 1) dup++;
+		rep(j, i + 1, 6) {
+
+			set<int> s1, s2, s3, s4;
+			for (auto x : days[i]) s3.insert(x);
+			for (auto x : days[j]) s3.insert(x);
+
+			for (auto x : days[i]) {
+				if (find(all(days[j]), x) == days[j].end()) {
+					s1.insert(x);
+				}
+				else s4.insert(x);
 			}
 
-			cnt1 -= dup;
-			cnt2 -= dup;
+			for (auto x : days[j]) {
+				if (!s4.count(x)) s2.insert(x);
+			}
 
-			if (cnt1 <= n / 2 && cnt2 <= n / 2 && cnt1 + cnt2 + dup == n) {
+			if (sz(s1) <= n / 2 && sz(s2) <= n / 2 && sz(s3) >= n) {
 				cout << "YES\n";
 				return;
 			}
