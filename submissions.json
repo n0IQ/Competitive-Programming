@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF131575736": {
+    "contest_id": 1600,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1600\\J.cpp",
+    "platform": "Codeforces",
+    "problem_index": "J",
+    "problem_name": "Robot Factory",
+    "problem_url": "https://codeforces.com/contest/1600/problem/J",
+    "submission_id": "CF131575736",
+    "submission_url": "https://codeforces.com/contest/1600/submission/131575736",
+    "tags": [
+      "bitmasks",
+      "dfs and similar",
+      "*1400"
+    ],
+    "timestamp": "Oct/11/2021 22:29"
+  },
   "CF131590866": {
     "contest_id": 1208,
     "language": "GNU C++17 (64)",
