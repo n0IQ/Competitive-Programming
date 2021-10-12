@@ -33,57 +33,42 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
 
-int low[3000000];
-int high[3000000];
-int sum[3000000];
-int len[3000000];
-
 void solve()
 {
 	string s;
 	cin >> s;
 
-	int n = sz(s);
-	sum[0] = n + 10;
+	int n = sz(s), mx = 0;
+	int a[n + 10] = {0}, b[n + 10] = {0}, len[n + 10] = {0};
+	stack<int> stk;
 
 	rep(i, 0, n) {
-		sum[i + 1] = sum[i] + (s[i] == '(' ? 1 : -1);
-	}
-
-	rep(i, 0, 3000000) {
-		low[i] = 1e9;
-		high[i] = -1e9;
-	}
-
-	repR(i, n, 0) {
-		if (i != n) {
-			if (low[sum[i] - 1] != 1e9) {
-				len[i] = low[sum[i] - 1] - i - 1;
+		if (s[i] == '(') {
+			stk.push(i);
+		}
+		else {
+			if (stk.empty()) {
+				a[i] = -1;
+				b[i] = -1;
 			}
-			else if (high[sum[i]] != -1e9) {
-				len[i] = high[sum[i]] - i;
+			else {
+				int x = stk.top();
+				stk.pop();
+
+				a[i] = x, b[i] = x;
+				if (x > 0 && s[x - 1] == ')' && a[x - 1] >= 0) {
+					b[i] = b[x - 1];
+				}
+
+				int l = i - b[i] + 1;
+				len[l]++;
+				mx = max(mx, l);
 			}
 		}
-
-		low[sum[i]] = min(low[sum[i]], i);
-		high[sum[i]] = max(high[sum[i]], i);
 	}
 
-	int mx = 0, cnt = 0;
-	rep(i, 0, 3000000) {
-		mx = max(mx, len[i]);
-	}
-
-	rep(i, 0, 3000000) {
-		if (len[i] == mx) cnt++;
-	}
-
-	if (mx == 0) {
-		cout << 0 << ' ' << 1 << '\n';
-	}
-	else {
-		cout << mx << ' ' << cnt << '\n';
-	}
+	len[0] = 1;
+	cout << mx << ' ' << len[mx] << '\n';
 }
 
 int main()
