@@ -38,49 +38,44 @@ void solve()
 	int n, k;
 	cin >> n >> k;
 
-	vector<vector<int>> adj(n);
-	vector<int> deg(n), lv(n, -1);
+	set<int> adj[n];
+	set<pii> edges;
 
 	rep(i, 0, n - 1) {
 		int u, v;
 		cin >> u >> v;
 		--u, --v;
-		adj[u].pb(v);
-		adj[v].pb(u);
+		adj[u].insert(v);
+		adj[v].insert(u);
 	}
 
-	queue<int> q;
 	rep(i, 0, n) {
-		deg[i] = sz(adj[i]);
-
-		if (deg[i] == 1) {
-			lv[i] = 1;
-			q.push(i);
-		}
+		edges.insert({sz(adj[i]), i});
 	}
 
-	while (!q.empty()) {
-		int u = q.front();
-		q.pop();
+	while (k && !edges.empty()) {
+		set<int> leaf;
 
-		for (auto v : adj[u]) {
-			if (lv[v] == -1) {
-				deg[v] -= 1;
+		while (!edges.empty() && (edges.begin()->ff <= 1)) {
+			leaf.insert(edges.begin()->ss);
+			edges.erase(edges.begin());
+		}
 
-				if (deg[v] == 1) {
-					lv[v] = 1 + lv[u];
-					q.push(v);
+		for (auto u : leaf) {
+			for (auto v : adj[u]) {
+				if (edges.find({sz(adj[v]), v}) != edges.end()) {
+					auto it = edges.find({sz(adj[v]), v});
+					adj[v].erase(u);
+					edges.erase(it);
+					edges.insert({sz(adj[v]), v});
 				}
 			}
 		}
+
+		k--;
 	}
 
-	int ans = 0;
-	rep(i, 0, n) {
-		ans += lv[i] > k;
-	}
-
-	cout << ans << '\n';
+	cout << sz(edges) << '\n';
 }
 
 int main()
