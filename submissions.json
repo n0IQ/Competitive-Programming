@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF132019192": {
+    "contest_id": 873,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\873\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Strange Game On Matrix",
+    "problem_url": "https://codeforces.com/contest/873/problem/C",
+    "submission_id": "CF132019192",
+    "submission_url": "https://codeforces.com/contest/873/submission/132019192",
+    "tags": [
+      "greedy",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Oct/15/2021 16:26"
+  },
   "CF132206459": {
     "contest_id": 1443,
     "language": "GNU C++17 (64)",
