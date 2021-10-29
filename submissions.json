@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF133439434": {
+    "contest_id": 1602,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1602\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Two Subsequences",
+    "problem_url": "https://codeforces.com/contest/1602/problem/A",
+    "submission_id": "CF133439434",
+    "submission_url": "https://codeforces.com/contest/1602/submission/133439434",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Oct/29/2021 16:58"
+  },
   "CF133586753": {
     "contest_id": 1606,
     "language": "GNU C++17 (64)",
