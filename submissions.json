@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF133594514": {
+    "contest_id": 1606,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1606\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Update Files",
+    "problem_url": "https://codeforces.com/contest/1606/problem/B",
+    "submission_id": "CF133594514",
+    "submission_url": "https://codeforces.com/contest/1606/submission/133594514",
+    "tags": [
+      "greedy",
+      "implementation",
+      "math",
+      "*1100"
+    ],
+    "timestamp": "Oct/30/2021 15:59"
+  },
   "CF133783078": {
     "contest_id": 1604,
     "language": "GNU C++17 (64)",
