@@ -9337,6 +9337,23 @@
     ],
     "timestamp": "Nov/07/2021 21:10"
   },
+  "CF134597183": {
+    "contest_id": 1582,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1582\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Vupsen, Pupsen and 0",
+    "problem_url": "https://codeforces.com/contest/1582/problem/D",
+    "submission_id": "CF134597183",
+    "submission_url": "https://codeforces.com/contest/1582/submission/134597183",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Nov/07/2021 21:27"
+  },
   "CF134676926": {
     "contest_id": 1515,
     "language": "GNU C++17 (64)",

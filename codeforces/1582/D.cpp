@@ -33,56 +33,35 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
 
-ll a[100010], b[100010];
-
-void helper(int n)
-{
-	for (int i = 0; i < n; i += 2) {
-		b[i] = a[i + 1];
-		b[i + 1] = a[i];
-
-		if (a[i] * b[i] < 0) b[i] *= -1;
-		if (a[i + 1] * b[i + 1] > 0) b[i] *= -1;
-	}
-}
-
 void solve()
 {
 	int n;
 	cin >> n;
 
-	rep(i, 0, n) cin >> a[i];
-
 	if (n % 2 == 0) {
-		helper(n);
+		rep(i, 0, n / 2) {
+			int a, b;
+			cin >> a >> b;
+			cout << b << ' ' << -a << ' ';
+		}
 	}
 	else {
-		helper(n - 3);
+		int a, b, c;
+		cin >> a >> b >> c;
 
-		if (a[n - 3] + a[n - 2] != 0) {
-			b[n - 3] = a[n - 1], b[n - 2] = a[n - 1], b[n - 1] = abs(a[n - 3]) + abs(a[n - 2]);
-
-			if (a[n - 3] * b[n - 3] > 0) b[n - 3] *= -1;
-			if (a[n - 2] * b[n - 2] > 0) b[n - 2] *= -1;
-			if (a[n - 1] * b[n - 1] < 0) b[n - 1] *= -1;
+		if (a + b != 0)	{
+			cout << c << ' ' << c << ' ' << -a - b << ' ';
 		}
-		else if (a[n - 3] + a[n - 1] != 0) {
-			b[n - 3] = a[n - 2], b[n - 1] = a[n - 2], b[n - 2] = abs(a[n - 3]) + abs(a[n - 1]);
-
-			if (a[n - 3] * b[n - 3] > 0) b[n - 3] *= -1;
-			if (a[n - 1] * b[n - 1] > 0) b[n - 1] *= -1;
-			if (a[n - 2] * b[n - 2] < 0) b[n - 2] *= -1;
+		else {
+			cout << -c << ' ' << c << ' ' << a - b << ' ';
 		}
-		else if (a[n - 2] + a[n - 1] != 0) {
-			b[n - 2] = a[n - 3], b[n - 1] = a[n - 3], b[n - 3] = abs(a[n - 2]) + abs(a[n - 1]);
 
-			if (a[n - 2] * b[n - 2] > 0) b[n - 2] *= -1;
-			if (a[n - 1] * b[n - 1] > 0) b[n - 1] *= -1;
-			if (a[n - 3] * b[n - 3] < 0) b[n - 3] *= -1;
+		rep(i, 0, (n - 3) / 2) {
+			cin >> a >> b;
+			cout << b << ' ' << -a << ' ';
 		}
 	}
 
-	rep(i, 0, n) cout << b[i] << ' ';
 	cout << '\n';
 }
 
