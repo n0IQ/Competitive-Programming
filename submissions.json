@@ -1,4 +1,20 @@
 {
+  "AC27089437": {
+    "contest_id": "abc226",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc226\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Counting Arrays",
+    "problem_url": "https://atcoder.jp/contests/abc226/tasks/abc226_b",
+    "submission_id": "AC27089437",
+    "submission_url": "https://atcoder.jp/contests/abc226/submissions/27089437",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Nov/07/2021 17:50"
+  },
   "AC27100625": {
     "contest_id": "abc226",
     "language": "C++ (GCC 9.2.1)",
