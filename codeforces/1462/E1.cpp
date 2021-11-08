@@ -35,20 +35,20 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 
 void solve()
 {
-	int n;
+	int n, m = 3, k = 2;
 	cin >> n;
 
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
 
 	sort(all(a));
+	int r = 0;
 	ll ans = 0;
 
-	rep(i, 0, n) {
-		int j = (int)(ub(all(a), a[i] + 2) - a.begin()) - 1;
-		if (j - i < 2 || a[j] - a[i] > 2) continue;
-		ll idx = j - i;
-		ans += ((idx * (idx - 1)) / 2);
+	rep(l, 0, n) {
+		while (r < n && a[r] - a[l] <= k) r++;
+		ll len = r - l;
+		if (len >= m) ans += (len - 1) * (len - 2) / 2;
 	}
 
 	cout << ans << '\n';
@@ -58,10 +58,10 @@ int main()
 {
 	fastio;
 
-#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-#endif
+	/*#ifndef ONLINE_JUDGE
+		freopen("input.txt", "r", stdin);
+		freopen("output.txt", "w", stdout);
+	#endif*/
 
 	int t = 1;
 	cin >> t;
