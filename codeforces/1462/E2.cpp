@@ -34,30 +34,20 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 //2. find_by_order(k) : k-th element in the set
 
 const int N = 2e5 + 5;
-int fact[N];
-int invfact[N];
+ll fact[N];
+ll invfact[N];
 
-int mult(int a, int b)
+ll binpow(ll a, ll b, ll m)
 {
-	int res = (a * 1LL * b) % MOD1;
+	ll res = 1;
+	a %= m;
 
-	if (res < 0) {
-		res += MOD1;
-	}
-
-	return res;
-}
-
-int power(int a, int b)
-{
-	int res = 1;
-
-	while (b) {
-		if (b % 2 == 1) {
-			res = mult(a, res);
+	while (b > 0) {
+		if (b % 2) {
+			res = (res * a) % m;
 		}
 
-		a = mult(a, a);
+		a = (a * a) % m;
 		b /= 2;
 	}
 
@@ -68,22 +58,24 @@ void precalc()
 {
 	fact[0] = 1;
 	for (int i = 1; i < N; i++) {
-		fact[i] = mult(i, fact[i - 1]) % MOD1;
+		fact[i] = i * 1LL * fact[i - 1];
+		fact[i] %= MOD1;
 	}
 
-	invfact[N - 1] = power(fact[N - 1], MOD1 - 2) % MOD1;
+	invfact[N - 1] = binpow(fact[N - 1], MOD1 - 2, MOD1);
 	for (int i = N - 2; i >= 0; i--) {
-		invfact[i] = mult(invfact[i + 1], i + 1) % MOD1;
+		invfact[i] = invfact[i + 1] * 1LL * (i + 1);
+		invfact[i] %= MOD1;
 	}
 }
 
-int getnCr(int n, int r)
+ll getnCr(int n, int r)
 {
-	if (r > n || n < 0 || r < 0) {
-		return 0;
-	}
-
-	int res = mult(mult(fact[n], invfact[r]) % MOD1, invfact[n - r]) % MOD1;
+	if (r > n || n < 0 || r < 0) return 0;
+	ll res = fact[n] * invfact[r];
+	res %= MOD1;
+	res *= invfact[n - r];
+	res %= MOD1;
 	return res;
 }
 
