@@ -38,17 +38,75 @@ void solve()
 	int n;
 	cin >> n;
 
-	rep(i, 1, n) {
-		rep(j, i + 1, n + 1) {
-			int diff = j - i;
+	if (n == 2) {
+		cout << "0\n";
+		return;
+	}
 
-			if (diff * 2 < n) cout << "1 ";
-			else if (diff * 2 == n) cout << "0 ";
-			else cout << "-1 ";
+	int win = n / 2, draw = n / 2, loss = n / 2;
+
+	if (n % 2 == 0) {
+		n = n * (n - 1) / 2;
+		win--, loss--;
+		int w = win, l = loss, ok = 1;
+
+		rep(i, 0, n - 1) {
+			if (ok == 1) {
+				cout << "1 ";
+				w--;
+				if (w == 0) {
+					ok = 0;
+					w = win;
+				}
+			}
+			else if (ok == 0) {
+				cout << "0 ";
+				draw--;
+				if (draw == 0) {
+					ok = 1;
+					w = INT_MAX;
+				}
+				else ok = -1;
+			}
+			else {
+				cout << "-1 ";
+				l--;
+				if (l == 0) {
+					ok = 1;
+					loss--;
+					l = loss;
+				}
+			}
+		}
+	}
+	else {
+		n = n * (n - 1) / 2;
+		int w = win, l = loss, ok = 1;
+
+		rep(i, 0, n - 1) {
+			if (ok == 1) {
+				cout << "1 ";
+				w--;
+				if (w == 0) {
+					ok = 0;
+					w = win;
+				}
+			}
+			else {
+				cout << "-1 ";
+				l--;
+				if (l == 0) {
+					ok = 1;
+					loss--;
+					l = loss;
+				}
+
+				if (loss == 0) w = INT_MAX;
+			}
 		}
 	}
 
-	cout << '\n';
+	cout << "1\n";
 }
 
 int main()
