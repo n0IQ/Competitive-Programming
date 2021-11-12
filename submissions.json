@@ -9358,6 +9358,25 @@
     ],
     "timestamp": "Nov/09/2021 03:09"
   },
+  "CF135191847": {
+    "contest_id": 1605,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1605\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Dominant Character",
+    "problem_url": "https://codeforces.com/contest/1605/problem/C",
+    "submission_id": "CF135191847",
+    "submission_url": "https://codeforces.com/contest/1605/submission/135191847",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "strings",
+      "*1400"
+    ],
+    "timestamp": "Nov/13/2021 01:23"
+  },
   "CF135267783": {
     "contest_id": 1490,
     "language": "GNU C++17 (64)",
