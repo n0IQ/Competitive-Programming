@@ -9358,6 +9358,22 @@
     ],
     "timestamp": "Nov/09/2021 03:09"
   },
+  "CF136065654": {
+    "contest_id": 962,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\962\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Equator",
+    "problem_url": "https://codeforces.com/contest/962/problem/A",
+    "submission_id": "CF136065654",
+    "submission_url": "https://codeforces.com/contest/962/submission/136065654",
+    "tags": [
+      "implementation",
+      "*1300"
+    ],
+    "timestamp": "Nov/18/2021 17:48"
+  },
   "CF136417587": {
     "contest_id": 1520,
     "language": "GNU C++17 (64)",
