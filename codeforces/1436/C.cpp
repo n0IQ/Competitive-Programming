@@ -33,54 +33,36 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
 
-int n, x, pos;
-ll smaller, bigger;
-
-void helper()
+void solve()
 {
-	ll l = 0, r = n;
+	int n, x, pos;
+	cin >> n >> x >> pos;
+
+	ll l = 0, r = n, ans = 1, less = x - 1, greater = n - x;
 	while (l < r) {
 		ll m = l + (r - l) / 2;
 
 		if (m <= pos) {
-			if (m != pos) smaller++;
+			if (m != pos) {
+				ans *= less;
+				ans %= MOD1;
+				less--;
+			}
+
 			l = m + 1;
 		}
 		else {
-			bigger++;
+			ans *= greater;
+			ans %= MOD1;
+			greater--;
 			r = m;
 		}
-	}
-}
 
-void solve()
-{
-	cin >> n >> x >> pos;
-	smaller = 0, bigger = 0;
-
-	helper();
-
-	if (smaller >= x || bigger > n - x) {
-		cout << 0 << '\n';
-		return;
-	}
-
-	ll ans = 1;
-	rep(i, 1, smaller + 1) {
-		ans = ans * (x - i);
-		ans %= MOD1;
 		if (ans < 0) ans += MOD1;
 	}
 
-	rep(i, 1, bigger + 1) {
-		ans = ans * (n - x - i + 1);
-		ans %= MOD1;
-		if (ans < 0) ans += MOD1;
-	}
-
-	n -= (smaller + bigger + 1);
-	rep(i, 1, n + 1) {
-		ans = ans * i;
+	for (ll i = 1; i <= less + greater; i++) {
+		ans *= i;
 		ans %= MOD1;
 		if (ans < 0) ans += MOD1;
 	}
