@@ -33,22 +33,61 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 //1. order_of_key(k) : number of elements strictly lesser than k
 //2. find_by_order(k) : k-th element in the set
 
+int n;
+int arr[(int)2e5 + 10];
+ll low, high;
+
+ll checkLow(ll a)
+{
+	ll l = 0, r = n - 1, ans = -1;
+	while (l <= r) {
+		ll m = l + (r - l) / 2;
+		ll x = a + arr[m];
+
+		if (x >= low) {
+			if (x <= high) ans = m;
+			r = m - 1;
+		}
+		else {
+			l = m + 1;
+		}
+	}
+
+	return ans;
+}
+
+ll checkHigh(ll a)
+{
+	ll l = 0, r = n - 1, ans = -1;
+	while (l <= r) {
+		ll m = l + (r - l) / 2;
+		ll x = a + arr[m];
+
+		if (x <= high) {
+			if (x >= low) ans = m;
+			l = m + 1;
+		}
+		else {
+			r = m - 1;
+		}
+	}
+
+	return ans;
+}
+
 void solve()
 {
-	int n;
-	ll l, r;
-	cin >> n >> l >> r;
+	cin >> n >> low >> high;
+	rep(i, 0, n) cin >> arr[i];
 
-	vector<ll> a(n);
-	for (auto &x : a) cin >> x;
-
-	sort(all(a));
+	sort(arr, arr + n);
 	ll ans = 0;
 
 	rep(i, 0, n) {
-		ans += ub(all(a), r - a[i]) - a.begin();
-		ans -= lb(all(a), l - a[i]) - a.begin();
-		if (l <= 2 * a[i] && 2 * a[i] <= r) ans--;
+		ll a = checkHigh(arr[i]);
+		ll b = checkLow(arr[i]);
+		if (a > -1) ans += a - b + 1;
+		if (low <= 2 * arr[i] && 2 * arr[i] <= high) ans--;
 	}
 
 	cout << ans / 2 << '\n';
