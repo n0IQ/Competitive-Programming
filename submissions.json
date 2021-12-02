@@ -9358,6 +9358,24 @@
     ],
     "timestamp": "Nov/09/2021 03:09"
   },
+  "CF137836514": {
+    "contest_id": 802,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\802\\J.cpp",
+    "platform": "Codeforces",
+    "problem_index": "J",
+    "problem_name": "Send the Fool Further! (easy)",
+    "problem_url": "https://codeforces.com/contest/802/problem/J",
+    "submission_id": "CF137836514",
+    "submission_url": "https://codeforces.com/contest/802/submission/137836514",
+    "tags": [
+      "dfs and similar",
+      "graphs",
+      "trees",
+      "*1400"
+    ],
+    "timestamp": "Dec/03/2021 03:16"
+  },
   "CF137836673": {
     "contest_id": 116,
     "language": "GNU C++17 (64)",
