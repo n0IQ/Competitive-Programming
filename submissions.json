@@ -1,4 +1,20 @@
 {
+  "AC27673884": {
+    "contest_id": "abc230",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc230\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "X drawing",
+    "problem_url": "https://atcoder.jp/contests/abc230/tasks/abc230_c",
+    "submission_id": "AC27673884",
+    "submission_url": "https://atcoder.jp/contests/abc230/submissions/27673884",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/03/2021 19:41"
+  },
   "AC27875333": {
     "contest_id": "abc138",
     "language": "C++ (GCC 9.2.1)",
