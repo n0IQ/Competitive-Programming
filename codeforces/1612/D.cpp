@@ -56,9 +56,12 @@ void solve()
 	ll a, b;
 	cin >> a >> b >> x;
 
-	if (a < b) swap(a, b);
-	if (x > a) {
+	if (x > max(a, b)) {
 		cout << "NO\n";
+		return;
+	}
+	if (a == x || b == x || (max(a, b) - x) % min(a, b) == 0) {
+		cout << "YES\n";
 		return;
 	}
 
