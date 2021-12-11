@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF138723067": {
+    "contest_id": 1608,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1608\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Find Array",
+    "problem_url": "https://codeforces.com/contest/1608/problem/A",
+    "submission_id": "CF138723067",
+    "submission_url": "https://codeforces.com/contest/1608/submission/138723067",
+    "tags": [
+      "constructive algorithms",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Dec/11/2021 15:37"
+  },
   "CF138777527": {
     "contest_id": 1608,
     "language": "GNU C++17 (64)",
