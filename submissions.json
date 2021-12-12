@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF138872518": {
+    "contest_id": 1591,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1591\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Life of a Flower",
+    "problem_url": "https://codeforces.com/contest/1591/problem/A",
+    "submission_id": "CF138872518",
+    "submission_url": "https://codeforces.com/contest/1591/submission/138872518",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Dec/12/2021 20:50"
+  },
   "CF138886268": {
     "contest_id": 1591,
     "language": "GNU C++17 (64)",
