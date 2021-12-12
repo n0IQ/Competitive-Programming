@@ -1,4 +1,20 @@
 {
+  "AC27888402": {
+    "contest_id": "abc126",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc126\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Even Relation",
+    "problem_url": "https://atcoder.jp/contests/abc126/tasks/abc126_d",
+    "submission_id": "AC27888402",
+    "submission_url": "https://atcoder.jp/contests/abc126/submissions/27888402",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/13/2021 03:45"
+  },
   "AC27911566": {
     "contest_id": "dp",
     "language": "C++ (GCC 9.2.1)",
