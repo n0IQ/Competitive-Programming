@@ -1,4 +1,20 @@
 {
+  "AC27881481": {
+    "contest_id": "abc070",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc070\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Transit Tree Path",
+    "problem_url": "https://atcoder.jp/contests/abc070/tasks/abc070_d",
+    "submission_id": "AC27881481",
+    "submission_url": "https://atcoder.jp/contests/abc070/submissions/27881481",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Dec/12/2021 16:36"
+  },
   "AC27888402": {
     "contest_id": "abc126",
     "language": "C++ (GCC 9.2.1)",
