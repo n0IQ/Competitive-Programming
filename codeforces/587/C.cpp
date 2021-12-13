@@ -36,8 +36,8 @@ template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_ta
 const int MAXN = (int)1e5 + 10;
 const int LOG = 19;
 vector<int> adj[MAXN], city[MAXN];
-vector<vector<int>> st[MAXN];
 int up[MAXN][LOG];
+int st[MAXN][LOG][10];
 int depth[MAXN];
 
 vector<int> merge(vector<int> a, vector<int> b)
@@ -45,7 +45,7 @@ vector<int> merge(vector<int> a, vector<int> b)
 	for (auto x : b) a.pb(x);
 	sort(all(a));
 	unique(all(a));
-	a.resize(10, 1e9);
+	a.resize(min(10, sz(a)));
 	return a;
 }
 
@@ -62,11 +62,24 @@ void dfs(int u, int p = -1)
 			}
 		}
 
-		st[v][0] = merge(city[v], city[u]);
+		vector<int> a = merge(city[v], city[u]);
+		for (int i = 0; i < sz(a); i++) {
+			st[v][0][i] = a[i];
+		}
+
 		for (int j = 1; j < LOG; j++) {
 			if (up[v][j - 1] != -1) {
-				st[v][j] = merge(st[v][j - 1], st[up[v][j - 1]][j - 1]);
-				//st[v][j - 1][0...10] + st[up[v][j - 1]][j - 1][0...10]
+				vector<int> t1(10), t2(10);
+				for (int i = 0; i < 10; i++) {
+					t1[i] = st[v][j - 1][i];
+					t2[i] = st[up[v][j - 1]][j - 1][i];
+				}
+				a.clear();
+				a = merge(t1, t2);
+				for (int i = 0; i < sz(a); i++) {
+					st[v][j][i] = a[i];
+				}
+				//st[v][j - 1][0...10] st[up[v][j - 1]][j - 1][0...10]
 			}
 		}
 
@@ -76,7 +89,7 @@ void dfs(int u, int p = -1)
 
 vector<int> get_lca(int u, int v)
 {
-	vector<int> res;
+	vector<int> a, b;
 	if (depth[u] < depth[v]) {
 		swap(u, v);
 	}
@@ -84,25 +97,41 @@ vector<int> get_lca(int u, int v)
 	int k = depth[u] - depth[v];
 	for (int j = LOG - 1; j >= 0; j--) {
 		if (k & (1 << j)) {
-			res = merge(res, st[u][j]);
+			b.clear();
+			for (int i = 0; i < 10; i++) {
+				b.pb(st[u][j][i]);
+			}
+			a = merge(a, b);
 			u = up[u][j];
 		}
 	}
 
-	if (u == v) return res;
+	if (u == v) return a;
 
 	for (int j = LOG - 1; j >= 0; j--) {
 		if (up[u][j] != up[v][j]) {
-			res = merge(res, st[u][j]);
-			res = merge(res, st[v][j]);
+			b.clear();
+			for (int i = 0; i < 10; i++) {
+				b.pb(st[u][j][i]);
+			}
+			a = merge(a, b);
+			b.clear();
+			for (int i = 0; i < 10; i++) {
+				b.pb(st[v][j][i]);
+			}
+			a = merge(a, b);
 			u = up[u][j];
 			v = up[v][j];
 		}
 	}
 
-	res = merge(res, st[u][0]);
-	res = merge(res, st[v][0]);
-	return res;
+	b.clear();
+	for (int i = 0; i < 10; i++) b.pb(st[u][0][i]);
+	a = merge(a, b);
+	b.clear();
+	for (int i = 0; i < 10; i++) b.pb(st[v][0][i]);
+	a = merge(a, b);
+	return a;
 }
 
 void solve()
@@ -131,7 +160,9 @@ void solve()
 
 	mem1(up);
 	rep(i, 0, n) {
-		st[i] = vector<vector<int>> (LOG);
+		rep(j, 0, LOG) {
+			rep(k, 0, 10) st[i][j][k] = (int)1e9;
+		}
 	}
 
 	dfs(0);
@@ -141,20 +172,24 @@ void solve()
 		cin >> u >> v >> a;
 		--u, --v;
 
-		vector<int> res;
-		if (u == v) res = city[u];
-		else res = get_lca(u, v);
+		vector<int> ans;
+		if (u == v) {
+			ans = city[u];
+		}
+		else {
+			ans = get_lca(u, v);
+		}
 
-		rep(i, 0, sz(res)) {
-			if (res[i] >= (int)1e9) {
-				res.resize(i);
+		rep(i, 0, sz(ans)) {
+			if (ans[i] >= (int)1e9) {
+				ans.resize(i);
 				break;
 			}
 		}
 
-		res.resize(min(sz(res), a));
-		cout << sz(res) << ' ';
-		for (auto x : res) cout << x + 1 << ' ';
+		ans.resize(min(sz(ans), a));
+		cout << sz(ans) << ' ';
+		for (auto x : ans) cout << x + 1 << ' ';
 		cout << '\n';
 	}
 }
