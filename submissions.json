@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF139424019": {
+    "contest_id": 1604,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1604\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Di-visible Confusion",
+    "problem_url": "https://codeforces.com/contest/1604/problem/C",
+    "submission_id": "CF139424019",
+    "submission_url": "https://codeforces.com/contest/1604/submission/139424019",
+    "tags": [
+      "brute force",
+      "greedy",
+      "math",
+      "number theory",
+      "*1300"
+    ],
+    "timestamp": "Dec/16/2021 00:11"
+  },
   "CF139429288": {
     "contest_id": 1462,
     "language": "GNU C++17 (64)",
