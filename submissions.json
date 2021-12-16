@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF139549459": {
+    "contest_id": 1617,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1617\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Forbidden Subsequence",
+    "problem_url": "https://codeforces.com/contest/1617/problem/A",
+    "submission_id": "CF139549459",
+    "submission_url": "https://codeforces.com/contest/1617/submission/139549459",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Dec/16/2021 21:33"
+  },
   "CF139549801": {
     "contest_id": 1617,
     "language": "GNU C++17 (64)",
