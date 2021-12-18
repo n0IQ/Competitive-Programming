@@ -63,22 +63,40 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+ll dp[1001][1001];
+
+ll helper(ll n, ll k, ll i, bool right)
+{
+	if ((!right && i == 1) || (right && i > n) || (k == 1)) return 1;
+	if (dp[i][k] != -1) return dp[i][k];
+
+	ll ans = 0;
+	if (right) {
+		ans += helper(n, k, i + 1, 1);
+		ans %= MOD1;
+		ans += helper(n, k - 1, i, 0);
+		ans %= MOD1;
+	}
+	else {
+		ans += helper(n, k, i - 1, 0);
+		ans %= MOD1;
+		ans += helper(n, k - 1, i, 1);
+		ans %= MOD1;
+	}
+
+	dp[i][k] = ans % MOD1;
+
+	return dp[i][k];
+}
+
 void solve()
 {
 	ll n, k;
 	cin >> n >> k;
 
-	ll dp[n + 1][k + 1];
-	mem0(dp);
-
-	rep(j, 1, k + 1) {
-		rep(i, 0, n + 1) {
-			if (i == 0) dp[i][j] = 1;
-			else dp[i][j] = (dp[i - 1][j] + dp[n - i][j - 1]) % MOD1;
-		}
-	}
-
-	cout << dp[n][k] << '\n';
+	mem1(dp);
+	ll ans = helper(n, k, 1, 1);
+	cout << ans % MOD1 << '\n';
 }
 
 int main()
