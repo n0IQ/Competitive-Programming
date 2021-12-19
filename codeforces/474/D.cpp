@@ -63,17 +63,26 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
-vector<ll> dp;
+vector<ll> dp, p;
 int k;
+
+ll helper(int i)
+{
+	if (i == 0) return 1;
+	if (i < 0) return 0;
+	if (dp[i] != -1) return dp[i];
+
+	return dp[i] = (helper(i - 1) + helper(i - k)) % MOD1;
+}
 
 void solve()
 {
 	int a, b;
 	cin >> a >> b;
 
-	ll ans = (dp[b] - dp[a - 1]) % MOD1;
-	ans += MOD1;
-	cout << ans % MOD1 << '\n';
+	ll ans = (p[b] - p[a - 1]) % MOD1;
+	if (ans < 0) ans += MOD1;
+	cout << ans << '\n';
 }
 
 int main()
@@ -89,20 +98,12 @@ int main()
 	int t = 1;
 	cin >> t >> k;
 
-	dp = vector<ll> (1e5 + 10, 0);
-	dp[0] = 1;
-	rep(i, 1, 100001) {
-		dp[i] = dp[i - 1];
-		if (i >= k) {
-			dp[i] += dp[i - k];
-		}
+	dp = vector<ll> (1e5 + 10, -1);
+	p = vector<ll>(1e5 + 10, 0);
 
-		dp[i] %= MOD1;
-	}
-
-	dp[0] = 0;
+	rep(i, 1, 100001) helper(i);
 	rep(i, 1, 100001) {
-		dp[i] = (dp[i - 1] + dp[i]) % MOD1;
+		p[i] = (p[i - 1] + dp[i]) % MOD1;
 	}
 
 	while (t--) solve();
