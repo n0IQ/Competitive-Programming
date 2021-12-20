@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF140036637": {
+    "contest_id": 1619,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1619\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Squares and Cubes",
+    "problem_url": "https://codeforces.com/contest/1619/problem/B",
+    "submission_id": "CF140036637",
+    "submission_url": "https://codeforces.com/contest/1619/submission/140036637",
+    "tags": [
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Dec/20/2021 20:22"
+  },
   "CF140150626": {
     "contest_id": 1619,
     "language": "GNU C++17 (64)",
