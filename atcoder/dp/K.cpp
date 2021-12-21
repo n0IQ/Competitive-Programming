@@ -65,7 +65,18 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 
 int dp[100001];
 
-// dp[i] = if its possible to win for 1st player with i piles of stones
+bool helper(vector<int> &a, int n, int k)
+{
+	if (dp[k] != -1) return dp[k];
+
+	int ans = 0;
+	rep(i, 0, n) {
+		if (k - a[i] < 0) break;
+		ans |= (helper(a, n, k - a[i]) == 0);
+	}
+
+	return dp[k] = ans;
+}
 
 void solve()
 {
@@ -75,15 +86,8 @@ void solve()
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
 
-	rep(i, 1, k + 1) {
-		rep(j, 0, n) {
-			if (i >= a[j]) {
-				dp[i] |= !(dp[i - a[j]]);
-			}
-		}
-	}
-
-	if (dp[k]) cout << "First\n";
+	mem1(dp);
+	if (helper(a, n, k)) cout << "First\n";
 	else cout << "Second\n";
 }
 
