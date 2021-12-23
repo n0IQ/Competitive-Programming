@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF140343557": {
+    "contest_id": 1132,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1132\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Clear the String",
+    "problem_url": "https://codeforces.com/contest/1132/problem/F",
+    "submission_id": "CF140343557",
+    "submission_url": "https://codeforces.com/contest/1132/submission/140343557",
+    "tags": [
+      "dp",
+      "*2000"
+    ],
+    "timestamp": "Dec/23/2021 17:18"
+  },
   "CF140360316": {
     "contest_id": 845,
     "language": "GNU C++17 (64)",
