@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF140360316": {
+    "contest_id": 845,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\845\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Luba And The Ticket",
+    "problem_url": "https://codeforces.com/contest/845/problem/B",
+    "submission_id": "CF140360316",
+    "submission_url": "https://codeforces.com/contest/845/submission/140360316",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Dec/23/2021 20:19"
+  },
   "CF140363043": {
     "contest_id": 845,
     "language": "GNU C++17 (64)",
