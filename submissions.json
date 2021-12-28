@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF140950992": {
+    "contest_id": 1623,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1623\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Balanced Stone Heaps",
+    "problem_url": "https://codeforces.com/contest/1623/problem/C",
+    "submission_id": "CF140950992",
+    "submission_url": "https://codeforces.com/contest/1623/submission/140950992",
+    "tags": [
+      "binary search",
+      "greedy",
+      "*1600"
+    ],
+    "timestamp": "Dec/28/2021 22:27"
+  },
   "CF141035192": {
     "contest_id": 1230,
     "language": "GNU C++17 (64)",
