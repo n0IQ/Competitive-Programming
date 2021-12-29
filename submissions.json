@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF141078790": {
+    "contest_id": 1616,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1616\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Mirror in the String",
+    "problem_url": "https://codeforces.com/contest/1616/problem/B",
+    "submission_id": "CF141078790",
+    "submission_url": "https://codeforces.com/contest/1616/submission/141078790",
+    "tags": [
+      "greedy",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "Dec/29/2021 21:40"
+  },
   "CF141168436": {
     "contest_id": 1073,
     "language": "GNU C++17 (64)",
