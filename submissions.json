@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF141257354": {
+    "contest_id": 1616,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1616\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Representative Edges",
+    "problem_url": "https://codeforces.com/contest/1616/problem/C",
+    "submission_id": "CF141257354",
+    "submission_url": "https://codeforces.com/contest/1616/submission/141257354",
+    "tags": [
+      "brute force",
+      "geometry",
+      "implementation",
+      "math",
+      "*1500"
+    ],
+    "timestamp": "Dec/31/2021 21:18"
+  },
   "CF141314875": {
     "contest_id": 16,
     "language": "GNU C++17 (64)",
