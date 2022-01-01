@@ -64,41 +64,55 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+lld arr[20][20];
+vector<lld> dp(1 << 20, -1.0);
+
+lld helper(int n, int mask)
+{
+	if (set_bits(mask) == n) {
+		return 1.0;
+	}
+	if (dp[mask] >= 0) {
+		return dp[mask];
+	}
+
+	int p = 0;
+	rep(i, 0, n) {
+		if (mask & (1 << i)) {
+			p++;
+		}
+	}
+
+	lld ans = 0;
+	rep(j, 0, n) {
+		if (mask & (1 << j)) {
+			continue;
+		}
+
+		rep(i, 0, n) {
+			if (mask & (1 << i)) {
+				ans += (arr[i][j] / ((p * (p + 1)) / 2)) * helper(n, mask | (1 << j));
+			}
+		}
+	}
+
+	return dp[mask] = ans;
+}
+
 void solve()
 {
 	int n;
 	cin >> n;
 
-	lld arr[n][n];
 	rep(i, 0, n) {
 		rep(j, 0, n) {
 			cin >> arr[i][j];
 		}
 	}
 
-	vector<lld> dp(1 << 19);
-	dp[(1 << n) - 1] = 1.0;
-
-	repR(mask, (1 << n) - 1, 0) {
-		vector<int> one, zero;
-
-		rep(i, 0, n) {
-			if (mask & (1 << i)) one.pb(i);
-			else zero.pb(i);
-		}
-
-		int p = sz(one) + 1;
-		int total = (p * (p - 1)) / 2;
-
-		for (auto i : one) {
-			for (auto j : zero) {
-				dp[mask] += (arr[i][j] / total) * dp[mask ^ (1 << j)];
-			}
-		}
-	}
-
 	rep(i, 0, n) {
-		cout << ps(dp[(1 << i)], 6) << ' ';
+		lld ans = helper(n, (1 << i));
+		cout << ps(ans, 6) << ' ';
 	}
 
 	cout << '\n';
