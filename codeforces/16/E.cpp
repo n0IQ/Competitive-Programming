@@ -77,17 +77,22 @@ void solve()
 	}
 
 	vector<lld> dp(1 << 19);
-	dp[(1 << n) - 1] = 1.0; // initially all fish are alive set their probability to 1
+	dp[(1 << n) - 1] = 1.0;
 
 	repR(mask, (1 << n) - 1, 0) {
+		vector<int> one, zero;
+
 		rep(i, 0, n) {
-			if (mask & (1 << i)) { // ith fish is alive
-				rep(j, 0, n) {
-					if (mask & (1 << j) && i != j) { // jth fish is alive
-						ll p = set_bits(mask);
-						dp[mask ^ (1 << j)] += dp[mask] * arr[i][j] / ((p * (p - 1)) / 2);
-					}
-				}
+			if (mask & (1 << i)) one.pb(i);
+			else zero.pb(i);
+		}
+
+		int p = sz(one) + 1;
+		int total = (p * (p - 1)) / 2;
+
+		for (auto i : one) {
+			for (auto j : zero) {
+				dp[mask] += (arr[i][j] / total) * dp[mask ^ (1 << j)];
 			}
 		}
 	}
