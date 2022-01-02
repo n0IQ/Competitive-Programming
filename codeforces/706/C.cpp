@@ -63,17 +63,49 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+vector<ll> cost;
+vector<string> arr, rev_arr;
+vector<vector<ll>> dp;
+
+ll helper(int n, int i, bool rev)
+{
+	if (i == n) {
+		return 0;
+	}
+	if (dp[i][rev] != -1) {
+		return dp[i][rev];
+	}
+
+	ll ans = 1e16;
+	if (rev == 0) {
+		if (arr[i] >= arr[i - 1]) {
+			ans = min(ans, helper(n, i + 1, 0));
+		}
+		if (rev_arr[i] >= arr[i - 1]) {
+			ans = min(ans, cost[i] + helper(n, i + 1, 1));
+		}
+	}
+	else {
+		if (arr[i] >= rev_arr[i - 1]) {
+			ans = min(ans, helper(n, i + 1, 0));
+		}
+		if (rev_arr[i] >= rev_arr[i - 1]) {
+			ans = min(ans, cost[i] + helper(n, i + 1, 1));
+		}
+	}
+
+	return dp[i][rev] = ans;
+}
+
 void solve()
 {
 	int n;
 	cin >> n;
 
-	vector<ll> cost(n);
-	vector<string> arr(n), rev_arr(n);
-	vector<vector<ll>> dp(n, vector<ll> (2, 0));
-
-	// dp[i][j] = min cost to make first i strings lexicographically sorted where j = 0 means
-	//            the sting is not reversed and j = 1 means the string is reversed.
+	cost = vector<ll> (n);
+	arr = vector<string> (n);
+	rev_arr = vector<string> (n);
+	dp = vector<vector<ll>> (n + 1, vector<ll> (2, -1));
 
 	rep(i, 0, n) cin >> cost[i];
 
@@ -83,35 +115,8 @@ void solve()
 		reverse(all(rev_arr[i]));
 	}
 
-	dp[0][0] = 0, dp[0][1] = cost[0];
-	rep(i, 1, n) {
-		rep(j, 0, 2) {
-			ll ans = 1e16;
+	ll ans = min(helper(n, 1, 0), cost[0] + helper(n, 1, 1));
 
-			if (j == 0) {
-				if (arr[i] >= arr[i - 1]) {
-					ans = min(ans, dp[i - 1][0]);
-				}
-				if (arr[i] >= rev_arr[i - 1]) {
-					ans = min(ans, dp[i - 1][1]);
-				}
-			}
-			else {
-				if (rev_arr[i] >= arr[i - 1]) {
-					ans = min(ans, cost[i] + dp[i - 1][0]);
-				}
-				if (rev_arr[i] >= rev_arr[i - 1]) {
-					ans = min(ans, cost[i] + dp[i - 1][1]);
-				}
-			}
-
-			dp[i][j] = ans;
-		}
-	}
-
-	debug(dp)
-
-	ll ans = min(dp[n - 1][0], dp[n - 1][1]);
 	if (ans >= 1e16) cout << -1 << '\n';
 	else cout << ans << '\n';
 }
