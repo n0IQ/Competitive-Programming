@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF141730602": {
+    "contest_id": 1621,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1621\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Integers Shop",
+    "problem_url": "https://codeforces.com/contest/1621/problem/B",
+    "submission_id": "CF141730602",
+    "submission_url": "https://codeforces.com/contest/1621/submission/141730602",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Jan/05/2022 17:40"
+  },
   "CF146556699": {
     "contest_id": 1638,
     "language": "GNU C++17 (64)",
