@@ -63,67 +63,54 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
-template <typename T> class SegTree {
-public:
-	int n;
-	T e;
-	vector<T> st;
+vector<ll> arr((int)2e5 + 10);
+ll st[4 * (int)2e5 + 10];
 
-	SegTree(int _n, T _e = T()) {
-		n = _n;
-		e = _e;
-		st.resize(4 * n + 10);
+void build(int i, int l, int r, bool &ok)
+{
+	if (l == r) {
+		st[i] = arr[l];
+		ok = 1;
+		return;
 	}
 
-	T merge(const T &l, const T &r, bool &ok)
-	{
-		if (ok) {
-			ok ^= 1;
-			return (l | r);
-		}
-		else {
-			ok ^= 1;
-			return (l ^ r);
-		}
+	int mid = l + (r - l) / 2;
+	build(i << 1, l, mid, ok);
+	build(i << 1 | 1, mid + 1, r, ok);
+
+	if (ok) {
+		st[i] = (st[i << 1] | st[i << 1 | 1]);
+		ok ^= 1;
+	}
+	else {
+		st[i] = (st[i << 1] ^ st[i << 1 | 1]);
+		ok ^= 1;
+	}
+}
+
+void update(int i, int l, int r, int idx, ll val, bool &ok)
+{
+	if (l == r) {
+		st[i] = val;
+		ok = 1;
+		return;
 	}
 
-	template<typename U> void build(U &arr, int i, int l, int r, bool &ok)
-	{
-		if (l == r) {
-			st[i] = T(arr[l]);
-			ok = 1;
-			return;
-		}
+	int mid = l + (r - l) / 2;
+	if (idx <= mid)
+		update(i << 1, l, mid, idx, val, ok);
+	else
+		update(i << 1 | 1, mid + 1, r, idx, val, ok);
 
-		int mid = l + (r - l) / 2;
-		build(arr, i << 1, l, mid, ok);
-		build(arr, i << 1 | 1, mid + 1, r, ok);
-
-		st[i] = merge(st[i << 1], st[i << 1 | 1], ok);
+	if (ok) {
+		st[i] = (st[i << 1] | st[i << 1 | 1]);
+		ok ^= 1;
 	}
-
-	template<typename U> void Update(int i, int l, int r, int idx, U val, bool &ok)
-	{
-		if (l == r) {
-			st[i] = T(val);
-			ok = 1;
-			return;
-		}
-
-		int mid = l + (r - l) / 2;
-		if (idx <= mid)
-			Update(i << 1, l, mid, idx, val, ok);
-		else
-			Update(i << 1 | 1, mid + 1, r, idx, val, ok);
-
-		st[i] = merge(st[i << 1], st[i << 1 | 1], ok);
+	else {
+		st[i] = (st[i << 1] ^ st[i << 1 | 1]);
+		ok ^= 1;
 	}
-
-	template<typename U> void update(int idx, U val, bool ok)
-	{
-		Update(1, 0, n - 1, idx, val, ok);
-	}
-};
+}
 
 void solve()
 {
@@ -131,13 +118,10 @@ void solve()
 	cin >> n >> m;
 
 	n = (1 << n);
-	vector<ll> a(n);
-	for (auto &x : a) cin >> x;
-
-	SegTree<ll> segtree(n);
+	rep(i, 0, n) cin >> arr[i];
 
 	bool ok = 0;
-	segtree.build(a, 1, 0, n - 1, ok);
+	build(1, 0, n - 1, ok);
 
 	while (m--) {
 		int idx;
@@ -145,8 +129,8 @@ void solve()
 		cin >> idx >> val;
 		--idx;
 		ok = 0;
-		segtree.update(idx, val, ok);
-		cout << segtree.st[1] << '\n';
+		update(1, 0, n - 1, idx, val, ok);
+		cout << st[1] << '\n';
 	}
 }
 
