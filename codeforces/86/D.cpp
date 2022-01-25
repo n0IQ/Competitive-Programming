@@ -64,55 +64,45 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
 const int MAXN = (int)2e5 + 10;
-int BLOCK_SIZE;
+int block_sz;
 
 struct Query {
 	int l, r, idx;
 } qr[MAXN];
 
-int n, q;
 int arr[MAXN], freq[(int)1e6 + 10];
 ll ans[MAXN];
 ll curr_ans;
 
-bool comp(const Query &a, const Query &b)
+bool comp(Query &q1, Query &q2)
 {
-	if (a.l / BLOCK_SIZE != b.l / BLOCK_SIZE) return a.l < b.l;
-	else return (a.l / BLOCK_SIZE & 1) ? a.r < b.r: a.r > b.r;
+	int b1 = q1.l / block_sz;
+	int b2 = q2.l / block_sz;
+	if (b1 != b2) return b1 < b2;
+	else return (b1 & 1) ? q1.r < q2.r: q1.r > q2.r;
 }
 
-inline void add(int x)
+void add(int x)
 {
-	curr_ans -= 1LL * freq[x] * freq[x] * x;
-	freq[x]++;
-	curr_ans += 1LL * freq[x] * freq[x] * x;
+	ll cnt = freq[arr[x]];
+	curr_ans -= ((cnt * cnt) * arr[x]);
+	freq[arr[x]]++;
+	cnt = freq[arr[x]];
+	curr_ans += ((cnt * cnt) * arr[x]);
 }
 
-inline void remove(int x)
+void remove(int x)
 {
-	curr_ans -= 1LL * freq[x] * freq[x] * x;
-	freq[x]--;
-	curr_ans += 1LL * freq[x] * freq[x] * x;
-}
-
-void mo()
-{
-	BLOCK_SIZE = sqrt(n) + 1;
-	sort(qr + 1, qr + q + 1, comp);
-	int l = 1, r = 0;
-	curr_ans = 0;
-
-	rep(i, 1, q + 1) {
-		while (r < qr[i].r) add(arr[++r]);
-		while (l > qr[i].l) add(arr[--l]);
-		while (r > qr[i].r) remove(arr[r--]);
-		while (l < qr[i].l) remove(arr[l++]);
-		ans[qr[i].idx] = curr_ans;
-	}
+	ll cnt = freq[arr[x]];
+	curr_ans -= ((cnt * cnt) * arr[x]);
+	freq[arr[x]]--;
+	cnt = freq[arr[x]];
+	curr_ans += ((cnt * cnt) * arr[x]);
 }
 
 void solve()
 {
+	int n, q;
 	cin >> n >> q;
 
 	rep(i, 1, n + 1) cin >> arr[i];
@@ -123,7 +113,18 @@ void solve()
 		qr[i] = {l, r, i};
 	}
 
-	mo();
+	block_sz = sqrt(n) + 1;
+	sort(qr + 1, qr + q + 1, comp);
+	int l = 1, r = 0;
+	curr_ans = 0;
+
+	rep(i, 1, q + 1) {
+		while (r < qr[i].r) add(++r);
+		while (l > qr[i].l) add(--l);
+		while (r > qr[i].r) remove(r--);
+		while (l < qr[i].l) remove(l++);
+		ans[qr[i].idx] = curr_ans;
+	}
 
 	rep(i, 1, q + 1) {
 		cout << ans[i] << '\n';
