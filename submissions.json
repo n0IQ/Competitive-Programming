@@ -10770,6 +10770,23 @@
     ],
     "timestamp": "Jan/05/2022 17:40"
   },
+  "CF144783520": {
+    "contest_id": 1633,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1633\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Make Them Equal",
+    "problem_url": "https://codeforces.com/contest/1633/problem/D",
+    "submission_id": "CF144783520",
+    "submission_url": "https://codeforces.com/contest/1633/submission/144783520",
+    "tags": [
+      "dp",
+      "greedy",
+      "*1600"
+    ],
+    "timestamp": "Feb/01/2022 03:15"
+  },
   "CF144882499": {
     "contest_id": 522,
     "language": "GNU C++17 (64)",
