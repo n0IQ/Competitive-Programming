@@ -67,6 +67,20 @@ const int MAXN = (int)5e5 + 10;
 int st[4 * MAXN];
 map<int, int> idx;
 
+void build(int i, int l, int r)
+{
+	if (l == r) {
+		st[i] = INT_MAX;
+		return;
+	}
+
+	int mid = l + (r - l) / 2;
+	build(i << 1, l, mid);
+	build(i << 1 | 1, mid + 1, r);
+
+	st[i] = min(st[i << 1], st[i << 1 | 1]);
+}
+
 void update(int i, int l, int r, int idx, int val)
 {
 	if (l == r) {
@@ -113,9 +127,7 @@ void solve()
 		qr[r].pb({l, i});
 	}
 
-	rep(i, 0, 4 * MAXN) {
-		st[i] = INT_MAX;
-	}
+	build(1, 0, n - 1);
 
 	int ans[q];
 	rep(i, 0, n) {
