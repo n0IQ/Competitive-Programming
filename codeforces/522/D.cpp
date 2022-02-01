@@ -63,78 +63,39 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
-template <typename T> class SegTree {
-public:
-	int n;
-	T e;
-	vector<T> st;
+const int MAXN = (int)5e5 + 10;
+int st[4 * MAXN];
+map<int, int> idx;
 
-	SegTree(int _n, T _e = T()) {
-		n = _n;
-		e = _e;
-		st.resize(4 * n + 10);
+void update(int i, int l, int r, int idx, int val)
+{
+	if (l == r) {
+		st[i] = val;
+		return;
 	}
 
-	T merge(const T &l, const T &r)
-	{
-		return min(l, r);
-	}
+	int mid = l + (r - l) / 2;
+	if (idx <= mid)
+		update(i << 1, l, mid, idx, val);
+	else
+		update(i << 1 | 1, mid + 1, r, idx, val);
 
-	void build(int i, int l, int r)
-	{
-		if (l == r) {
-			st[i] = INT_MAX;
-			return;
-		}
+	st[i] = min(st[i << 1], st[i << 1 | 1]);
+}
 
-		int mid = l + (r - l) / 2;
-		build(i << 1, l, mid);
-		build(i << 1 | 1, mid + 1, r);
+int query(int i, int l, int r, int ql, int qr)
+{
+	if (l > qr || r < ql)
+		return INT_MAX;
+	if (l >= ql && r <= qr)
+		return st[i];
 
-		st[i] = merge(st[i << 1], st[i << 1 | 1]);
-	}
+	int mid = l + (r - l) / 2;
+	int x = query(i << 1, l, mid, ql, qr);
+	int y = query(i << 1 | 1, mid + 1, r, ql, qr);
 
-	template<typename U> void Update(int i, int l, int r, int idx, U val)
-	{
-		if (l == r) {
-			st[i] = T(val);
-			return;
-		}
-
-		int mid = l + (r - l) / 2;
-		if (idx <=  mid)
-			Update(i << 1, l, mid, idx, val);
-		else
-			Update(i << 1 | 1, mid + 1, r, idx, val);
-
-		st[i] = merge(st[i << 1], st[i << 1 | 1]);
-	}
-
-	T Query(int i, int l, int r, int ql, int qr)
-	{
-		if (ql > r || qr < l)
-			return e;
-		if (l >= ql && r <= qr) {
-			return st[i];
-		}
-
-		int mid = l + (r - l) / 2;
-		T x = Query(i << 1, l, mid, ql, qr);
-		T y = Query(i << 1 | 1, mid + 1, r, ql, qr);
-
-		return merge(x, y);
-	}
-
-	template<typename U> void update(int idx, U val)
-	{
-		Update(1, 0, n - 1, idx, val);
-	}
-
-	T query(int ql, int qr)
-	{
-		return Query(1, 0, n - 1, ql, qr);
-	}
-};
+	return min(x, y);
+}
 
 void solve()
 {
@@ -144,15 +105,6 @@ void solve()
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
 
-	//Coordinate Compression
-	vector<int> b = a;
-	sort(b.begin(), b.end());
-	b.resize(unique(b.begin(), b.end()) - b.begin());
-	for (int i = 0; i < n; ++i) {
-		a[i] = lower_bound(b.begin(), b.end(), a[i]) - b.begin();
-	}
-	//original value of a[i] can be obtained through b[a[i]]
-
 	vector<pii> qr[n];
 	rep(i, 0, q) {
 		int l, r;
@@ -161,26 +113,23 @@ void solve()
 		qr[r].pb({l, i});
 	}
 
-	SegTree<int> segtree(n, INT_MAX);
-	segtree.build(1, 0, n - 1);
-
-	int ans[q], idx[n];
-	rep(i, 0, n) {
-		idx[i] = -1;
+	rep(i, 0, 4 * MAXN) {
+		st[i] = INT_MAX;
 	}
 
+	int ans[q];
 	rep(i, 0, n) {
-		if (idx[a[i]] == -1) {
+		if (!idx.count(a[i])) {
 			idx[a[i]] = i;
 		}
 		else {
 			int prev = idx[a[i]];
 			idx[a[i]] = i;
-			segtree.update(prev, i - prev);
+			update(1, 0, n - 1, prev, i - prev);
 		}
 
 		for (auto it : qr[i]) {
-			ans[it.ss] = segtree.query(it.ff, i);
+			ans[it.ss] = query(1, 0, n - 1, it.ff, i);
 		}
 	}
 
