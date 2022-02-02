@@ -63,55 +63,41 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+const int MAXN = (int)1e5 + 10;
+const int MAXLOG = 20;
+vector<ll> arr[5];
+ll st[5][MAXN][MAXLOG];
+int LOG[MAXN];
 int n, m, k;
 vector<ll> ans, temp;
 
-struct SparseTable {
-	int n;
-	int MAXLOG = 20;
-	vector<int> LOG;
-	vector<vector<ll>> st;
-
-	void init(int _n)
-	{
-		n = _n;
-		st = vector<vector<ll>> (n, vector<ll> (MAXLOG, 0));
-		LOG.resize(n + 10, 0);
-		LOG[1] = 0;
-		for (int i = 2; i <= n; i++) {
-			LOG[i] = LOG[i / 2] + 1;
-		}
+void build(int id)
+{
+	for (int i = 0; i < n; i++) {
+		st[id][i][0] = arr[id][i];
 	}
 
-	void build(vector<ll> &arr)
-	{
-		for (int i = 0; i < n; i++) {
-			st[i][0] = arr[i];
-		}
-
-		for (int j = 1; j < MAXLOG; j++) {
-			for (int i = 0; i + (1 << j) - 1 < n; i++) {
-				st[i][j] = max(st[i][j - 1], st[i + (1 << (j - 1))][j - 1]);
-			}
+	for (int j = 1; j < MAXLOG; j++) {
+		for (int i = 0; i + (1 << j) - 1 < n; i++) {
+			st[id][i][j] = max(st[id][i][j - 1], st[id][i + (1 << (j - 1))][j - 1]);
 		}
 	}
+}
 
-	ll query(int l, int r)
-	{
-		int j = LOG[r - l + 1];
-		return max(st[l][j], st[r - (1 << j) + 1][j]);
-	}
-};
-
-SparseTable table[5];
+ll query(int id, int l, int r)
+{
+	int j = LOG[r - l + 1];
+	return max(st[id][l][j], st[id][r - (1 << j) + 1][j]);
+}
 
 bool check(int l, int r)
 {
 	ll sum = 0LL;
-	temp.assign(m, 0);
+	temp.clear();
+	temp.resize(m, 0);
 
 	rep(i, 0, m) {
-		ll x = table[i].query(l, r);
+		ll x = query(i, l, r);
 		temp[i] += x;
 		sum += x;
 	}
@@ -123,16 +109,21 @@ void solve()
 {
 	cin >> n >> m >> k;
 
-	vector<vector<ll>> arr(m, vector<ll>(n));
 	rep(i, 0, n) {
 		rep(j, 0, m) {
-			cin >> arr[j][i];
+			int x;
+			cin >> x;
+			arr[j].pb(x);
 		}
 	}
 
+	LOG[1] = 0;
+	for (int i = 2; i < MAXN; i++) {
+		LOG[i] = LOG[i / 2] + 1;
+	}
+
 	rep(i, 0, m) {
-		table[i].init(n);
-		table[i].build(arr[i]);
+		build(i);
 	}
 
 	ans.resize(m, 0);
