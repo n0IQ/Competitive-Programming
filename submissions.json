@@ -10770,6 +10770,22 @@
     ],
     "timestamp": "Jan/05/2022 17:40"
   },
+  "CF145582754": {
+    "contest_id": 278,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\278\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Learning Languages",
+    "problem_url": "https://codeforces.com/contest/278/problem/C",
+    "submission_id": "CF145582754",
+    "submission_url": "https://codeforces.com/contest/278/submission/145582754",
+    "tags": [
+      "dsu",
+      "*1400"
+    ],
+    "timestamp": "Feb/08/2022 01:16"
+  },
   "CF145584500": {
     "contest_id": 884,
     "language": "GNU C++17 (64)",
