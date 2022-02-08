@@ -10770,6 +10770,25 @@
     ],
     "timestamp": "Jan/05/2022 17:40"
   },
+  "CF145697349": {
+    "contest_id": 230,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\230\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Shifts",
+    "problem_url": "https://codeforces.com/contest/230/problem/C",
+    "submission_id": "CF145697349",
+    "submission_url": "https://codeforces.com/contest/230/submission/145697349",
+    "tags": [
+      "binary search",
+      "data structures",
+      "dp",
+      "implementation",
+      "*1500"
+    ],
+    "timestamp": "Feb/09/2022 04:40"
+  },
   "CF145792475": {
     "contest_id": 888,
     "language": "GNU C++17 (64)",
