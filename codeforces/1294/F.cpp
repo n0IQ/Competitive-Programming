@@ -64,21 +64,76 @@ template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
 const int MAXN = (int)2e5 + 10;
+const int LOG = 20;
 vector<int> adj[MAXN];
-vector<int> par;
+vector<int> depth(MAXN, 0);
+int up[MAXN][LOG];
+int max_d, node;
 
-pii dfs(int u, int p = -1, int d = 0)
+void dfs(int u, int p = -1)
 {
-	par[u] = p;
-	pii res = {d, u};
-
 	for (auto v : adj[u]) {
-		if (v != p) {
-			res = max(res, dfs(v, u, d + 1));
+		if (v == p) continue;
+
+		depth[v] = depth[u] + 1;
+		up[v][0] = u;
+
+		for (int j = 1; j < LOG; j++) {
+			if (up[v][j - 1] != -1) {
+				up[v][j] = up[up[v][j - 1]][j - 1];
+			}
+		}
+
+		dfs(v, u);
+	}
+}
+
+int get_lca(int u, int v)
+{
+	if (depth[u] < depth[v]) {
+		swap(u, v);
+	}
+
+	int k = depth[u] - depth[v];
+	for (int j = LOG - 1; j >= 0; j--) {
+		if (k & (1 << j)) {
+			u = up[u][j];
 		}
 	}
 
-	return res;
+	if (u == v) {
+		return u;
+	}
+
+	for (int j = LOG - 1; j >= 0; j--) {
+		if (up[u][j] != up[v][j]) {
+			u = up[u][j];
+			v = up[v][j];
+		}
+	}
+
+	return up[u][0];
+}
+
+pii get_distance(int u, int v)
+{
+	int lca = get_lca(u, v);
+	int dist = depth[u] + depth[v] - 2 * depth[lca];
+	return {lca, dist};
+}
+
+void dfs2(int u, int p = -1, int d = 0)
+{
+	if (d > max_d) {
+		max_d = d;
+		node = u;
+	}
+
+	for (auto v : adj[u]) {
+		if (v != p) {
+			dfs2(v, u, d + 1);
+		}
+	}
 }
 
 void solve()
@@ -94,58 +149,38 @@ void solve()
 		adj[v].pb(u);
 	}
 
-	par.resize(n);
 	int a, b, c;
 
-	pii p1 = dfs(0);
-	pii p2 = dfs(p1.ss);
+	max_d = 0;
+	dfs2(0);
+	a = node;
+	max_d = 0;
+	dfs2(node);
+	b = node;
 
-	a = p1.ss, b = p2.ss;
-	vector<int> path;
-	int u = b;
-	while (u != a) {
-		path.pb(u);
-		u = par[u];
-	}
-	path.pb(a);
-
-	if (sz(path) == n) {
-		cout << n - 1 << '\n';
-		cout << path[0] + 1 << ' ' << path[1] + 1 << ' ' << path.back() + 1 << '\n';
-		return;
-	}
-
-	queue<int> q;
-	vector<bool> visited(n, 0);
-	vector<int> dist(n, 0);
-	for (auto x : path) {
-		q.push(x);
-		visited[x] = 1;
-		dist[x] = 0;
-	}
-
-	while (!q.empty()) {
-		int u = q.front();
-		q.pop();
-
-		for (auto v : adj[u]) {
-			if (!visited[v]) {
-				q.push(v);
-				visited[v] = 1;
-				dist[v] = dist[u] + 1;
-			}
+	rep(i, 0, MAXN) {
+		rep(j, 0, LOG) {
+			up[i][j] = -1;
 		}
 	}
 
-	int max_d = -1;
+	dfs(a);
+
+	max_d = 0;
 	rep(i, 0, n) {
-		if (dist[i] > max_d) {
-			max_d = dist[i];
+		if (i == a || i == b) continue;
+
+		pii p1 = get_distance(b, i);
+		pii p2 = get_distance(a, p1.ff);
+
+		int dist = p1.ss + p2.ss;
+		if (dist > max_d) {
+			max_d = dist;
 			c = i;
 		}
 	}
 
-	cout << p2.ff + max_d << '\n';
+	cout << max_d << '\n';
 	cout << a + 1 << ' ' << b + 1 << ' ' << c + 1 << '\n';
 }
 
