@@ -109,15 +109,25 @@ void solve()
 				}
 			}
 		}
+
+		debug(pref)
+		debug(suff)
 		rep(j, 0, m) {
 			step[i][j] = min({pref[j], suff[j], suff[0] + (m - j), pref[m - 1] + j + 1});
 		}
 	}
 
+	debug(step)
+
 	int ans = INT_MAX;
 	rep(j, 0, m) {
 		int temp_ans = 0;
-		rep(i, 0, n) temp_ans += step[i][j];
+
+		rep(i, 0, n) {
+			temp_ans += step[i][j];
+		}
+
+		debug(temp_ans)
 		ans = min(ans, temp_ans);
 	}
 
