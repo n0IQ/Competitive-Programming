@@ -10770,6 +10770,22 @@
     ],
     "timestamp": "Jan/05/2022 17:40"
   },
+  "CF145944546": {
+    "contest_id": 577,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\577\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Points on Plane",
+    "problem_url": "https://codeforces.com/contest/577/problem/E",
+    "submission_id": "CF145944546",
+    "submission_url": "https://codeforces.com/contest/577/submission/145944546",
+    "tags": [
+      "constructive algorithms",
+      "*2100"
+    ],
+    "timestamp": "Feb/11/2022 17:33"
+  },
   "CF146058711": {
     "contest_id": 722,
     "language": "GNU C++17 (64)",
