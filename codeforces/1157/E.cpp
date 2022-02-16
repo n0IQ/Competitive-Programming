@@ -71,18 +71,62 @@ void solve()
 	vector<int> a(n);
 	for (auto &x : a) cin >> x;
 
-	multiset<int> s;
+	map<int, int> m;
 	rep(i, 0, n) {
 		int x;
 		cin >> x;
-		s.insert(x);
+		m[x]++;
 	}
 
+	debug(a)
+
 	rep(i, 0, n) {
-		auto it = s.lb(n - a[i]);
-		if (it == s.end()) it = s.begin();
-		cout << (a[i] + *it) % n << ' ';
-		s.erase(it);
+		int x = n - a[i];
+		auto it = m.lb(x);
+		auto it2 = it;
+		debug(m)
+
+		if (it != m.end() && it->ff == x) {
+			debug(it->ff)
+
+			cout << "0 ";
+			it->ss--;
+			if (it->ss == 0) m.erase(it);
+		}
+		else {
+			int t1 = n, t2 = n;
+
+			if (it == m.end()) {
+				debug(it->ff)
+				it--;
+				t1 = (a[i] + it->ff) % n;
+				it2 = m.begin();
+				t2 = (a[i] + it2->ff) % n;
+				debug(t1)
+				debug(t2)
+			}
+			else {
+				debug(it->ff)
+				t1 = (a[i] + it->ff) % n;
+				it2 = it;
+				if (it2 != m.begin()) it2--;
+				t2 = (a[i] + it2->ff) % n;
+
+				debug(t1)
+				debug(t2)
+			}
+
+			if (t1 < t2) {
+				cout << t1 << ' ';
+				it->ss--;
+				if (it->ss == 0) m.erase(it);
+			}
+			else {
+				cout << t2 << ' ';
+				it2->ss--;
+				if (it2->ss == 0) m.erase(it2);
+			}
+		}
 	}
 }
 
