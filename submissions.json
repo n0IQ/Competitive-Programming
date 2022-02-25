@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF147680946": {
+    "contest_id": 1133,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1133\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Zero Quantity Maximization",
+    "problem_url": "https://codeforces.com/contest/1133/problem/D",
+    "submission_id": "CF147680946",
+    "submission_url": "https://codeforces.com/contest/1133/submission/147680946",
+    "tags": [
+      "hashing",
+      "math",
+      "number theory",
+      "*1500"
+    ],
+    "timestamp": "Feb/25/2022 21:51"
+  },
   "CF147728529": {
     "contest_id": 1133,
     "language": "GNU C++17 (64)",
