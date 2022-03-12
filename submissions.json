@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF149413377": {
+    "contest_id": 1647,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1647\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Madoka and Childish Pranks",
+    "problem_url": "https://codeforces.com/contest/1647/problem/C",
+    "submission_id": "CF149413377",
+    "submission_url": "https://codeforces.com/contest/1647/submission/149413377",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*1300"
+    ],
+    "timestamp": "Mar/12/2022 16:32"
+  },
   "CF149441671": {
     "contest_id": 1647,
     "language": "GNU C++17 (64)",
