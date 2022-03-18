@@ -110,6 +110,36 @@ public:
 		st[i] = merge(st[i << 1], st[i << 1 | 1]);
 	}
 
+	int get_pos(int i, int l, int r, int ql, int qr, int x)
+	{
+		if (st[i] == x || l > qr || r < ql) {
+			return -1;
+		}
+		if (l >= ql && r <= qr) {
+			while (l != r) {
+				int mid = l + (r - l) / 2;
+
+				if (st[i << 1] % x != 0) {
+					i = (i << 1);
+					r = mid;
+				}
+				else {
+					i = (i << 1 | 1);
+					l = mid + 1;
+				}
+			}
+
+			return l;
+		}
+
+		int mid = l + (r - l) / 2;
+		int idx = get_pos(i << 1, l, mid, ql, qr, x);
+		if (idx != -1) {
+			return idx;
+		}
+		return get_pos(i << 1 | 1, mid + 1, r, ql, qr, x);
+	}
+
 	void Query(int i, int l, int r, int ql, int qr, int x, int &cnt)
 	{
 		if (st[i] % x == 0 || ql > r || qr < l)
