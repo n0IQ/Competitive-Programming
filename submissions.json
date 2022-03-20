@@ -1951,6 +1951,25 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF150231247": {
+    "contest_id": 1654,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1654\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Maximum Cake Tastiness",
+    "problem_url": "https://codeforces.com/contest/1654/problem/A",
+    "submission_id": "CF150231247",
+    "submission_url": "https://codeforces.com/contest/1654/submission/150231247",
+    "tags": [
+      "brute force",
+      "greedy",
+      "implementation",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Mar/20/2022 17:08"
+  },
   "CF150246020": {
     "contest_id": 1654,
     "language": "GNU C++17 (64)",
