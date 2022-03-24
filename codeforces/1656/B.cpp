@@ -72,14 +72,21 @@ void solve()
 	for (auto &x : a) cin >> x;
 
 	sort(all(a));
-	map<int, int> m;
 
-	rep(i, 0, n) {
-		if (m.count(a[i] - k)) {
+	int i = 0, j = 1;
+	while (j < n) {
+		if (abs(a[i] - a[j]) == k) {
 			cout << "YES\n";
 			return;
 		}
-		m[a[i]]++;
+		else if (abs(a[i] - a[j]) < k) {
+			j++;
+		}
+		else {
+			while (i < j && abs(a[i] - a[j]) > k) {
+				i++;
+			}
+		}
 	}
 
 	cout << "NO\n";
