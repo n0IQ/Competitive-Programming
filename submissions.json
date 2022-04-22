@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF154514851": {
+    "contest_id": 1671,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1671\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "String Building",
+    "problem_url": "https://codeforces.com/contest/1671/problem/A",
+    "submission_id": "CF154514851",
+    "submission_url": "https://codeforces.com/contest/1671/submission/154514851",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Apr/22/2022 20:12"
+  },
   "CF154533576": {
     "contest_id": 1671,
     "language": "GNU C++17 (64)",
