@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF156294857": {
+    "contest_id": 1673,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1673\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "A Perfectly Balanced String?",
+    "problem_url": "https://codeforces.com/contest/1673/problem/B",
+    "submission_id": "CF156294857",
+    "submission_url": "https://codeforces.com/contest/1673/submission/156294857",
+    "tags": [
+      "brute force",
+      "greedy",
+      "strings",
+      "*1100"
+    ],
+    "timestamp": "May/08/2022 19:50"
+  },
   "CF156298634": {
     "contest_id": 1678,
     "language": "GNU C++17 (64)",
