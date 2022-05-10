@@ -1951,6 +1951,24 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF156715358": {
+    "contest_id": 1676,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1676\\H2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "H2",
+    "problem_name": "Maximum Crossings (Hard Version)",
+    "problem_url": "https://codeforces.com/contest/1676/problem/H2",
+    "submission_id": "CF156715358",
+    "submission_url": "https://codeforces.com/contest/1676/submission/156715358",
+    "tags": [
+      "data structures",
+      "divide and conquer",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "May/10/2022 21:37"
+  },
   "CF156724925": {
     "contest_id": 1676,
     "language": "GNU C++17 (64)",
