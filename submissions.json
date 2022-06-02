@@ -1951,6 +1951,23 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "CF159256814": {
+    "contest_id": 1686,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1686\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Odd Subarrays",
+    "problem_url": "https://codeforces.com/contest/1686/problem/B",
+    "submission_id": "CF159256814",
+    "submission_url": "https://codeforces.com/contest/1686/submission/159256814",
+    "tags": [
+      "dp",
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Jun/02/2022 19:14"
+  },
   "CF159270544": {
     "contest_id": 1686,
     "language": "GNU C++17 (64)",
