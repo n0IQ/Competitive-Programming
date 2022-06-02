@@ -1950,5 +1950,23 @@
       "*300"
     ],
     "timestamp": "May/15/2022 02:05"
+  },
+  "CF159271420": {
+    "contest_id": 1686,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1686\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Circular Local MiniMax",
+    "problem_url": "https://codeforces.com/contest/1686/problem/C",
+    "submission_id": "CF159271420",
+    "submission_url": "https://codeforces.com/contest/1686/submission/159271420",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "*1100"
+    ],
+    "timestamp": "Jun/02/2022 21:45"
   }
 }
