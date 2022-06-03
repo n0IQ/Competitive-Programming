@@ -12181,6 +12181,24 @@
     ],
     "timestamp": "Jun/02/2022 21:45"
   },
+  "CF159313657": {
+    "contest_id": 1691,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1691\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Beat The Odds",
+    "problem_url": "https://codeforces.com/contest/1691/problem/A",
+    "submission_id": "CF159313657",
+    "submission_url": "https://codeforces.com/contest/1691/submission/159313657",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "math"
+    ],
+    "timestamp": "Jun/03/2022 11:54"
+  },
   "CF85832857": {
     "contest_id": 4,
     "language": "MS C++ 2017",
