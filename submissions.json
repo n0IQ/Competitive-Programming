@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC32199739": {
+    "contest_id": "abc254",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc254\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Last Two Digits",
+    "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_a",
+    "submission_id": "AC32199739",
+    "submission_url": "https://atcoder.jp/contests/abc254/submissions/32199739",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jun/04/2022 17:31"
+  },
   "AC32211891": {
     "contest_id": "abc254",
     "language": "C++ (GCC 9.2.1)",
