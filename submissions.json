@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC32234010": {
+    "contest_id": "abc254",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc254\\D.cpp",
+    "platform": "AtCoder",
+    "problem_index": "D",
+    "problem_name": "Together Square",
+    "problem_url": "https://atcoder.jp/contests/abc254/tasks/abc254_d",
+    "submission_id": "AC32234010",
+    "submission_url": "https://atcoder.jp/contests/abc254/submissions/32234010",
+    "tags": [
+      "AtCoder",
+      "*400"
+    ],
+    "timestamp": "Jun/04/2022 18:35"
+  },
   "AC36502937": {
     "contest_id": "dp",
     "language": "C++ (GCC 9.2.1)",
