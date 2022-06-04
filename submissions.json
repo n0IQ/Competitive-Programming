@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF159486998": {
+    "contest_id": 1688,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1688\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Cirno's Perfect Bitmasks Classroom",
+    "problem_url": "https://codeforces.com/contest/1688/problem/A",
+    "submission_id": "CF159486998",
+    "submission_url": "https://codeforces.com/contest/1688/submission/159486998",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "*800"
+    ],
+    "timestamp": "Jun/04/2022 19:37"
+  },
   "CF159487030": {
     "contest_id": 1688,
     "language": "GNU C++17 (64)",
