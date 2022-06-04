@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF159487030": {
+    "contest_id": 1688,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1688\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Patchouli's Magical Talisman",
+    "problem_url": "https://codeforces.com/contest/1688/problem/B",
+    "submission_id": "CF159487030",
+    "submission_url": "https://codeforces.com/contest/1688/submission/159487030",
+    "tags": [
+      "bitmasks",
+      "constructive algorithms",
+      "greedy",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Jun/04/2022 19:38"
+  },
   "CF159731335": {
     "contest_id": 1690,
     "language": "GNU C++17 (64)",
