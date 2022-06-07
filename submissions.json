@@ -22961,6 +22961,24 @@
     ],
     "timestamp": "Jun/07/2022 20:28"
   },
+  "CF159767004": {
+    "contest_id": 1690,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1690\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Restoring the Duration of Tasks",
+    "problem_url": "https://codeforces.com/contest/1690/problem/C",
+    "submission_id": "CF159767004",
+    "submission_url": "https://codeforces.com/contest/1690/submission/159767004",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jun/07/2022 20:35"
+  },
   "CF159775685": {
     "contest_id": 1690,
     "language": "GNU C++17 (64)",
