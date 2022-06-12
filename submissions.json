@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF160287396": {
+    "contest_id": 1697,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1697\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Parkway Walk",
+    "problem_url": "https://codeforces.com/contest/1697/problem/A",
+    "submission_id": "CF160287396",
+    "submission_url": "https://codeforces.com/contest/1697/submission/160287396",
+    "tags": [
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Jun/12/2022 20:11"
+  },
   "CF160307699": {
     "contest_id": 1697,
     "language": "GNU C++17 (64)",
