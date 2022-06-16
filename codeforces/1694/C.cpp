@@ -71,20 +71,57 @@ void solve()
 	vector<ll> a(n);
 	for (auto &x : a) cin >> x;
 
-	while (sz(a) && a.back() == 0) a.ppb();
+	if (a[0] < 0 || a[n - 1] > 0) {
+		cout << "NO\n";
+		return;
+	}
 
-	ll ans = 0;
-	repR(i, sz(a) - 1, 0) {
-		ans += a[i];
-
-		if (ans >= 0 && i != 0) {
-			cout << "NO\n";
-			return;
+	int idx = -1;
+	repR(i, n - 1, 0) {
+		if (a[i] != 0) {
+			idx = i;
+			break;
 		}
 	}
 
-	if (ans == 0) cout << "YES\n";
-	else cout << "NO\n";
+	if (idx == -1) {
+		cout << "YES\n";
+		return;
+	}
+
+	if (idx == 0) {
+		cout << "NO\n";
+		return;
+	}
+
+
+	vector<ll> b(n, 0);
+	ll rem = 0;
+
+	// 2 -1 1 -2 0 0 0
+	//         i
+
+	rep(i, 0, idx) {
+		b[i] = 1;
+	}
+
+	b[idx] = a[idx]; // 2 1 2 -2 0 0
+	b[idx - 1] = abs(b[idx]);
+	repR(i, idx - 1, 1) {
+		if (b[i] <= a[i]) {
+			cout << "NO\n";
+			return;
+		}
+
+		ll t = abs(b[i] - a[i]) - 1;
+		b[i - 1] += t;
+		b[i] = a[i];
+	}
+
+	if (b[0] != a[0]) {
+		cout << "NO\n";
+	}
+	else cout << "YES\n";
 }
 
 int main()
