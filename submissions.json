@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF161075154": {
+    "contest_id": 1695,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1695\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Circle Game",
+    "problem_url": "https://codeforces.com/contest/1695/problem/B",
+    "submission_id": "CF161075154",
+    "submission_url": "https://codeforces.com/contest/1695/submission/161075154",
+    "tags": [
+      "games",
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Jun/18/2022 20:43"
+  },
   "CF161300571": {
     "contest_id": 1700,
     "language": "GNU C++17 (64)",
