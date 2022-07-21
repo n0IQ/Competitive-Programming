@@ -23445,6 +23445,24 @@
     ],
     "timestamp": "Jul/08/2022 23:01"
   },
+  "CF165153347": {
+    "contest_id": 1709,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1709\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Also Try Minecraft",
+    "problem_url": "https://codeforces.com/contest/1709/problem/B",
+    "submission_id": "CF165153347",
+    "submission_url": "https://codeforces.com/contest/1709/submission/165153347",
+    "tags": [
+      "data structures",
+      "dp",
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Jul/21/2022 20:25"
+  },
   "CF165502785": {
     "contest_id": 1709,
     "language": "GNU C++17 (64)",
