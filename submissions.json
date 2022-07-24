@@ -23445,6 +23445,22 @@
     ],
     "timestamp": "Jul/08/2022 23:01"
   },
+  "CF165540363": {
+    "contest_id": 1711,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1711\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Perfect Permutation",
+    "problem_url": "https://codeforces.com/contest/1711/problem/A",
+    "submission_id": "CF165540363",
+    "submission_url": "https://codeforces.com/contest/1711/submission/165540363",
+    "tags": [
+      "constructive algorithms",
+      "*800"
+    ],
+    "timestamp": "Jul/24/2022 20:11"
+  },
   "CF166885766": {
     "contest_id": 1714,
     "language": "GNU C++17 (64)",
