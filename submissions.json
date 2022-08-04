@@ -22219,6 +22219,24 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF166885766": {
+    "contest_id": 1714,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1714\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Remove Prefix",
+    "problem_url": "https://codeforces.com/contest/1714/problem/B",
+    "submission_id": "CF166885766",
+    "submission_url": "https://codeforces.com/contest/1714/submission/166885766",
+    "tags": [
+      "data structures",
+      "greedy",
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Aug/04/2022 12:38"
+  },
   "CF166885797": {
     "contest_id": 1714,
     "language": "GNU C++17 (64)",
