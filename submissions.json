@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF168138120": {
+    "contest_id": 1712,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1712\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Sort Zero",
+    "problem_url": "https://codeforces.com/contest/1712/problem/C",
+    "submission_id": "CF168138120",
+    "submission_url": "https://codeforces.com/contest/1712/submission/168138120",
+    "tags": [
+      "greedy",
+      "sortings",
+      "*1100"
+    ],
+    "timestamp": "Aug/13/2022 20:48"
+  },
   "CF168524816": {
     "contest_id": 1719,
     "language": "GNU C++17 (64)",
