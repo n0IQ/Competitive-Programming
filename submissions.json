@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF171855011": {
+    "contest_id": 1729,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1729\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Decode String",
+    "problem_url": "https://codeforces.com/contest/1729/problem/B",
+    "submission_id": "CF171855011",
+    "submission_url": "https://codeforces.com/contest/1729/submission/171855011",
+    "tags": [
+      "greedy",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Sep/12/2022 20:20"
+  },
   "CF171901070": {
     "contest_id": 1729,
     "language": "GNU C++17 (64)",
