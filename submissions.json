@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173207398": {
+    "contest_id": 1734,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1734\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Removing Smallest Multiples",
+    "problem_url": "https://codeforces.com/contest/1734/problem/C",
+    "submission_id": "CF173207398",
+    "submission_url": "https://codeforces.com/contest/1734/submission/173207398",
+    "tags": [
+      "greedy",
+      "math",
+      "*1200"
+    ],
+    "timestamp": "Sep/23/2022 18:56"
+  },
   "CF173244526": {
     "contest_id": 1733,
     "language": "GNU C++17 (64)",
