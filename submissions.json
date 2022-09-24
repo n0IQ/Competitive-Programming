@@ -22219,6 +22219,24 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173351693": {
+    "contest_id": 1733,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1733\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Zero-One (Easy Version)",
+    "problem_url": "https://codeforces.com/contest/1733/problem/D1",
+    "submission_id": "CF173351693",
+    "submission_url": "https://codeforces.com/contest/1733/submission/173351693",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "math",
+      "*1400"
+    ],
+    "timestamp": "Sep/24/2022 23:00"
+  },
   "CF173399219": {
     "contest_id": 1692,
     "language": "GNU C++17 (64)",
