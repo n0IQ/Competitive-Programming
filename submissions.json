@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173399219": {
+    "contest_id": 1692,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1692\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "3SUM",
+    "problem_url": "https://codeforces.com/contest/1692/problem/F",
+    "submission_id": "CF173399219",
+    "submission_url": "https://codeforces.com/contest/1692/submission/173399219",
+    "tags": [
+      "brute force",
+      "math",
+      "*1300"
+    ],
+    "timestamp": "Sep/25/2022 13:22"
+  },
   "CF173441448": {
     "contest_id": 1730,
     "language": "GNU C++17 (64)",
