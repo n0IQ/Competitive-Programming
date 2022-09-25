@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173489406": {
+    "contest_id": 1730,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1730\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Minimum Notation",
+    "problem_url": "https://codeforces.com/contest/1730/problem/C",
+    "submission_id": "CF173489406",
+    "submission_url": "https://codeforces.com/contest/1730/submission/173489406",
+    "tags": [
+      "data structures",
+      "greedy",
+      "math",
+      "sortings",
+      "*1200"
+    ],
+    "timestamp": "Sep/25/2022 21:56"
+  },
   "CF173603293": {
     "contest_id": 1714,
     "language": "GNU C++17 (64)",
