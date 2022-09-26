@@ -22219,6 +22219,24 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173603293": {
+    "contest_id": 1714,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1714\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Add Modulo 10",
+    "problem_url": "https://codeforces.com/contest/1714/problem/E",
+    "submission_id": "CF173603293",
+    "submission_url": "https://codeforces.com/contest/1714/submission/173603293",
+    "tags": [
+      "brute force",
+      "math",
+      "number theory",
+      "*1400"
+    ],
+    "timestamp": "Sep/26/2022 21:42"
+  },
   "CF173724879": {
     "contest_id": 1728,
     "language": "GNU C++17 (64)",
