@@ -22219,6 +22219,24 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173724879": {
+    "contest_id": 1728,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1728\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Digital Logarithm",
+    "problem_url": "https://codeforces.com/contest/1728/problem/C",
+    "submission_id": "CF173724879",
+    "submission_url": "https://codeforces.com/contest/1728/submission/173724879",
+    "tags": [
+      "data structures",
+      "greedy",
+      "sortings",
+      "*1400"
+    ],
+    "timestamp": "Sep/27/2022 21:04"
+  },
   "CF173727351": {
     "contest_id": 1728,
     "language": "GNU C++17 (64)",

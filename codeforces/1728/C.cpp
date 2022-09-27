@@ -63,6 +63,39 @@ template <class T> void _print(multiset <T> v) {cerr << "[ "; for (T i : v) {_pr
 template <class T, class V> void _print(map <T, V> v) {cerr << "[ "; for (auto i : v) {_print(i); cerr << " ";} cerr << "]";}
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+int getLength(int n)
+{
+	int l = 0;
+	while (n) {
+		l++;
+		n /= 10;
+	}
+
+	return l;
+}
+
+void helper(vector<int> &a, vector<int> &b)
+{
+	multiset<int> s1(all(a)), s2(all(b));
+	vector<int> temp;
+
+	for (auto &x : s1) {
+		if (s2.count(x)) {
+			s2.erase(s2.lb(x));
+			temp.pb(x);
+		}
+	}
+
+	for (auto &x : temp) {
+		s1.erase(s1.lb(x));
+	}
+
+	a.clear(), b.clear();
+	for (auto &x : s1) a.pb(x);
+	for (auto &x : s2) b.pb(x);
+	s1.clear(), s2.clear();
+}
+
 void solve()
 {
 	int n;
@@ -72,24 +105,30 @@ void solve()
 	for (auto &x : a) cin >> x;
 	for (auto &x : b) cin >> x;
 
-	priority_queue<int> qa(all(a)), qb(all(b));
+	helper(a, b);
+
 	ll ans = 0;
-
-	while (!qa.empty()) {
-		if (qa.top() == qb.top()) {
-			qa.pop();
-			qb.pop();
-			continue;
+	rep(i, 0, sz(a)) {
+		if (a[i] > 9) {
+			a[i] = getLength(a[i]);
+			ans++;
 		}
-
-		ans++;
-		if (qa.top() > qb.top()) {
-			qa.push(sz(to_string(qa.top())));
-			qa.pop();
+		if (b[i] > 9) {
+			b[i] = getLength(b[i]);
+			ans++;
 		}
-		else {
-			qb.push(sz(to_string(qb.top())));
-			qb.pop();
+	}
+
+	helper(a, b);
+
+	rep(i, 0, sz(a)) {
+		if (a[i] > 1) {
+			a[i] = getLength(a[i]);
+			ans++;
+		}
+		if (b[i] > 1) {
+			b[i] = getLength(b[i]);
+			ans++;
 		}
 	}
 
