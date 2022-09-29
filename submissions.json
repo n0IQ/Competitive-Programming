@@ -22219,6 +22219,22 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF173938142": {
+    "contest_id": 1739,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1739\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Immobile Knight",
+    "problem_url": "https://codeforces.com/contest/1739/problem/A",
+    "submission_id": "CF173938142",
+    "submission_url": "https://codeforces.com/contest/1739/submission/173938142",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Sep/29/2022 20:10"
+  },
   "CF173949470": {
     "contest_id": 1739,
     "language": "GNU C++17 (64)",
