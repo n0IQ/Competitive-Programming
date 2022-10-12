@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF175783868": {
+    "contest_id": 1706,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1706\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Qpwoeirut And The City",
+    "problem_url": "https://codeforces.com/contest/1706/problem/C",
+    "submission_id": "CF175783868",
+    "submission_url": "https://codeforces.com/contest/1706/submission/175783868",
+    "tags": [
+      "dp",
+      "flows",
+      "greedy",
+      "implementation",
+      "*1400"
+    ],
+    "timestamp": "Oct/12/2022 21:23"
+  },
   "CF175892823": {
     "contest_id": 1742,
     "language": "GNU C++17 (64)",
