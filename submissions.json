@@ -22219,6 +22219,22 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177177648": {
+    "contest_id": 1749,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1749\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Death's Blessing",
+    "problem_url": "https://codeforces.com/contest/1749/problem/B",
+    "submission_id": "CF177177648",
+    "submission_url": "https://codeforces.com/contest/1749/submission/177177648",
+    "tags": [
+      "greedy",
+      "*900"
+    ],
+    "timestamp": "Oct/20/2022 20:49"
+  },
   "CF177197128": {
     "contest_id": 1749,
     "language": "GNU C++17 (64)",
