@@ -22219,6 +22219,23 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177469299": {
+    "contest_id": 1743,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1743\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Permutation Value",
+    "problem_url": "https://codeforces.com/contest/1743/problem/B",
+    "submission_id": "CF177469299",
+    "submission_url": "https://codeforces.com/contest/1743/submission/177469299",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Oct/22/2022 20:59"
+  },
   "CF177469755": {
     "contest_id": 1743,
     "language": "GNU C++17 (64)",
