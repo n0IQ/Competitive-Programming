@@ -9,28 +9,38 @@ void solve()
 	string s;
 	cin >> n >> s;
 
-	vector<ll> a(n + 1);
-	for (int i = 1; i <= n; i++) cin >> a[i];
+	vector<ll> a(n);
+	for (int i = 0; i < n; i++) cin >> a[i];
 
-	s = "-" + s + "-";
-	// dp[i][0] = max magazines saved till ith box when ith box is not covered
-	// dp[i][1] = max magazines saved till ith box when ith box is covered
-	// dp[i][2] = max magazines saved till ith box when ith box is covered from right
-	ll dp[n + 1][3];
-	memset(dp, 0, sizeof(dp));
+	int i = 0, cnt = 0;
+	ll ans = 0, sum = 0;
+	priority_queue<ll> q;
 
-	for (int i = 1; i <= n; i++) {
-		dp[i][0] = max({dp[i - 1][0], dp[i - 1][1], dp[i - 1][2]});
+	while (i < n && s[i] == '1') ans += a[i++];
 
-		if (s[i] == '1') {
-			dp[i][1] = max(dp[i - 1][0], dp[i - 1][1]) + a[i];
+	while (i < n) {
+		while (i + 1 < n && s[i + 1] == '0') {
+			i++;
 		}
-		if (s[i + 1] == '1') {
-			dp[i][2] = max({dp[i - 1][0], dp[i - 1][1], dp[i - 1][2]}) + a[i];
+
+		q.push(a[i++]);
+		cnt = 0;
+
+		while (i < n && s[i] == '1') {
+			q.push(a[i++]);
+			cnt++;
+		}
+
+		while (!q.empty()) {
+			if (cnt > 0) {
+				ans += q.top();
+				cnt--;
+			}
+			q.pop();
 		}
 	}
 
-	cout << max({dp[n][0], dp[n][1], dp[n][2]}) << '\n';
+	cout << ans << '\n';
 }
 
 int main()
