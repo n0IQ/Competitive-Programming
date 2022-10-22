@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177435673": {
+    "contest_id": 1649,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1649\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Weird Sum",
+    "problem_url": "https://codeforces.com/contest/1649/problem/C",
+    "submission_id": "CF177435673",
+    "submission_url": "https://codeforces.com/contest/1649/submission/177435673",
+    "tags": [
+      "brute force",
+      "implementation",
+      "math",
+      "matrices",
+      "*1400"
+    ],
+    "timestamp": "Oct/22/2022 16:32"
+  },
   "CF177469299": {
     "contest_id": 1743,
     "language": "GNU C++17 (64)",
