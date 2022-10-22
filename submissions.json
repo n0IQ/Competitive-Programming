@@ -22219,6 +22219,24 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177491779": {
+    "contest_id": 1743,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1743\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Save the Magazines",
+    "problem_url": "https://codeforces.com/contest/1743/problem/C",
+    "submission_id": "CF177491779",
+    "submission_url": "https://codeforces.com/contest/1743/submission/177491779",
+    "tags": [
+      "constructive algorithms",
+      "dp",
+      "greedy",
+      "*1100"
+    ],
+    "timestamp": "Oct/23/2022 00:37"
+  },
   "CF177557889": {
     "contest_id": 1754,
     "language": "GNU C++17 (64)",
