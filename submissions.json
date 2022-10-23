@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177648686": {
+    "contest_id": 1732,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1732\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Ugu",
+    "problem_url": "https://codeforces.com/contest/1732/problem/B",
+    "submission_id": "CF177648686",
+    "submission_url": "https://codeforces.com/contest/1732/submission/177648686",
+    "tags": [
+      "brute force",
+      "dp",
+      "greedy",
+      "implementation",
+      "*900"
+    ],
+    "timestamp": "Oct/23/2022 18:56"
+  },
   "CF177694065": {
     "contest_id": 1717,
     "language": "GNU C++17 (64)",
