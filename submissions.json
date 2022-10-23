@@ -22219,6 +22219,22 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177583906": {
+    "contest_id": 1754,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1754\\C1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C1",
+    "problem_name": "Make Nonzero Sum (easy version)",
+    "problem_url": "https://codeforces.com/contest/1754/problem/C1",
+    "submission_id": "CF177583906",
+    "submission_url": "https://codeforces.com/contest/1754/submission/177583906",
+    "tags": [
+      "constructive algorithms",
+      "*1300"
+    ],
+    "timestamp": "Oct/23/2022 14:30"
+  },
   "CF177648665": {
     "contest_id": 1732,
     "language": "GNU C++17 (64)",
