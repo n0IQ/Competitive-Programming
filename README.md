@@ -12,19 +12,20 @@ A repository to keep track of problem solving practice, containing solutions fro
 
 | # | Title | Solution | Tags | Submitted |
 |---| ----- | -------- | ---- | --------- |
-1239 | [C - Swap Game](https://codeforces.com/contest/1747/problem/C) | [GNU C++17 (64)](./codeforces/1747/C.cpp) | `games` `*1200` | Nov/05/2022 01:31 | 
-1238 | [B - BAN BAN](https://codeforces.com/contest/1747/problem/B) | [GNU C++17 (64)](./codeforces/1747/B.cpp) | `constructive algorithms` `*900` | Nov/04/2022 20:23 | 
-1237 | [A - Two Groups](https://codeforces.com/contest/1747/problem/A) | [GNU C++17 (64)](./codeforces/1747/A.cpp) | `constructive algorithms` `greedy` `*800` | Nov/04/2022 20:08 | 
-1236 | [B - Five-In-a-Row](https://codeforces.com/contest/825/problem/B) | [GNU C++17 (64)](./codeforces/825/B.cpp) | `brute force` `implementation` `*1600` | Nov/03/2022 21:44 | 
-1235 | [A - Binary Protocol](https://codeforces.com/contest/825/problem/A) | [GNU C++17 (64)](./codeforces/825/A.cpp) | `implementation` `*1100` | Nov/03/2022 21:09 | 
-1234 | [F - Yet Another Problem About Pairs Satisfying an Inequality](https://codeforces.com/contest/1703/problem/F) | [GNU C++17 (64)](./codeforces/1703/F.cpp) | `binary search` `data structures` `dp` `greedy` `sortings` `*1300` | Oct/24/2022 21:38 | 
-1233 | [C1 - Good Subarrays (Easy Version)](https://codeforces.com/contest/1736/problem/C1) | [GNU C++17 (64)](./codeforces/1736/C1.cpp) | `binary search` `data structures` `schedules` `two pointers` `*1300` | Oct/24/2022 14:38 | 
-1232 | [D1 - Balance (Easy version)](https://codeforces.com/contest/1732/problem/D1) | [GNU C++17 (64)](./codeforces/1732/D1.cpp) | `brute force` `data structures` `implementation` `number theory` `*1500` | Oct/24/2022 13:10 | 
-1231 | [C - Madoka and Formal Statement](https://codeforces.com/contest/1717/problem/C) | [GNU C++17 (64)](./codeforces/1717/C.cpp) | `greedy` `*1300` | Oct/24/2022 01:22 | 
-1230 | [B - Ugu](https://codeforces.com/contest/1732/problem/B) | [GNU C++17 (64)](./codeforces/1732/B.cpp) | `brute force` `dp` `greedy` `implementation` `*900` | Oct/23/2022 18:56 | 
-1229 | [A - Bestie](https://codeforces.com/contest/1732/problem/A) | [GNU C++17 (64)](./codeforces/1732/A.cpp) | `brute force` `combinatorics` `constructive algorithms` `implementation` `math` `number theory` `*1000` | Oct/23/2022 18:56 | 
-1228 | [C1 - Make Nonzero Sum (easy version)](https://codeforces.com/contest/1754/problem/C1) | [GNU C++17 (64)](./codeforces/1754/C1.cpp) | `constructive algorithms` `*1300` | Oct/23/2022 14:30 | 
-1227 | [A - Technical Support](https://codeforces.com/contest/1754/problem/A) | [GNU C++17 (64)](./codeforces/1754/A.cpp) | `greedy` `*800` | Oct/23/2022 13:49 | 
+1240 | [C - Swap Game](https://codeforces.com/contest/1747/problem/C) | [GNU C++17 (64)](./codeforces/1747/C.cpp) | `games` `*1200` | Nov/05/2022 01:31 | 
+1239 | [B - BAN BAN](https://codeforces.com/contest/1747/problem/B) | [GNU C++17 (64)](./codeforces/1747/B.cpp) | `constructive algorithms` `*900` | Nov/04/2022 20:23 | 
+1238 | [A - Two Groups](https://codeforces.com/contest/1747/problem/A) | [GNU C++17 (64)](./codeforces/1747/A.cpp) | `constructive algorithms` `greedy` `*800` | Nov/04/2022 20:08 | 
+1237 | [B - Five-In-a-Row](https://codeforces.com/contest/825/problem/B) | [GNU C++17 (64)](./codeforces/825/B.cpp) | `brute force` `implementation` `*1600` | Nov/03/2022 21:44 | 
+1236 | [A - Binary Protocol](https://codeforces.com/contest/825/problem/A) | [GNU C++17 (64)](./codeforces/825/A.cpp) | `implementation` `*1100` | Nov/03/2022 21:09 | 
+1235 | [F - Yet Another Problem About Pairs Satisfying an Inequality](https://codeforces.com/contest/1703/problem/F) | [GNU C++17 (64)](./codeforces/1703/F.cpp) | `binary search` `data structures` `dp` `greedy` `sortings` `*1300` | Oct/24/2022 21:38 | 
+1234 | [C1 - Good Subarrays (Easy Version)](https://codeforces.com/contest/1736/problem/C1) | [GNU C++17 (64)](./codeforces/1736/C1.cpp) | `binary search` `data structures` `schedules` `two pointers` `*1300` | Oct/24/2022 14:38 | 
+1233 | [D1 - Balance (Easy version)](https://codeforces.com/contest/1732/problem/D1) | [GNU C++17 (64)](./codeforces/1732/D1.cpp) | `brute force` `data structures` `implementation` `number theory` `*1500` | Oct/24/2022 13:10 | 
+1232 | [C - Madoka and Formal Statement](https://codeforces.com/contest/1717/problem/C) | [GNU C++17 (64)](./codeforces/1717/C.cpp) | `greedy` `*1300` | Oct/24/2022 01:22 | 
+1231 | [B - Ugu](https://codeforces.com/contest/1732/problem/B) | [GNU C++17 (64)](./codeforces/1732/B.cpp) | `brute force` `dp` `greedy` `implementation` `*900` | Oct/23/2022 18:56 | 
+1230 | [A - Bestie](https://codeforces.com/contest/1732/problem/A) | [GNU C++17 (64)](./codeforces/1732/A.cpp) | `brute force` `combinatorics` `constructive algorithms` `implementation` `math` `number theory` `*1000` | Oct/23/2022 18:56 | 
+1229 | [C1 - Make Nonzero Sum (easy version)](https://codeforces.com/contest/1754/problem/C1) | [GNU C++17 (64)](./codeforces/1754/C1.cpp) | `constructive algorithms` `*1300` | Oct/23/2022 14:30 | 
+1228 | [A - Technical Support](https://codeforces.com/contest/1754/problem/A) | [GNU C++17 (64)](./codeforces/1754/A.cpp) | `greedy` `*800` | Oct/23/2022 13:49 | 
+1227 | [B - Kevin and Permutation](https://codeforces.com/contest/1754/problem/B) | [GNU C++17 (64)](./codeforces/1754/B.cpp) | `constructive algorithms` `greedy` `math` `*800` | Oct/23/2022 13:46 | 
 1226 | [A - Beat The Odds](https://codeforces.com/contest/1691/problem/A) | [GNU C++17 (64)](./codeforces/1691/A.cpp) | `brute force` `constructive algorithms` `greedy` `math` | Jun/03/2022 11:54 | 
 1225 | [B - Shoe Shuffling](https://codeforces.com/contest/1691/problem/B) | [GNU C++17 (64)](./codeforces/1691/B.cpp) | `constructive algorithms` `greedy` `implementation` `two pointers` | Jun/03/2022 11:53 | 
 1224 | [C - Circular Local MiniMax](https://codeforces.com/contest/1686/problem/C) | [GNU C++17 (64)](./codeforces/1686/C.cpp) | `constructive algorithms` `greedy` `sortings` `*1100` | Jun/02/2022 21:45 | 
