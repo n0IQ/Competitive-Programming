@@ -22219,6 +22219,25 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF177732058": {
+    "contest_id": 1732,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1732\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "Balance (Easy version)",
+    "problem_url": "https://codeforces.com/contest/1732/problem/D1",
+    "submission_id": "CF177732058",
+    "submission_url": "https://codeforces.com/contest/1732/submission/177732058",
+    "tags": [
+      "brute force",
+      "data structures",
+      "implementation",
+      "number theory",
+      "*1500"
+    ],
+    "timestamp": "Oct/24/2022 13:10"
+  },
   "CF177741220": {
     "contest_id": 1736,
     "language": "GNU C++17 (64)",
