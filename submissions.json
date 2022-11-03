@@ -22219,6 +22219,88 @@
     ],
     "timestamp": "Jun/03/2022 11:54"
   },
+  "CF179090703": {
+    "contest_id": 825,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\825\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Binary Protocol",
+    "problem_url": "https://codeforces.com/contest/825/problem/A",
+    "submission_id": "CF179090703",
+    "submission_url": "https://codeforces.com/contest/825/submission/179090703",
+    "tags": [
+      "implementation",
+      "*1100"
+    ],
+    "timestamp": "Nov/03/2022 21:09"
+  },
+  "CF179094823": {
+    "contest_id": 825,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\825\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Five-In-a-Row",
+    "problem_url": "https://codeforces.com/contest/825/problem/B",
+    "submission_id": "CF179094823",
+    "submission_url": "https://codeforces.com/contest/825/submission/179094823",
+    "tags": [
+      "brute force",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Nov/03/2022 21:44"
+  },
+  "CF179202615": {
+    "contest_id": 1747,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1747\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Two Groups",
+    "problem_url": "https://codeforces.com/contest/1747/problem/A",
+    "submission_id": "CF179202615",
+    "submission_url": "https://codeforces.com/contest/1747/submission/179202615",
+    "tags": [
+      "constructive algorithms",
+      "greedy",
+      "*800"
+    ],
+    "timestamp": "Nov/04/2022 20:08"
+  },
+  "CF179219898": {
+    "contest_id": 1747,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1747\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "BAN BAN",
+    "problem_url": "https://codeforces.com/contest/1747/problem/B",
+    "submission_id": "CF179219898",
+    "submission_url": "https://codeforces.com/contest/1747/submission/179219898",
+    "tags": [
+      "constructive algorithms",
+      "*900"
+    ],
+    "timestamp": "Nov/04/2022 20:23"
+  },
+  "CF179319611": {
+    "contest_id": 1747,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1747\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Swap Game",
+    "problem_url": "https://codeforces.com/contest/1747/problem/C",
+    "submission_id": "CF179319611",
+    "submission_url": "https://codeforces.com/contest/1747/submission/179319611",
+    "tags": [
+      "games",
+      "*1200"
+    ],
+    "timestamp": "Nov/05/2022 01:31"
+  },
   "CF85832857": {
     "contest_id": 4,
     "language": "MS C++ 2017",
