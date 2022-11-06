@@ -24848,6 +24848,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF179768177": {
+    "contest_id": 1750,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1750\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Indirect Sort",
+    "problem_url": "https://codeforces.com/contest/1750/problem/A",
+    "submission_id": "CF179768177",
+    "submission_url": "https://codeforces.com/contest/1750/submission/179768177",
+    "tags": [
+      "constructive algorithms",
+      "implementation",
+      "math",
+      "*800"
+    ],
+    "timestamp": "Nov/06/2022 23:49"
+  },
   "CF179768433": {
     "contest_id": 1750,
     "language": "GNU C++17 (64)",
