@@ -1,91 +1,57 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
 using namespace std;
-
-#define pb push_back
-#define mp make_pair
-#define lb lower_bound
-#define ub upper_bound
-#define ff first
-#define ss second
-
-#define rep(i, a, b) for(int i = a; i < b; i++)
-#define repR(i, a, b) for(int i = a; i >= b; --i)
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define sz(x) (int)(x).size()
-#define mem1(a) memset(a,-1,sizeof(a))
-#define mem0(a) memset(a,0,sizeof(a))
-
 typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<ll, ll> pll;
-
-#define MOD1 1000000007
-#define MOD2 998244353
-#define INF  2000000000000000000
-#define ps(x,y) fixed << setprecision(y) << x
-#define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
-template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-//member functions :
-//1. order_of_key(k) : number of elements strictly lesser than k
-//2. find_by_order(k) : k-th element in the set
 
 void solve()
 {
 	int n, k;
 	cin >> n >> k;
 
-	set<int> adj[n];
-	set<pii> edges;
+	set<int> adj[n + 1];
+	set<pair<int, int>> s;
 
-	rep(i, 0, n - 1) {
+	for (int i = 0; i < n - 1; i++) {
 		int u, v;
 		cin >> u >> v;
-		--u, --v;
 		adj[u].insert(v);
 		adj[v].insert(u);
 	}
 
-	rep(i, 0, n) {
-		edges.insert({sz(adj[i]), i});
+	for (int i = 1; i <= n; i++) {
+		s.insert({adj[i].size(), i});
 	}
 
-	while (k && !edges.empty()) {
-		set<int> leaf;
+	while (k-- && !s.empty()) {
+		set<int> temp;
 
-		while (!edges.empty() && (edges.begin()->ff <= 1)) {
-			leaf.insert(edges.begin()->ss);
-			edges.erase(edges.begin());
+		while (!s.empty() && s.begin()->first <= 1) {
+			temp.insert(s.begin()->second);
+			s.erase(s.begin());
 		}
 
-		for (auto u : leaf) {
-			for (auto v : adj[u]) {
-				if (edges.find({sz(adj[v]), v}) != edges.end()) {
-					auto it = edges.find({sz(adj[v]), v});
-					adj[v].erase(u);
-					edges.erase(it);
-					edges.insert({sz(adj[v]), v});
-				}
+		for (auto &u : temp) {
+			for (auto &v : adj[u]) {
+				adj[v].erase(u);
+				s.erase({adj[v].size() + 1, v});
+				s.insert({adj[v].size(), v});
 			}
+			s.erase({adj[u].size(), u});
 		}
-
-		k--;
 	}
 
-	cout << sz(edges) << '\n';
+	cout << s.size() << '\n';
 }
 
 int main()
 {
-	fastio;
+#ifndef ONLINE_JUDGE
+	//freopen("input.txt", "r", stdin);
+	//freopen("output.txt", "w", stdout);
+	//freopen("Error.txt", "w", stderr);
+#endif
 
-	/*#ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-		freopen("output.txt", "w", stdout);
-	#endif*/
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL), cout.tie(NULL);
 
 	int t = 1;
 	cin >> t;
