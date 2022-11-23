@@ -24848,6 +24848,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF182224677": {
+    "contest_id": 1760,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1760\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Quests",
+    "problem_url": "https://codeforces.com/contest/1760/problem/F",
+    "submission_id": "CF182224677",
+    "submission_url": "https://codeforces.com/contest/1760/submission/182224677",
+    "tags": [
+      "binary search",
+      "greedy",
+      "sortings",
+      "*1500"
+    ],
+    "timestamp": "Nov/23/2022 14:22"
+  },
   "CF182224689": {
     "contest_id": 1760,
     "language": "GNU C++17 (64)",
