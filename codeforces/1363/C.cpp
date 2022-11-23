@@ -1,89 +1,71 @@
 #include <bits/stdc++.h>
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
 using namespace std;
-
-#define pb push_back
-#define mp make_pair
-#define lb lower_bound
-#define ub upper_bound
-#define ff first
-#define ss second
-
-#define rep(i, a, b) for(int i = a; i < b; i++)
-#define repR(i, a, b) for (int i = a; i >= b; --i)
-#define all(x) (x).begin(), (x).end()
-#define rall(x) (x).rbegin(), (x).rend()
-#define sz(x) (int)(x).size()
-#define mem1(a) memset(a,-1,sizeof(a))
-#define mem0(a) memset(a,0,sizeof(a))
-
 typedef long long ll;
-typedef pair<int, int> pii;
-typedef pair<ll, ll> pll;
 
-#define vi vector<int>
-#define vvi vector<vi>
-#define vll vector<ll>
-#define vvll vector<vll>
-#define vs vector<string>
-#define vb vector<bool>
+vector<int> adj[1010];
+int n, x, moves;
 
-#define vpii vector<pii>
-#define vpll vector<pll>
-
-#define mod 1000000007
-#define ps(x,y) fixed << setprecision(y) << x
-#define fastio ios_base::sync_with_stdio(false),cin.tie(NULL),cout.tie(NULL)
-template <typename T> using ordered_set = tree<T, null_type, less<T>, rb_tree_tag, tree_order_statistics_node_update>;
-
-vector<vector<int>> adj;
-int deg[1001];
-
-void dfs(int u, int p)
+int dfs(int u, int p)
 {
-	for (auto v : adj[u]) {
+	int cnt = 0;
+	for (auto &v : adj[u]) {
 		if (v != p) {
-			deg[u]++;
-			deg[v]++;
-			dfs(v, u);
+			int sub = dfs(v, u);
+			if (u == x) {
+				moves += (sub - 1);
+			}
+			else {
+				cnt += sub;
+			}
 		}
 	}
+	return cnt + 1;
 }
 
 void solve()
 {
-	int n, x;
 	cin >> n >> x;
-
-	x--;
-	adj = vector<vector<int>> (n);
-	mem0(deg);
-
-	rep(i, 0, n - 1) {
-		int u, v;
-		cin >> u >> v;
-		--u, --v;
-		adj[u].pb(v);
-		adj[v].pb(u);
+	for (int i = 0; i <= n; i++) {
+		adj[i].clear();
 	}
 
-	dfs(0, -1);
+	int deg = 0;
+	for (int i = 0; i < n - 1; i++) {
+		int u, v;
+		cin >> u >> v;
+		adj[u].push_back(v);
+		adj[v].push_back(u);
+		if (u == x || v == x) deg++;
+	}
 
-	if (deg[x] <= 1) cout << "Ayush" << '\n';
-	else if (deg[x] % 2 == ((n - 1) - deg[x]) % 2) cout << "Ashish" << '\n';
-	else cout << "Ayush" << '\n';
+	if (n <= 2 || deg <= 1) {
+		cout << "Ayush\n";
+		return;
+	}
+
+	moves = 0;
+	dfs(x, -1);
+
+	if (moves % 2 == 0) { // aayush move
+		if (adj[x].size() % 2) cout << "Ayush\n";
+		else cout << "Ashish\n";
+	}
+	else { // ashish move
+		if (adj[x].size() % 2) cout << "Ashish\n";
+		else cout << "Ayush\n";
+	}
 }
 
 int main()
 {
-	fastio;
+#ifndef ONLINE_JUDGE
+	//freopen("input.txt", "r", stdin);
+	//freopen("output.txt", "w", stdout);
+	//freopen("Error.txt", "w", stderr);
+#endif
 
-	/*#ifndef ONLINE_JUDGE
-		freopen("input.txt", "r", stdin);
-		freopen("output.txt", "w", stdout);
-	#endif*/
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL), cout.tie(NULL);
 
 	int t = 1;
 	cin >> t;
