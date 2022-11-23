@@ -24848,6 +24848,23 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF182224642": {
+    "contest_id": 1760,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1760\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Challenging Valleys",
+    "problem_url": "https://codeforces.com/contest/1760/problem/D",
+    "submission_id": "CF182224642",
+    "submission_url": "https://codeforces.com/contest/1760/submission/182224642",
+    "tags": [
+      "implementation",
+      "two pointers",
+      "*1000"
+    ],
+    "timestamp": "Nov/23/2022 14:22"
+  },
   "CF182224665": {
     "contest_id": 1760,
     "language": "GNU C++17 (64)",
