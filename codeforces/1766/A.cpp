@@ -7,11 +7,21 @@ void solve()
 	int n;
 	cin >> n;
 
-	ll x = 1, ans = 0;
-	while (x <= n) {
-		ans += min(9LL, n / x);
-		x *= 10;
+	if (n <= 9) {
+		cout << n << '\n';
+		return;
 	}
+
+	string s = to_string(n);
+	ll ans = 0;
+	for (int i = 1; i < s.size(); i++) {
+		ans += 9;
+	}
+
+	string t(s.size(), '0');
+	t[0] = '1';
+	int x = stoi(t);
+	ans += n / x;
 
 	cout << ans << '\n';
 }
