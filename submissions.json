@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC37494102": {
+    "contest_id": "abc283",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc283\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Cash Register",
+    "problem_url": "https://atcoder.jp/contests/abc283/tasks/abc283_c",
+    "submission_id": "AC37494102",
+    "submission_url": "https://atcoder.jp/contests/abc283/submissions/37494102",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Dec/24/2022 17:39"
+  },
   "AC37504501": {
     "contest_id": "abc283",
     "language": "C++ (GCC 9.2.1)",
