@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC37802007": {
+    "contest_id": "abc284",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc284\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Count Connected Components",
+    "problem_url": "https://atcoder.jp/contests/abc284/tasks/abc284_c",
+    "submission_id": "AC37802007",
+    "submission_url": "https://atcoder.jp/contests/abc284/submissions/37802007",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Jan/07/2023 17:35"
+  },
   "AC37824968": {
     "contest_id": "abc284",
     "language": "C++ (GCC 9.2.1)",
