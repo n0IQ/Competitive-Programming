@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC38193339": {
+    "contest_id": "abc286",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc286\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Range Swap",
+    "problem_url": "https://atcoder.jp/contests/abc286/tasks/abc286_a",
+    "submission_id": "AC38193339",
+    "submission_url": "https://atcoder.jp/contests/abc286/submissions/38193339",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Jan/21/2023 17:35"
+  },
   "AC38196248": {
     "contest_id": "abc286",
     "language": "C++ (GCC 9.2.1)",
