@@ -24848,6 +24848,23 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF190219420": {
+    "contest_id": 209,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\209\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Multicolored Marbles",
+    "problem_url": "https://codeforces.com/contest/209/problem/A",
+    "submission_id": "CF190219420",
+    "submission_url": "https://codeforces.com/contest/209/submission/190219420",
+    "tags": [
+      "dp",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Jan/23/2023 20:11"
+  },
   "CF190229119": {
     "contest_id": 1774,
     "language": "GNU C++17 (64)",
