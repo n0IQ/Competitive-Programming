@@ -24848,6 +24848,26 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF190229119": {
+    "contest_id": 1774,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1774\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Same Count One",
+    "problem_url": "https://codeforces.com/contest/1774/problem/D",
+    "submission_id": "CF190229119",
+    "submission_url": "https://codeforces.com/contest/1774/submission/190229119",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "implementation",
+      "two pointers",
+      "*1600"
+    ],
+    "timestamp": "Jan/23/2023 21:35"
+  },
   "CF190420842": {
     "contest_id": 1792,
     "language": "GNU C++17 (64)",
