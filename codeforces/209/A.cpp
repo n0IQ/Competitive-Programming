@@ -9,8 +9,8 @@ void solve()
 	int n;
 	cin >> n;
 
-	// dp[i][j] = number of zebroid subsequence that can be formed till ith index such that
-	//            current marble is red / blue (0 / 1)
+	// dp[i][j] = number of special strings that can be formed till ith index such that
+	//            current character is j (0 / 1)
 
 	ll dp[n][2];
 	memset(dp, 0, sizeof(dp));
