@@ -13,30 +13,52 @@ void solve()
 		pos[a[i]] = i;
 	}
 
-	int ans = n / 2;
-	int i = (n + 1) / 2, l = pos[i], r = pos[n - i + 1];
-
-	if (pos[i] > pos[n - i + 1]) {
-		cout << ans << '\n';
+	if (n == 1) {
+		cout << "0\n";
 		return;
 	}
 
 	if (n % 2 == 0) {
+		int ans = n / 2;
+		int i = n / 2;
+
+		if (pos[i] > pos[n - i + 1]) {
+			cout << ans << '\n';
+			return;
+		}
+
 		ans--;
-	}
-
-	while (--i) {
-		if (pos[i] < l && pos[n - i + 1] > r) {
-			l = pos[i];
-			r = pos[n - i + 1];
-			ans--;
+		int l = pos[i], r = pos[n - i + 1];
+		while (--i) {
+			if (pos[i] < l && pos[n - i + 1] > r) {
+				l = pos[i];
+				r = pos[n - i + 1];
+				ans--;
+			}
+			else {
+				break;
+			}
 		}
-		else {
-			break;
-		}
-	}
 
-	cout << ans << '\n';
+		cout << ans << '\n';
+	}
+	else {
+		int ans = n / 2;
+		int i = n / 2 + 1, l = pos[i], r = pos[i];
+
+		while (--i) {
+			if (pos[i] < l && pos[n - i + 1] > r) {
+				l = pos[i];
+				r = pos[n - i + 1];
+				ans--;
+			}
+			else {
+				break;
+			}
+		}
+
+		cout << ans << '\n';
+	}
 }
 
 int main()
