@@ -24848,6 +24848,22 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF191008348": {
+    "contest_id": 1702,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1702\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Not a Cheap String",
+    "problem_url": "https://codeforces.com/contest/1702/problem/D",
+    "submission_id": "CF191008348",
+    "submission_url": "https://codeforces.com/contest/1702/submission/191008348",
+    "tags": [
+      "greedy",
+      "*1000"
+    ],
+    "timestamp": "Jan/28/2023 22:39"
+  },
   "CF191027907": {
     "contest_id": 1702,
     "language": "GNU C++17 (64)",
