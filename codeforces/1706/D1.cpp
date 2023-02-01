@@ -7,28 +7,42 @@ void solve()
 	int n, k;
 	cin >> n >> k;
 
-	vector<int> a(n);
+	vector<ll> a(n);
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
 	}
+	sort(a.begin(), a.end());
 
-	int ans = INT_MAX;
-	for (int mi = 0; mi <= 3000; mi++) {
-		int mx = 0;
-		bool flag = false;
+	ll ans = INT_MAX;
+	for (ll x = 0; x <= a[0]; x++) {
+		ll min_val = INT_MAX, max_val = INT_MIN, flag = 0;
 
 		for (int i = 0; i < n; i++) {
-			int p = mi == 0 ? k : min(k, a[i] / mi);
-			if (p == 0) {
-				flag = true;
+			ll l = 1, r = k, div = -1;
+
+			while (l <= r) {
+				ll mid = l + (r - l) / 2;
+				if (a[i] / mid >= x) {
+					div = a[i] / mid;
+					l = mid + 1;
+				}
+				else {
+					r = mid - 1;
+				}
+			}
+
+			if (div == -1) {
+				flag = 1;
 				break;
 			}
 
-			mx = max(mx, a[i] / p);
+			min_val = min(min_val, div);
+			max_val = max(max_val, div);
 		}
 
-		if (flag) continue;
-		ans = min(ans, mx - mi);
+		if (!flag) {
+			ans = min(ans, max_val - min_val);
+		}
 	}
 
 	cout << ans << '\n';
