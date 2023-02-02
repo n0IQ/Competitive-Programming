@@ -24848,6 +24848,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF191734293": {
+    "contest_id": 1778,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1778\\C.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C",
+    "problem_name": "Flexible String",
+    "problem_url": "https://codeforces.com/contest/1778/problem/C",
+    "submission_id": "CF191734293",
+    "submission_url": "https://codeforces.com/contest/1778/submission/191734293",
+    "tags": [
+      "bitmasks",
+      "brute force",
+      "strings",
+      "*1600"
+    ],
+    "timestamp": "Feb/02/2023 21:40"
+  },
   "CF191810093": {
     "contest_id": 1512,
     "language": "GNU C++17 (64)",
