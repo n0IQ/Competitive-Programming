@@ -24848,6 +24848,22 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF192489797": {
+    "contest_id": 1786,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1786\\A1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A1",
+    "problem_name": "Non-alternating Deck (easy version)",
+    "problem_url": "https://codeforces.com/contest/1786/problem/A1",
+    "submission_id": "CF192489797",
+    "submission_url": "https://codeforces.com/contest/1786/submission/192489797",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Feb/06/2023 20:33"
+  },
   "CF192491704": {
     "contest_id": 1786,
     "language": "GNU C++17 (64)",
