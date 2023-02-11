@@ -21,15 +21,18 @@ ll bfs(int x, int y, int tx, int ty)
 
 		ll d = dist[x][y];
 
-		for (auto &ngb1 : adj[x]) {
-			for (auto &ngb2 : adj[y]) {
-				if (color[ngb1] == color[ngb2]) {
-					continue;
-				}
+		vector<int> col[2]; // stores edges respective to its colors
+		for (auto &v : adj[x]) {
+			col[color[v]].push_back(v);
+		}
 
-				if (dist[ngb1][ngb2] > 1 + dist[x][y]) {
-					dist[ngb1][ngb2] = 1 + dist[x][y];
-					q.push({ngb1, ngb2});
+		for (auto &v : adj[y]) {
+			int c = color[v] ^ 1; // pick vertex having different color
+
+			for (auto &u : col[c]) {
+				if (dist[u][v] > d + 1) {
+					dist[u][v] = d + 1;
+					q.push({u, v});
 				}
 			}
 		}
