@@ -24848,6 +24848,23 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF193373147": {
+    "contest_id": 1658,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1658\\D1.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D1",
+    "problem_name": "388535 (Easy Version)",
+    "problem_url": "https://codeforces.com/contest/1658/problem/D1",
+    "submission_id": "CF193373147",
+    "submission_url": "https://codeforces.com/contest/1658/submission/193373147",
+    "tags": [
+      "bitmasks",
+      "math",
+      "*1600"
+    ],
+    "timestamp": "Feb/12/2023 22:12"
+  },
   "CF193487527": {
     "contest_id": 1114,
     "language": "GNU C++17 (64)",
