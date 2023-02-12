@@ -2,27 +2,44 @@
 using namespace std;
 typedef long long ll;
 
+int getSetBits(vector<int> &a, int k)
+{
+	int setBits = 0;
+	for (auto &x : a) {
+		setBits += ((x >> k) & 1);
+	}
+	return setBits;
+}
+
 void solve()
 {
 	int l, r;
 	cin >> l >> r;
 
 	int n = r - l + 1;
-	vector<int> originalBits(20), newBits(20);
 
+	vector<int> a(n);
 	for (int i = 0; i < n; i++) {
-		int x;
-		cin >> x;
-		for (int j = 0; j < 20; j++) if ((x >> j) & 1) newBits[j]++;
-		for (int j = 0; j < 20; j++) if ((i >> j) & 1) originalBits[j]++;
+		cin >> a[i];
 	}
+	sort(a.begin(), a.end());
 
-	int x = 0;
+	vector<int> b(n);
+	iota(b.begin(), b.end(), 0);
+
+	int ans = 0;
 	for (int i = 0; i < 20; i++) {
-		if (originalBits[i] != newBits[i]) x += (1 << i);
+		int setBits1 = getSetBits(a, i);
+		int setBits2 = getSetBits(b, i);
+
+		// cout << i << ' ' << setBits1 << ' ' << setBits2 << '\n';
+
+		if (setBits1 != setBits2) {
+			ans |= (1 << i);
+		}
 	}
 
-	cout << x << '\n';
+	cout << ans << '\n';
 }
 
 int main()
