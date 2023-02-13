@@ -2,6 +2,23 @@
 using namespace std;
 typedef long long ll;
 
+bool check(vector<int> &a, vector<int> &chose, int n, int q, int idx)
+{
+	fill(chose.begin(), chose.end(), 0);
+
+	for (int i = 0; i < n; i++) {
+		if (i < idx) {
+			if (a[i] <= q) chose[i] = 1;
+		}
+		else {
+			chose[i] = 1;
+			if (a[i] > q) q--;
+		}
+	}
+
+	return q >= 0;
+}
+
 void solve()
 {
 	int n, q;
@@ -12,25 +29,22 @@ void solve()
 		cin >> a[i];
 	}
 
+	int l = 0, r = n - 1, idx = n;
 	vector<int> chose(n, 0);
-	int k = 0, pos = -1;
 
-	for (int i = n - 1; i >= 0; i--) {
-		if (k < a[i]) {
-			k++;
+	while (l <= r) {
+		int mid = l + (r - l) / 2;
+
+		if (check(a, chose, n, q, mid)) {
+			idx = mid;
+			r = mid - 1;
 		}
-		if (k > q) {
-			pos = i;
-			break;
+		else {
+			l = mid + 1;
 		}
-		chose[i] = 1;
 	}
 
-	for (int i = 0; i < pos; i++) {
-		if (a[i] <= q) {
-			chose[i] = 1;
-		}
-	}
+	check(a, chose, n, q, idx);
 
 	for (auto &x : chose) {
 		cout << x;
