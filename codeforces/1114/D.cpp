@@ -2,41 +2,57 @@
 using namespace std;
 typedef long long ll;
 
-int dp[6001][6001];
+int n;
+int a[6001];
+int dp[6010][6010];
 
-int lcs(int n, vector<int> &a, vector<int> &b)
+ll helper(int l, int r)
 {
-	for (int i = 1; i <= n; i++) {
-		for (int j = 1; j <= n; j++) {
-			if (a[i] == b[j]) {
-				dp[i][j] = 1 + dp[i - 1][j - 1];
-			}
-			else {
-				dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
-			}
-		}
+	if (l <= 1 && r >= n) {
+		return 0;
+	}
+	if (dp[l][r] != -1) {
+		return dp[l][r];
 	}
 
-	return dp[n][n];
+	ll ans = INT_MAX;
+	if (l - 1 >= 1 && a[l - 1] == a[l]) {
+		ans = min(ans, helper(l - 1, r));
+	}
+	else if (l - 1 >= 1) {
+		ans = min(ans, 1 + helper(l - 1, r));
+	}
+
+	if (r + 1 <= n && a[r + 1] == a[r]) {
+		ans = min(ans, helper(l, r + 1));
+	}
+	else if (r + 1 <= n) {
+		ans = min(ans, 1 + helper(l, r + 1));
+	}
+
+	if (l - 1 >= 1 && r + 1 <= n && a[l - 1] == a[r + 1]) {
+		ans = min(ans, 1 + helper(l - 1, r + 1));
+	}
+
+	return dp[l][r] = ans;
 }
 
 void solve()
 {
-	int n;
 	cin >> n;
-
-	vector<int> a(1, 0);
-	for (int i = 0; i < n; i++) {
-		int x;
-		cin >> x;
-		if (x != a.back()) a.push_back(x);
+	for (int i = 1; i <= n; i++) {
+		cin >> a[i];
 	}
 
-	vector<int> b(a);
-	reverse(b.begin() + 1, b.end());
+	// dp[l][r] = minimum number of turns to change the line from l to r to a single color.
+	memset(dp, -1, sizeof(dp));
 
-	n = (int)a.size() - 1;
-	cout << n - (lcs(n, a, b) + 1) / 2 << '\n';
+	ll ans = INT_MAX;
+	for (int i = 1; i <= n; i++) {
+		ans = min(ans, helper(i, i));
+	}
+
+	cout << ans << '\n';
 }
 
 int main()
