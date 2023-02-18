@@ -7,9 +7,21 @@ void solve()
 	ll n, m, k, l;
 	cin >> n >> m >> k >> l;
 
-	ll x = (l + k + m - 1) / m;
-	if (x * m <= n) cout << x << '\n';
-	else cout << "-1\n";
+	ll left = 1, right = n / m, ans = -1;
+	while (left <= right) {
+		ll mid = left + (right - left) / 2;
+		ll og = mid * m - k;
+
+		if (og >= l) {
+			ans = mid;
+			right = mid - 1;
+		}
+		else {
+			left = mid + 1;
+		}
+	}
+
+	cout << ans << '\n';
 }
 
 int main()
