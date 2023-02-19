@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39021350": {
+    "contest_id": "abc290",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc290\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Max MEX",
+    "problem_url": "https://atcoder.jp/contests/abc290/tasks/abc290_c",
+    "submission_id": "AC39021350",
+    "submission_url": "https://atcoder.jp/contests/abc290/submissions/39021350",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Feb/19/2023 17:41"
+  },
   "AC39403382": {
     "contest_id": "abc292",
     "language": "C++ (GCC 9.2.1)",
