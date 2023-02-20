@@ -2,7 +2,6 @@
 using namespace std;
 typedef long long ll;
 
-// stores 2 minimum Widths with index for each prefix of sorted height
 vector<pair<ll, ll>> adj[200010];
 
 int helper(vector<ll> &v, ll val1, ll val2, int currentIdx)
@@ -46,7 +45,7 @@ void solve()
 		v[i] = arr[i].first.first;
 	}
 
-	priority_queue<pair<ll, ll>> pq; // store minimum W with index
+	priority_queue<pair<ll, ll>> pq; // store min W with indexes
 	for (int i = 0; i < n; i++) {
 		pq.push({arr[i].first.second, arr[i].second}); // W, idx
 		while ((int)pq.size() > 2) pq.pop();
