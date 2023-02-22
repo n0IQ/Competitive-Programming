@@ -24848,6 +24848,25 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF194547684": {
+    "contest_id": 1722,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1722\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Counting Rectangles",
+    "problem_url": "https://codeforces.com/contest/1722/problem/E",
+    "submission_id": "CF194547684",
+    "submission_url": "https://codeforces.com/contest/1722/submission/194547684",
+    "tags": [
+      "brute force",
+      "data structures",
+      "dp",
+      "implementation",
+      "*1600"
+    ],
+    "timestamp": "Feb/22/2023 14:27"
+  },
   "CF194713514": {
     "contest_id": 1722,
     "language": "GNU C++17 (64)",
