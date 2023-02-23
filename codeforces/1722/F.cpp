@@ -5,6 +5,7 @@ typedef long long ll;
 int n, m;
 int a[55][55];
 set<pair<int, int>> s;
+bool visited[55][55];
 bool isPossible;
 
 
@@ -15,6 +16,8 @@ int getCount(int i, int j)
 
 bool check(int i, int j)
 {
+	// cout << "L: " << i << ' ' << j << '\n';
+
 	bool conditions = true;
 	if (a[i][j] && (a[i][j - 1] || a[i + 1][j - 1] || a[i - 1][j - 1] || a[i - 1][j] || a[i - 1][j + 1])) conditions = false;
 	if (a[i][j + 1] && (a[i][j + 2] || a[i + 1][j + 2] || a[i - 1][j + 2] || a[i - 1][j + 1] || a[i - 1][j])) conditions = false;
@@ -35,6 +38,7 @@ void solve()
 	for (int i = 0; i <= 52; i++) {
 		for (int j = 0; j <= 52; j++) {
 			a[i][j] = 0;
+			visited[i][j] = 0;
 		}
 	}
 	s.clear();
@@ -65,6 +69,10 @@ void solve()
 
 		if (!isPossible) break;
 	}
+
+	/*for (auto it : s) {
+		cout << it.first << ' ' << it.second << '\n';
+	}*/
 
 	if (isPossible && s.empty()) cout << "YES\n";
 	else cout << "NO\n";
