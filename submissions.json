@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39408895": {
+    "contest_id": "abc292",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc292\\B.cpp",
+    "platform": "AtCoder",
+    "problem_index": "B",
+    "problem_name": "Yellow and Red Card",
+    "problem_url": "https://atcoder.jp/contests/abc292/tasks/abc292_b",
+    "submission_id": "AC39408895",
+    "submission_url": "https://atcoder.jp/contests/abc292/submissions/39408895",
+    "tags": [
+      "AtCoder",
+      "*200"
+    ],
+    "timestamp": "Mar/04/2023 17:34"
+  },
   "AC39422058": {
     "contest_id": "abc292",
     "language": "C++ (GCC 9.2.1)",
