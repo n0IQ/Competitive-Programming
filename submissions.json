@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39403382": {
+    "contest_id": "abc292",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc292\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "CAPS LOCK",
+    "problem_url": "https://atcoder.jp/contests/abc292/tasks/abc292_a",
+    "submission_id": "AC39403382",
+    "submission_url": "https://atcoder.jp/contests/abc292/submissions/39403382",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/04/2023 17:31"
+  },
   "AC39408895": {
     "contest_id": "abc292",
     "language": "C++ (GCC 9.2.1)",
