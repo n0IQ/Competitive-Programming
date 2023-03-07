@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39518897": {
+    "contest_id": "abc292",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc292\\C.cpp",
+    "platform": "AtCoder",
+    "problem_index": "C",
+    "problem_name": "Four Variables",
+    "problem_url": "https://atcoder.jp/contests/abc292/tasks/abc292_c",
+    "submission_id": "AC39518897",
+    "submission_url": "https://atcoder.jp/contests/abc292/submissions/39518897",
+    "tags": [
+      "AtCoder",
+      "*300"
+    ],
+    "timestamp": "Mar/07/2023 20:22"
+  },
   "AC39601338": {
     "contest_id": "abc293",
     "language": "C++ (GCC 9.2.1)",
