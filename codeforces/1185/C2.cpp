@@ -7,7 +7,7 @@ void solve()
 	ll n, m;
 	cin >> n >> m;
 
-	vector<ll> cnt(101, 0);
+	vector<ll> ans(n, 0), cnt(101, 0);
 	for (int i = 1; i <= n; i++) {
 		ll x;
 		cin >> x;

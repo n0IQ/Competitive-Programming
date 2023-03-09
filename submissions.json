@@ -23622,6 +23622,25 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF196718181": {
+    "contest_id": 1185,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1185\\C2.cpp",
+    "platform": "Codeforces",
+    "problem_index": "C2",
+    "problem_name": "Exam in BerSU (hard version)",
+    "problem_url": "https://codeforces.com/contest/1185/problem/C2",
+    "submission_id": "CF196718181",
+    "submission_url": "https://codeforces.com/contest/1185/submission/196718181",
+    "tags": [
+      "brute force",
+      "data structures",
+      "greedy",
+      "math",
+      "*1700"
+    ],
+    "timestamp": "Mar/10/2023 03:06"
+  },
   "CF196718373": {
     "contest_id": 1185,
     "language": "GNU C++17 (64)",
