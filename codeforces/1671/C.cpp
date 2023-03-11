@@ -15,7 +15,7 @@ void solve()
 	ll ans = 0, prefixSum = 0;
 	for (ll i = 0; i < n; i++) {
 		if (a[i] > x) break;
-		ll l = 1, r = x + 10, sugar = 0;
+		ll l = 1, r = x + 10, sugar = 0; // 1 2 2
 
 		while (l <= r) {
 			ll mid = l + (r - l) / 2;
