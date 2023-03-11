@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39601338": {
+    "contest_id": "abc293",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc293\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Swap Odd and Even",
+    "problem_url": "https://atcoder.jp/contests/abc293/tasks/abc293_a",
+    "submission_id": "AC39601338",
+    "submission_url": "https://atcoder.jp/contests/abc293/submissions/39601338",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/11/2023 17:32"
+  },
   "AC39605392": {
     "contest_id": "abc293",
     "language": "C++ (GCC 9.2.1)",
