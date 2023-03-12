@@ -23622,6 +23622,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF197035118": {
+    "contest_id": 1671,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1671\\D.cpp",
+    "platform": "Codeforces",
+    "problem_index": "D",
+    "problem_name": "Insert a Progression",
+    "problem_url": "https://codeforces.com/contest/1671/problem/D",
+    "submission_id": "CF197035118",
+    "submission_url": "https://codeforces.com/contest/1671/submission/197035118",
+    "tags": [
+      "brute force",
+      "constructive algorithms",
+      "greedy",
+      "*1600"
+    ],
+    "timestamp": "Mar/12/2023 14:42"
+  },
   "CF197078376": {
     "contest_id": 1804,
     "language": "GNU C++17 (64)",
