@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39840448": {
+    "contest_id": "abc294",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc294\\A.cpp",
+    "platform": "AtCoder",
+    "problem_index": "A",
+    "problem_name": "Filter",
+    "problem_url": "https://atcoder.jp/contests/abc294/tasks/abc294_a",
+    "submission_id": "AC39840448",
+    "submission_url": "https://atcoder.jp/contests/abc294/submissions/39840448",
+    "tags": [
+      "AtCoder",
+      "*100"
+    ],
+    "timestamp": "Mar/19/2023 17:30"
+  },
   "AC39846926": {
     "contest_id": "abc294",
     "language": "C++ (GCC 9.2.1)",
