@@ -1951,6 +1951,22 @@
     ],
     "timestamp": "May/15/2022 02:05"
   },
+  "AC39873072": {
+    "contest_id": "abc294",
+    "language": "C++ (GCC 9.2.1)",
+    "path": "atcoder\\abc294\\E.cpp",
+    "platform": "AtCoder",
+    "problem_index": "E",
+    "problem_name": "2xN Grid",
+    "problem_url": "https://atcoder.jp/contests/abc294/tasks/abc294_e",
+    "submission_id": "AC39873072",
+    "submission_url": "https://atcoder.jp/contests/abc294/submissions/39873072",
+    "tags": [
+      "AtCoder",
+      "*500"
+    ],
+    "timestamp": "Mar/19/2023 18:39"
+  },
   "CF100008152": {
     "contest_id": 1455,
     "language": "GNU C++14",
