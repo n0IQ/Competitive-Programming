@@ -23622,6 +23622,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF198196987": {
+    "contest_id": 1807,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1807\\E.cpp",
+    "platform": "Codeforces",
+    "problem_index": "E",
+    "problem_name": "Interview",
+    "problem_url": "https://codeforces.com/contest/1807/problem/E",
+    "submission_id": "CF198196987",
+    "submission_url": "https://codeforces.com/contest/1807/submission/198196987",
+    "tags": [
+      "binary search",
+      "implementation",
+      "interactive",
+      "*1300"
+    ],
+    "timestamp": "Mar/19/2023 21:23"
+  },
   "CF198261841": {
     "contest_id": 1807,
     "language": "GNU C++17 (64)",
