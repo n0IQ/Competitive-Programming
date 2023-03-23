@@ -23622,6 +23622,22 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF198760395": {
+    "contest_id": 1809,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1809\\A.cpp",
+    "platform": "Codeforces",
+    "problem_index": "A",
+    "problem_name": "Garland",
+    "problem_url": "https://codeforces.com/contest/1809/problem/A",
+    "submission_id": "CF198760395",
+    "submission_url": "https://codeforces.com/contest/1809/submission/198760395",
+    "tags": [
+      "implementation",
+      "*800"
+    ],
+    "timestamp": "Mar/23/2023 20:15"
+  },
   "CF198919743": {
     "contest_id": 1809,
     "language": "GNU C++17 (64)",
