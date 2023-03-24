@@ -23622,6 +23622,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF198966172": {
+    "contest_id": 1807,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1807\\F.cpp",
+    "platform": "Codeforces",
+    "problem_index": "F",
+    "problem_name": "Bouncy Ball",
+    "problem_url": "https://codeforces.com/contest/1807/problem/F",
+    "submission_id": "CF198966172",
+    "submission_url": "https://codeforces.com/contest/1807/submission/198966172",
+    "tags": [
+      "brute force",
+      "dfs and similar",
+      "implementation",
+      "*1700"
+    ],
+    "timestamp": "Mar/24/2023 20:58"
+  },
   "CF199072321": {
     "contest_id": 1809,
     "language": "GNU C++17 (64)",
