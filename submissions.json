@@ -23622,6 +23622,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF199072321": {
+    "contest_id": 1809,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1809\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Points on Plane",
+    "problem_url": "https://codeforces.com/contest/1809/problem/B",
+    "submission_id": "CF199072321",
+    "submission_url": "https://codeforces.com/contest/1809/submission/199072321",
+    "tags": [
+      "binary search",
+      "greedy",
+      "math",
+      "*1000"
+    ],
+    "timestamp": "Mar/25/2023 15:03"
+  },
   "CF199253325": {
     "contest_id": 1798,
     "language": "GNU C++17 (64)",
