@@ -23622,6 +23622,23 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF200401396": {
+    "contest_id": 1805,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1805\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "The String Has a Target",
+    "problem_url": "https://codeforces.com/contest/1805/problem/B",
+    "submission_id": "CF200401396",
+    "submission_url": "https://codeforces.com/contest/1805/submission/200401396",
+    "tags": [
+      "greedy",
+      "strings",
+      "*800"
+    ],
+    "timestamp": "Apr/02/2023 20:21"
+  },
   "CF200443964": {
     "contest_id": 1805,
     "language": "GNU C++17 (64)",
