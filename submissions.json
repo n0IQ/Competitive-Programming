@@ -23622,6 +23622,24 @@
     ],
     "timestamp": "Nov/05/2022 01:31"
   },
+  "CF203269363": {
+    "contest_id": 1822,
+    "language": "GNU C++17 (64)",
+    "path": "codeforces\\1822\\B.cpp",
+    "platform": "Codeforces",
+    "problem_index": "B",
+    "problem_name": "Karina and Array",
+    "problem_url": "https://codeforces.com/contest/1822/problem/B",
+    "submission_id": "CF203269363",
+    "submission_url": "https://codeforces.com/contest/1822/submission/203269363",
+    "tags": [
+      "greedy",
+      "math",
+      "sortings",
+      "*800"
+    ],
+    "timestamp": "Apr/24/2023 20:18"
+  },
   "CF203276071": {
     "contest_id": 1822,
     "language": "GNU C++17 (64)",
